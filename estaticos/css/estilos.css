@@ -57,6 +57,8 @@ button { font: inherit; }
 
 .contenedor { max-width: var(--ancho); margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 .contenedor--angosto { max-width: var(--ancho-angosto); }
+/* Toda rejilla arranca con UNA columna que no puede crecer más que su contenedor (evita que tablas y listas desborden en celular) */
+.franja__grid, .tarjetas, .patologias, .beneficios, .pasos, .paso, .sistema, .respaldo, .casos, .caso, .nosotros, .compromisos, .faq, .contacto__grid, .cotizador, .cotizador__campos, .formulario, .formulario__grid, .pie__grid { grid-template-columns: minmax(0, 1fr); }
 .ico { width: 1.15em; height: 1.15em; vertical-align: -.2em; flex: none; }
 
 /* ---------- Botones ---------- */
@@ -185,6 +187,7 @@ thead th { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; c
 tbody th { font-weight: 600; color: var(--tinta); white-space: nowrap; }
 .comparativa td.destacada, .comparativa th.destacada { background: rgba(201, 165, 84, .12); color: var(--marino); font-weight: 600; }
 .tecnica td { font-variant-numeric: tabular-nums; }
+.tecnica th { white-space: normal; width: 55%; }
 .sistema__tabla .tabla-envoltura { margin-top: 12px; }
 
 /* ---------- Proceso ---------- */
