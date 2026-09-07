@@ -1,5 +1,5 @@
 {
- "hero-movil": {
+ "hero-propia-movil": {
   "anchos": [
    480,
    768,
@@ -7,7 +7,27 @@
   ],
   "prop": 0.8,
   "formato": "webp",
-  "huella": "97c5dd2cc7"
+  "huella": "f2385fec6f"
+ },
+ "hero-movil": {
+  "anchos": [
+   480,
+   768,
+   1024
+  ],
+  "prop": 0.8,
+  "formato": "webp",
+  "huella": "2bb2244c73"
+ },
+ "hero-propia-escritorio": {
+  "anchos": [
+   1024,
+   1600,
+   1920
+  ],
+  "prop": 1.7778,
+  "formato": "webp",
+  "huella": "5e5eedb464"
  },
  "hero-escritorio": {
   "anchos": [
@@ -17,7 +37,7 @@
   ],
   "prop": 1.7778,
   "formato": "webp",
-  "huella": "dde83d792b"
+  "huella": "70ddbe67a0"
  },
  "app-zinc": {
   "anchos": [

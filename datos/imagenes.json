@@ -1,10 +1,10 @@
 {
-  "_nota": "Manifiesto de fotos. 'origen' es relativo a 'raiz' (la carpeta Fotos_LOPSA del repositorio LOPSA_CLAUDE). preparar_imagenes.py las recorta, las convierte a WebP sin datos EXIF ni GPS y las deja en estaticos/img/. 'recorte' = proporción ancho:alto; 'foco' = punto de interés (0-1, 0-1); 'caja' = recorte previo en fracciones [izq, arriba, der, abajo]; 'desenfocar' = zonas a difuminar en fracciones [[x0, y0, x1, y1], ...].",
+  "_nota": "Manifiesto de fotos. 'origen' es relativo a 'raiz' (la carpeta Fotos_LOPSA del repositorio LOPSA_CLAUDE). preparar_imagenes.py las recorta, las convierte a WebP sin datos EXIF ni GPS y las deja en estaticos/img/. 'recorte' = proporción ancho:alto; 'foco' = punto de interés (0-1, 0-1); 'caja' = recorte previo en fracciones [izq, arriba, der, abajo]; 'desenfocar' = zonas a difuminar en fracciones [[x0, y0, x1, y1], ...]. 'origen_abs' = ruta absoluta para fotos externas con licencia (registrar la licencia en 'licencia').",
   "raiz": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto",
   "raiz_material": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Material_Ventas/Fotos",
   "imagenes": [
     {
-      "id": "hero-movil",
+      "id": "hero-propia-movil",
       "origen": "2026015_Filtraciones_Royal_Pacific/20260618_Aplicacion_PoliureaTechoZincSkyline_01.jpg",
       "recorte": "4:5",
       "foco": [
@@ -18,7 +18,30 @@
       ]
     },
     {
-      "id": "hero-escritorio",
+      "id": "hero-movil",
+      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Web_LOPSA/05_Portafolio/_Candidatas_Portada_20260907/libres_01.jpg",
+      "licencia": "Unsplash License (Ömer Haktan Bulut, unsplash.com/photos/ce2r9sPR_9E) — uso comercial sin atribución; NO es obra de LOPSA",
+      "recorte": "4:5",
+      "foco": [
+        0.66,
+        0.55
+      ],
+      "anchos": [
+        480,
+        768,
+        1024
+      ],
+      "desenfocar": [
+        [
+          0.685,
+          0.3,
+          0.735,
+          0.37
+        ]
+      ]
+    },
+    {
+      "id": "hero-propia-escritorio",
       "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260707_Aplicacion_TechoZincPoliureaGrisAvance_01.jpg",
       "recorte": "16:9",
       "foco": [
@@ -31,6 +54,30 @@
         1920
       ],
       "calidad": 68
+    },
+    {
+      "id": "hero-escritorio",
+      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Web_LOPSA/05_Portafolio/_Candidatas_Portada_20260907/libres_01.jpg",
+      "licencia": "Unsplash License — ver hero-movil",
+      "recorte": "16:9",
+      "foco": [
+        0.55,
+        0.5
+      ],
+      "anchos": [
+        1024,
+        1600,
+        1920
+      ],
+      "desenfocar": [
+        [
+          0.685,
+          0.3,
+          0.735,
+          0.37
+        ]
+      ],
+      "calidad": 72
     },
     {
       "id": "app-zinc",

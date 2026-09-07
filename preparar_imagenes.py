@@ -67,7 +67,9 @@ def main():
     generadas = {}
     errores = 0
     for e in m["imagenes"]:
-        if "origen_material" in e:
+        if "origen_abs" in e:
+            origen = e["origen_abs"]
+        elif "origen_material" in e:
             origen = os.path.join(m["raiz_material"], e["origen_material"])
         else:
             origen = os.path.join(m["raiz"], e["origen"])
