@@ -17,9 +17,18 @@
   ],
   "posicionamiento": "Somos aplicadores especialistas en poliurea caliente. No vendemos material ni alquilamos equipo: el diagnóstico y la aplicación los hace personal propio de LOPSA, con equipo propio.",
   "triada": [
-    {"titulo": "Impermeabilización", "texto": "Losas, azoteas, techos de zinc, terrazas y tanques."},
-    {"titulo": "Anticorrosión", "texto": "Canales, canalones, cubiertas metálicas y estructuras de acero."},
-    {"titulo": "Revestimiento industrial", "texto": "Pisos de planta, áreas de proceso y depósitos."}
+    {
+      "titulo": "Impermeabilización",
+      "texto": "Losas, azoteas, techos de zinc, terrazas y tanques."
+    },
+    {
+      "titulo": "Anticorrosión",
+      "texto": "Canales, canalones, cubiertas metálicas y estructuras de acero."
+    },
+    {
+      "titulo": "Revestimiento industrial",
+      "texto": "Pisos de planta, áreas de proceso y depósitos."
+    }
   ],
   "linea_empresa": "LOPSA, S.A. opera con póliza de responsabilidad civil vigente y personal inscrito en la Caja de Seguro Social.",
   "construccion": "También ejecutamos remodelaciones y obra civil menor con dirección técnica propia.",
@@ -40,7 +49,7 @@
     "cargo": "Gerente General",
     "titulo": "Ingeniero Civil idóneo",
     "idoneidad": "JTIA n.º 2022-006-308",
-    "mostrar": true
+    "mostrar": false
   },
   "instagram": "",
   "gtm_id": "",
@@ -48,18 +57,48 @@
   "aviso_fecha": "7 de septiembre de 2026",
   "anio": "2026",
   "nav": [
-    {"ancla": "#aplicaciones", "texto": "Aplicaciones"},
-    {"ancla": "#poliurea", "texto": "Poliurea"},
-    {"ancla": "#proceso", "texto": "Proceso"},
-    {"ancla": "#proyectos", "texto": "Proyectos"},
-    {"ancla": "#nosotros", "texto": "Nosotros"},
-    {"ancla": "#preguntas", "texto": "Preguntas"}
+    {
+      "ancla": "#aplicaciones",
+      "texto": "Aplicaciones"
+    },
+    {
+      "ancla": "#poliurea",
+      "texto": "Poliurea"
+    },
+    {
+      "ancla": "#proceso",
+      "texto": "Proceso"
+    },
+    {
+      "ancla": "#proyectos",
+      "texto": "Proyectos"
+    },
+    {
+      "ancla": "#nosotros",
+      "texto": "Nosotros"
+    },
+    {
+      "ancla": "#preguntas",
+      "texto": "Preguntas"
+    }
   ],
   "compromisos": [
-    {"titulo": "Diagnóstico antes que precio", "texto": "Visitamos, medimos y documentamos las patologías antes de cotizar. La propuesta dice qué se hace, cuántos metros cuadrados y con qué sistema."},
-    {"titulo": "Personal y equipo propios", "texto": "La aplicación no se subcontrata: la ejecutan cuadrillas de LOPSA con el equipo de aplicación en caliente de la empresa."},
-    {"titulo": "Proceso documentado", "texto": "Cada obra se entrega con un informe fotográfico del proceso, del estado inicial al acabado."},
-    {"titulo": "Garantía por escrito", "texto": "Cada metro cuadrado aplicado queda respaldado por una garantía escrita, con su alcance y condiciones en la propuesta."}
+    {
+      "titulo": "Diagnóstico antes que precio",
+      "texto": "Visitamos, medimos y documentamos las patologías antes de cotizar. La propuesta dice qué se hace, cuántos metros cuadrados y con qué sistema."
+    },
+    {
+      "titulo": "Personal y equipo propios",
+      "texto": "La aplicación no se subcontrata: la ejecutan cuadrillas de LOPSA con el equipo de aplicación en caliente de la empresa."
+    },
+    {
+      "titulo": "Proceso documentado",
+      "texto": "Cada obra se entrega con un informe fotográfico del proceso, del estado inicial al acabado."
+    },
+    {
+      "titulo": "Garantía por escrito",
+      "texto": "Cada metro cuadrado aplicado queda respaldado por una garantía escrita, con su alcance y condiciones en la propuesta."
+    }
   ],
-  "quienes": "LOPSA, S.A. es una empresa panameña fundada por ingenieros civiles con años de experiencia en obra. Después de ver cómo los sistemas tradicionales de impermeabilización fallan a los pocos años, con filtraciones, juntas que se abren y reparaciones constantes, decidimos traer al país la poliurea caliente bicomponente y aplicarla con criterio de ingeniería: dirección técnica idónea, personal capacitado y procesos documentados en cada proyecto."
+  "quienes": "LOPSA, S.A. es una empresa panameña fundada por ingenieros civiles con años de experiencia en obra. Después de ver cómo los sistemas tradicionales de impermeabilización fallan a los pocos años, con filtraciones, juntas que se abren y reparaciones constantes, decidimos traer al país la poliurea caliente bicomponente y aplicarla con criterio de ingeniería: dirección técnica de un ingeniero civil idóneo registrado en la Junta Técnica de Ingeniería y Arquitectura, personal capacitado y procesos documentados en cada proyecto."
 }

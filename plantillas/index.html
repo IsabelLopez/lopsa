@@ -277,7 +277,7 @@
         <li><span class="compromisos__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span><strong>{{ c.titulo }}</strong><span>{{ c.texto }}</span></li>
         {% endfor %}
       </ol>
-      <a class="boton boton--dorado" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="nosotros">{{ m.icono_whatsapp('ico') }} {% if sitio.responsable.mostrar %}Hablar con el ingeniero{% else %}Hablar con LOPSA{% endif %}</a>
+      <a class="boton boton--dorado" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="nosotros">{{ m.icono_whatsapp('ico') }} {% if sitio.responsable.mostrar %}Hablar con el ingeniero{% else %}Hablar con un ingeniero de LOPSA{% endif %}</a>
     </div>
     <div class="nosotros__fotos">
       <figure>{{ m.foto('nosotros-camion', 'Camión de LOPSA rotulado, en una obra en Ciudad de Panamá', '(min-width: 1024px) 40vw, 100vw') }}<figcaption>Unidad móvil de aplicación en caliente</figcaption></figure>
