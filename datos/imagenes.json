@@ -1,0 +1,454 @@
+{
+  "_nota": "Manifiesto de fotos. 'origen' es relativo a 'raiz' (la carpeta Fotos_LOPSA del repositorio LOPSA_CLAUDE). preparar_imagenes.py las recorta, las convierte a WebP sin datos EXIF ni GPS y las deja en estaticos/img/. 'recorte' = proporción ancho:alto; 'foco' = punto de interés (0-1, 0-1); 'caja' = recorte previo en fracciones [izq, arriba, der, abajo]; 'desenfocar' = zonas a difuminar en fracciones [[x0, y0, x1, y1], ...].",
+  "raiz": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto",
+  "raiz_material": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Material_Ventas/Fotos",
+  "imagenes": [
+    {
+      "id": "hero-movil",
+      "origen": "2026015_Filtraciones_Royal_Pacific/20260618_Aplicacion_PoliureaTechoZincSkyline_01.jpg",
+      "recorte": "4:5",
+      "foco": [
+        0.5,
+        0.42
+      ],
+      "anchos": [
+        480,
+        768,
+        1080
+      ]
+    },
+    {
+      "id": "hero-escritorio",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260707_Aplicacion_TechoZincPoliureaGrisAvance_01.jpg",
+      "recorte": "16:9",
+      "foco": [
+        0.5,
+        0.55
+      ],
+      "anchos": [
+        1024,
+        1600,
+        1920
+      ],
+      "calidad": 68
+    },
+    {
+      "id": "app-zinc",
+      "origen": "2026015_Filtraciones_Royal_Pacific/20260618_Aplicacion_PoliureaTechoZincAvance_03.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "app-losa",
+      "origen": "2026013_IBS/20260600_Final_LosaConZocaloTerminada_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "app-canal",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260709_Aplicacion_AplicacionPoliureaCanal_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.45
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "app-tanque",
+      "origen": "2026021_Buenaventura/20260800_Aplicacion_PoliureaArenaPisoTanques_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "app-piso",
+      "origen": "2026003_Lavery/20260500_Final_PasilloPisoGrisTerminado_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "pat-losa",
+      "origen": "_SIN_PROYECTO/20260401_Inicial_AzoteaVistaCorredorSur_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.5,
+        0.55
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "pat-zinc",
+      "origen": "2026025_Lavery_Techo/20260627_Inicial_TechoZincOxidoTraslapes_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "pat-junta",
+      "origen": "2026013_IBS/20260513_Inicial_JuntaZincParedSelladorRoto_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "paso-1",
+      "origen": "2026013_IBS/20260513_Inicial_TechoZincRojoPanoramica_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "paso-2",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260703_Preparacion_LavadoTechoZincRojo_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.6,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ],
+      "desenfocar": [
+        [
+          0.3,
+          0.1,
+          0.44,
+          0.16
+        ]
+      ]
+    },
+    {
+      "id": "paso-3",
+      "origen": "2026008_Almacenajes_Del_Este/20260618_Sellado_SelladoGrietaOperario_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "paso-4",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260709_Aplicacion_AplicacionPoliureaCanalOperario_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.55,
+        0.45
+      ],
+      "anchos": [
+        480,
+        800
+      ],
+      "desenfocar": [
+        [
+          0.02,
+          0.36,
+          0.11,
+          0.41
+        ]
+      ]
+    },
+    {
+      "id": "paso-5",
+      "origen": "2026013_IBS/20260600_Final_LosaConZocaloTerminada_01.jpg",
+      "recorte": "3:2",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "probeta",
+      "origen_material": "Foto_Muestra_Poliurea_InmersionAgua_desde20260619_20260803.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        800
+      ]
+    },
+    {
+      "id": "caso1-antes",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260600_Inicial_TechoZincRojoPanoramica_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso1-proceso",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260709_Aplicacion_AplicacionPoliureaCanal_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso1-despues",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260707_Aplicacion_AvancePoliureaTechoZinc_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.55
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso2-antes",
+      "origen": "2026015_Filtraciones_Royal_Pacific/20260520_Inicial_TechoTejaPanelesVistaAmplia_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso2-proceso",
+      "origen": "2026015_Filtraciones_Royal_Pacific/20260500_Preparacion_LavadoPresionTechoZincRojo_02.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso2-despues",
+      "origen": "2026015_Filtraciones_Royal_Pacific/20260618_Aplicacion_PoliureaTechoZincAvance_03.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso3-antes",
+      "origen": "2026008_Almacenajes_Del_Este/20260619_Inicial_AleroAntesManchasHumedad_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso3-proceso",
+      "origen": "2026008_Almacenajes_Del_Este/20260618_Sellado_SelladoGrietaOperario_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso3-despues",
+      "origen": "2026008_Almacenajes_Del_Este/20260619_Aplicacion_AleroPoliureaGrisAplicada_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso4-antes",
+      "origen": "2026003_Lavery/20260516_Inicial_PasilloPisoExistente_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso4-proceso",
+      "origen": "2026003_Lavery/20260517_Preparacion_PulidoPisoOperarioPlanta_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "caso4-despues",
+      "origen": "2026003_Lavery/20260726_Final_PasilloLargoPisoGrisTerminado_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "nosotros-camion",
+      "origen": "_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaVistaAmpliaEdificio_01.jpg",
+      "caja": [
+        0.0,
+        0.0,
+        0.66,
+        1.0
+      ],
+      "recorte": "4:3",
+      "foco": [
+        0.45,
+        0.6
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "nosotros-cuadrilla",
+      "origen": "2026027_PH_Plaza_Real/20260700_Cuadrilla_OperarioAzoteaLimpiezaSkyline_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        480,
+        960
+      ]
+    },
+    {
+      "id": "contacto-fondo",
+      "origen": "2026003_Lavery/20260613_Equipo_CamionLopsaPlantaNoche_01.jpg",
+      "recorte": "16:9",
+      "foco": [
+        0.5,
+        0.5
+      ],
+      "anchos": [
+        1024,
+        1600
+      ]
+    },
+    {
+      "id": "og",
+      "origen": "_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaVistaAmpliaEdificio_01.jpg",
+      "caja": [
+        0.0,
+        0.0,
+        0.66,
+        1.0
+      ],
+      "recorte": "1200:630",
+      "foco": [
+        0.45,
+        0.62
+      ],
+      "anchos": [
+        1200
+      ],
+      "formato": "jpg"
+    }
+  ]
+}

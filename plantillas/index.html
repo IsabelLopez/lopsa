@@ -1,0 +1,372 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block cabeza %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ sitio.url }}/#empresa",
+      "name": "{{ sitio.razon_social }}",
+      "url": "{{ sitio.url }}/",
+      "telephone": "{{ sitio.telefono_tel }}",
+      "email": "{{ sitio.correo }}",
+      "description": "{{ sitio.descripcion }}",
+      "image": "{{ sitio.url }}/img/og-1200.jpg",
+      "address": {"@type": "PostalAddress", "streetAddress": "Ave. Marina del Norte, PH Plaza Real, Piso 3, Oficina 306, Costa del Este", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
+      "areaServed": {"@type": "Country", "name": "Panamá"},
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+      ],
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for p in preguntas %}{"@type": "Question", "name": {{ p.pregunta | tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ p.respuesta | tojson }}}}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block contenido %}
+<!-- 1 · Portada -->
+<section class="portada" id="inicio">
+  <picture class="portada__foto">
+    {% set he = img.get('hero-escritorio') %}{% set hm = img.get('hero-movil') %}
+    {% if he %}<source media="(min-width: 768px)" srcset="{% for a in he.anchos %}/img/hero-escritorio-{{ a }}.{{ he.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="100vw">{% endif %}
+    {% if hm %}<img src="/img/hero-movil-{{ hm.anchos[0] }}.{{ hm.formato }}" srcset="{% for a in hm.anchos %}/img/hero-movil-{{ a }}.{{ hm.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="100vw" alt="Techo de zinc en Costa del Este, con la mitad ya cubierta por la membrana de poliurea gris" width="{{ hm.anchos[-1] }}" height="{{ (hm.anchos[-1] / hm.prop) | round | int }}" fetchpriority="high" decoding="async">{% endif %}
+  </picture>
+  <div class="portada__velo" aria-hidden="true"></div>
+  <div class="contenedor portada__texto">
+    <p class="portada__etiqueta">{{ sitio.eyebrow }}</p>
+    <h1 class="portada__titulo">{{ sitio.h1 }}</h1>
+    <p class="portada__lead">{{ sitio.lead }}</p>
+    <div class="portada__botones">
+      <a class="boton boton--dorado" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="portada">{{ m.icono_whatsapp('ico') }} Cotizar por WhatsApp</a>
+      <a class="boton boton--borde" href="#proyectos">Ver proyectos</a>
+    </div>
+    <ul class="portada__chips" aria-label="Datos de LOPSA">
+      {% for c in sitio.chips %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- 2 · Franja de confianza -->
+<section class="franja">
+  <div class="contenedor franja__grid">
+    <p class="franja__posicion">{{ sitio.posicionamiento }}</p>
+    <ul class="franja__triada">
+      {% for t in sitio.triada %}<li><strong>{{ t.titulo }}</strong><span>{{ t.texto }}</span></li>{% endfor %}
+    </ul>
+    <p class="franja__linea">{{ sitio.linea_empresa }}</p>
+  </div>
+</section>
+
+<!-- 3 · Aplicaciones -->
+<section class="seccion" id="aplicaciones">
+  <div class="contenedor">
+    <div class="seccion__cabeza">
+      <p class="etiqueta">Dónde se aplica</p>
+      <h2>Una membrana para cada superficie que filtra o se corroe</h2>
+      <p class="seccion__intro">Cada tarjeta abre WhatsApp con la consulta ya escrita. Solo agregue los metros cuadrados aproximados y la ubicación.</p>
+    </div>
+    <div class="tarjetas">
+      {% for a in aplicaciones %}
+      <article class="tarjeta" id="app-{{ a.id }}">
+        <figure class="tarjeta__foto">
+          {% if a.imagen %}{{ m.foto(a.imagen, a.alt, '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw') }}{% else %}
+          <div class="ilustracion" role="img" aria-label="Esquema de una rampa de estacionamiento con la membrana aplicada">
+            <svg viewBox="0 0 400 300" aria-hidden="true"><rect width="400" height="300" fill="#F0F3F7"/><path d="M40 230 L200 130 L360 130 L360 230 Z" fill="#DDE3EB"/><path d="M40 230 L200 130 L360 130" fill="none" stroke="#1A2F50" stroke-width="4" stroke-linecap="round"/><path d="M60 218 L200 142 L340 142" fill="none" stroke="#C9A554" stroke-width="10" stroke-linecap="round"/><rect x="230" y="150" width="70" height="36" rx="8" fill="#1A2F50"/><circle cx="248" cy="192" r="9" fill="#1D1D1B"/><circle cx="286" cy="192" r="9" fill="#1D1D1B"/><text x="40" y="270" font-family="Inter, sans-serif" font-size="14" fill="#555555">Rampa y losa de estacionamiento · cargas hasta P4</text></svg>
+          </div>
+          {% endif %}
+          {% if a.nota %}<figcaption class="tarjeta__nota">{{ a.nota }}</figcaption>{% endif %}
+        </figure>
+        <div class="tarjeta__cuerpo">
+          <h3>{{ a.titulo }}</h3>
+          <p>{{ a.resumen }}</p>
+          <ul class="vinetas">
+            {% for p in a.puntos %}<li>{{ p }}</li>{% endfor %}
+          </ul>
+          <a class="enlace-wa" href="{{ wa(a.whatsapp) }}" target="_blank" rel="noopener" data-wa="app-{{ a.id }}">{{ m.icono_whatsapp('ico') }} Cotizar {{ a.titulo | lower }}</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="seccion__cierre">{{ sitio.construccion }}</p>
+  </div>
+</section>
+
+<!-- 4 · Por qué poliurea caliente -->
+<section class="seccion seccion--hueso" id="poliurea">
+  <div class="contenedor">
+    <div class="seccion__cabeza">
+      <p class="etiqueta">Por qué poliurea caliente</p>
+      <h2>Lo que vemos en Panamá, y lo que hace el sistema</h2>
+      <p class="seccion__intro">{{ poliurea.intro }}</p>
+    </div>
+    <div class="patologias">
+      {% for p in poliurea.patologias %}
+      <article class="patologia">
+        <figure>{{ m.foto(p.imagen, p.alt, '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw') }}</figure>
+        <h3>{{ p.titulo }}</h3>
+        <p class="patologia__problema"><span>El problema</span>{{ p.problema }}</p>
+        <p class="patologia__solucion"><span>Con poliurea caliente</span>{{ p.solucion }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="patologias__cierre">Antes de cotizar, diagnosticamos. La visita técnica define el sistema, la preparación y el alcance real.</p>
+
+    <ul class="beneficios">
+      {% for b in poliurea.beneficios %}
+      <li><strong>{{ b.titulo }}</strong><span>{{ b.texto }}</span></li>
+      {% endfor %}
+    </ul>
+
+    <div class="tabla-envoltura">
+      <table class="comparativa">
+        <caption>Comparación con los sistemas convencionales</caption>
+        <thead>
+          <tr><th scope="col">Criterio</th>{% for c in poliurea.comparativa.columnas %}<th scope="col"{% if loop.last %} class="destacada"{% endif %}>{{ c }}</th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+          {% for f in poliurea.comparativa.filas %}
+          <tr><th scope="row">{{ f.criterio }}</th>{% for v in f.valores %}<td{% if loop.last %} class="destacada"{% endif %}>{{ v }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">{{ poliurea.comparativa.nota }}</p>
+    <div class="cta-linea">
+      <a class="boton boton--marino" href="{{ wa(sitio.whatsapp_evaluar) }}" target="_blank" rel="noopener" data-wa="poliurea">Cuéntenos su caso</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Cómo trabajamos -->
+<section class="seccion" id="proceso">
+  <div class="contenedor">
+    <div class="seccion__cabeza">
+      <p class="etiqueta">Cómo trabajamos</p>
+      <h2>Cinco pasos, el mismo sistema en cada obra</h2>
+      <p class="seccion__intro">{{ proceso.intro }}</p>
+    </div>
+    <ol class="pasos">
+      {% for p in proceso.pasos %}
+      <li class="paso">
+        <figure class="paso__foto">{{ m.foto(p.imagen, p.alt, '(min-width: 1024px) 40vw, 100vw') }}</figure>
+        <div class="paso__texto">
+          <span class="paso__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span>
+          <h3>{{ p.titulo }}</h3>
+          <p>{{ p.texto }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <div class="sistema">
+      <div class="sistema__esquema">
+        <div class="pestanas" role="tablist" aria-label="Tipo de soporte">
+          <button role="tab" aria-selected="true" aria-controls="capas-concreto" id="tab-concreto" type="button">Sobre concreto</button>
+          <button role="tab" aria-selected="false" aria-controls="capas-metal" id="tab-metal" type="button" tabindex="-1">Sobre metal</button>
+        </div>
+        <div class="capas" id="capas-concreto" role="tabpanel" aria-labelledby="tab-concreto">
+          <ol class="capas__lista">
+            {% for c in proceso.capas.concreto | reverse %}<li>{{ c }}</li>{% endfor %}
+          </ol>
+        </div>
+        <div class="capas" id="capas-metal" role="tabpanel" aria-labelledby="tab-metal" hidden>
+          <ol class="capas__lista">
+            {% for c in proceso.capas.metal | reverse %}<li>{{ c }}</li>{% endfor %}
+          </ol>
+        </div>
+        <p class="nota">El esquema muestra las capas de abajo hacia arriba. Espesor de diseño de la membrana: 2,0 kg/m².</p>
+      </div>
+      <div class="sistema__tabla">
+        <h3>{{ proceso.tecnica.titulo }}</h3>
+        <div class="tabla-envoltura">
+          <table class="tecnica">
+            <tbody>
+              {% for f in proceso.tecnica.filas %}<tr><th scope="row">{{ f.dato }}</th><td>{{ f.valor }}</td></tr>{% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="nota">{{ proceso.tecnica.nota }}</p>
+      </div>
+    </div>
+
+    <div class="respaldo">
+      <figure class="respaldo__probeta">
+        {{ m.foto(proceso.probeta.imagen, proceso.probeta.alt, '(min-width: 1024px) 33vw, 100vw') }}
+        <figcaption>{{ proceso.probeta.texto }}</figcaption>
+      </figure>
+      <div class="respaldo__lista">
+        <h3>{{ proceso.respaldo.titulo }}</h3>
+        <ul>
+          {% for r in proceso.respaldo['items'] %}<li><span class="insignia">{{ r.badge }}</span><span>{{ r.texto }}</span></li>{% endfor %}
+        </ul>
+        <p class="nota">{{ proceso.respaldo.nota }}</p>
+      </div>
+    </div>
+    <div class="cta-linea">
+      <a class="boton boton--marino" href="#contacto">Solicitar evaluación técnica</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Proyectos -->
+<section class="seccion seccion--hueso" id="proyectos">
+  <div class="contenedor">
+    <div class="seccion__cabeza">
+      <p class="etiqueta">Proyectos</p>
+      <h2>Mostramos el proceso porque ahí se decide la calidad</h2>
+      <p class="seccion__intro">{{ proyectos.intro }}</p>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtrar proyectos por tipo">
+      {% for f in proyectos.filtros %}<button type="button" data-filtro="{{ f }}"{% if loop.first %} aria-pressed="true"{% else %} aria-pressed="false"{% endif %}>{{ f }}</button>{% endfor %}
+    </div>
+    <div class="casos">
+      {% for c in proyectos.casos %}
+      <article class="caso" data-tipo="{{ c.tipo }}" id="caso-{{ c.id }}">
+        <div class="caso__fotos">
+          {% for f in c.fotos %}
+          <figure>
+            <button type="button" class="caso__abrir" data-foto="{{ f.imagen }}" data-alt="{{ f.alt }}" aria-label="Ampliar: {{ f.etapa }}">
+              {{ m.foto(f.imagen, f.alt, '(min-width: 1024px) 22vw, (min-width: 640px) 33vw, 100vw') }}
+            </button>
+            <figcaption>{{ f.etapa }}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+        <div class="caso__texto">
+          <h3>{{ c.titulo }}</h3>
+          <dl class="caso__ficha">
+            {% for k, v in c.ficha.items() %}<div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}
+          </dl>
+          <p><strong>Reto.</strong> {{ c.reto }}</p>
+          <p><strong>Solución.</strong> {{ c.solucion }}</p>
+          <p><strong>Resultado.</strong> {{ c.resultado }}</p>
+          <p class="caso__sistema">{{ c.sistema }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="cta-linea">
+      <a class="boton boton--dorado" href="{{ wa(proyectos.cta_whatsapp) }}" target="_blank" rel="noopener" data-wa="proyectos">{{ m.icono_whatsapp('ico') }} {{ proyectos.cta }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Nosotros -->
+<section class="seccion seccion--marino" id="nosotros">
+  <div class="contenedor nosotros">
+    <div class="nosotros__texto">
+      <p class="etiqueta etiqueta--dorada">Quién responde</p>
+      <h2>Quién responde por cada metro cuadrado</h2>
+      <p>{{ sitio.quienes }}</p>
+      {% if sitio.responsable.mostrar %}
+      <p class="nosotros__responsable"><strong>{{ sitio.responsable.nombre }}</strong> · {{ sitio.responsable.cargo }}<br>{{ sitio.responsable.titulo }} ({{ sitio.responsable.idoneidad }})</p>
+      {% endif %}
+      <ol class="compromisos">
+        {% for c in sitio.compromisos %}
+        <li><span class="compromisos__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span><strong>{{ c.titulo }}</strong><span>{{ c.texto }}</span></li>
+        {% endfor %}
+      </ol>
+      <a class="boton boton--dorado" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="nosotros">{{ m.icono_whatsapp('ico') }} {% if sitio.responsable.mostrar %}Hablar con el ingeniero{% else %}Hablar con LOPSA{% endif %}</a>
+    </div>
+    <div class="nosotros__fotos">
+      <figure>{{ m.foto('nosotros-camion', 'Camión de LOPSA rotulado, en una obra en Ciudad de Panamá', '(min-width: 1024px) 40vw, 100vw') }}<figcaption>Unidad móvil de aplicación en caliente</figcaption></figure>
+      <figure>{{ m.foto('nosotros-cuadrilla', 'Técnico de LOPSA preparando la franja perimetral de una azotea en Costa del Este', '(min-width: 1024px) 40vw, 100vw') }}<figcaption>Cuadrilla propia en azotea, Costa del Este</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Preguntas frecuentes -->
+<section class="seccion" id="preguntas">
+  <div class="contenedor contenedor--angosto">
+    <div class="seccion__cabeza">
+      <p class="etiqueta">Preguntas frecuentes</p>
+      <h2>Lo que nos preguntan antes de contratar</h2>
+    </div>
+    <div class="faq">
+      {% for p in preguntas %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary>{{ p.pregunta }}</summary>
+        <p>{{ p.respuesta }}</p>
+      </details>
+      {% endfor %}
+    </div>
+    <p class="seccion__cierre">¿Otra pregunta? <a href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="faq">Escríbanos por WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- 9 · Contacto -->
+<section class="seccion contacto" id="contacto">
+  <div class="contacto__fondo" aria-hidden="true">{{ m.foto('contacto-fondo', '', '100vw') }}</div>
+  <div class="contenedor contacto__grid">
+    <div class="contacto__col">
+      <p class="etiqueta etiqueta--dorada">Contacto</p>
+      <h2>Solicite su cotización sin compromiso</h2>
+      <p class="contacto__sub">Diagnóstico técnico y cotización detallada por escrito.</p>
+
+      <div class="cotizador" id="cotizador">
+        <p class="cotizador__titulo">Cotizar por WhatsApp en tres toques</p>
+        <p class="cotizador__paso">1. ¿Qué superficie?</p>
+        <div class="chips" role="group" aria-label="Tipo de superficie">
+          {% for a in aplicaciones %}<button type="button" data-tipo="{{ a.titulo }}" aria-pressed="false">{{ a.titulo }}</button>{% endfor %}
+        </div>
+        <div class="cotizador__campos">
+          <label>2. Área aproximada<input type="number" inputmode="numeric" min="1" id="cot-area" placeholder="m²"></label>
+          <label>3. Ubicación<input type="text" id="cot-lugar" placeholder="Barrio o ciudad"></label>
+        </div>
+        <a class="boton boton--dorado" id="cot-enviar" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="cotizador">{{ m.icono_whatsapp('ico') }} Abrir WhatsApp con mi consulta</a>
+      </div>
+
+      <ul class="contacto__datos">
+        <li><span>WhatsApp y teléfono</span><a href="tel:{{ sitio.telefono_tel }}">{{ sitio.telefono_visible }}</a></li>
+        <li><span>Correo</span><a href="mailto:{{ sitio.correo }}">{{ sitio.correo }}</a></li>
+        <li><span>Oficina</span>{{ sitio.direccion_linea }}</li>
+        <li><span>Horario</span>{{ sitio.horario }}</li>
+        <li><span>Cobertura</span>{{ sitio.cobertura }}</li>
+      </ul>
+    </div>
+
+    <form class="formulario" name="cotizacion" method="POST" action="/gracias/" data-netlify="true" netlify-honeypot="campo-extra">
+      <input type="hidden" name="form-name" value="cotizacion">
+      <input type="hidden" name="origen" id="form-origen" value="web">
+      <p class="visualmente-oculto"><label>No llenar este campo: <input name="campo-extra"></label></p>
+      <h3>O déjenos sus datos</h3>
+      <div class="formulario__grid">
+        <label>Nombre <span aria-hidden="true">*</span><input type="text" name="nombre" required autocomplete="name"></label>
+        <label>Empresa o edificio<input type="text" name="empresa" autocomplete="organization"></label>
+        <label>Correo <span aria-hidden="true">*</span><input type="email" name="correo" required autocomplete="email"></label>
+        <label>Teléfono o WhatsApp <span aria-hidden="true">*</span><input type="tel" name="telefono" required autocomplete="tel"></label>
+        <label>Tipo de proyecto <span aria-hidden="true">*</span>
+          <select name="tipo" required>
+            <option value="">Seleccione</option>
+            {% for a in aplicaciones %}<option>{{ a.titulo }}</option>{% endfor %}
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Área aproximada (m²)<input type="number" name="area" inputmode="numeric" min="1"></label>
+        <label class="formulario__ancho">Ubicación (ciudad o sector)<input type="text" name="ubicacion"></label>
+        <label class="formulario__ancho">Cuéntenos el problema<textarea name="mensaje" rows="4"></textarea></label>
+      </div>
+      <label class="formulario__acepto"><input type="checkbox" name="acepta" required> He leído la <a href="/privacidad/">política de privacidad</a>.</label>
+      <button class="boton boton--marino" type="submit">Solicitar cotización</button>
+      <p class="nota">Respondemos desde {{ sitio.correo }} y por WhatsApp.</p>
+    </form>
+  </div>
+</section>
+
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <button type="button" class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar">×</button>
+  <img id="visor-img" src="" alt="">
+  <p id="visor-pie"></p>
+</dialog>
+{% endblock %}

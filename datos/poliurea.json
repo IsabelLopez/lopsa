@@ -1,0 +1,44 @@
+{
+  "intro": "En Panamá llueve nueve meses al año y el sol hace el resto. Estas son las tres patologías que más encontramos en las visitas de diagnóstico y lo que hace la poliurea caliente en cada caso.",
+  "patologias": [
+    {
+      "titulo": "Losas que empozan y fisuran",
+      "imagen": "pat-losa",
+      "alt": "Azotea de un edificio con agua empozada y el manto viejo deteriorado",
+      "problema": "El agua estancada y el sol dilatan y agrietan la losa; el manto viejo se levanta en las juntas y en los encuentros con el muro.",
+      "solucion": "La membrana es continua, elástica (más del 400 %) y sube por el zócalo: el agua no encuentra por dónde entrar."
+    },
+    {
+      "titulo": "Traslapes y tornillería oxidados en el zinc",
+      "imagen": "pat-zinc",
+      "alt": "Techo de zinc con óxido en los traslapes y la tornillería",
+      "problema": "Cada tornillo y cada traslape es un punto de filtración, y el óxido avanza por debajo de la pintura hasta perforar la lámina.",
+      "solucion": "La poliurea encapsula tornillos y traslapes y protege la lámina de la corrosión, sin desmontar el techo."
+    },
+    {
+      "titulo": "Selladores y mantos que se despegan",
+      "imagen": "pat-junta",
+      "alt": "Junta entre un techo de zinc y una pared con el sellador roto",
+      "problema": "Los selladores y los sistemas a rodillo pierden adherencia con el sol y la humedad, y se vuelven a reparar cada pocos años.",
+      "solucion": "Aplicada en caliente y a alta presión sobre el soporte imprimado, la membrana cura en segundos y forma una sola pieza con la superficie."
+    }
+  ],
+  "beneficios": [
+    {"titulo": "Membrana continua, sin juntas", "texto": "Una sola pieza sobre toda la superficie, incluidos zócalos, pasantes y encuentros."},
+    {"titulo": "Cura en segundos", "texto": "Tiempo de gel de 8 a 14 segundos; pisable a los 5 minutos. Sus operaciones no se detienen."},
+    {"titulo": "Elasticidad superior al 400 %", "texto": "Acompaña los movimientos de la estructura y puentea fisuras sin romperse."},
+    {"titulo": "Resiste el clima de Panamá", "texto": "Temperatura de servicio de -40 °C a +80 °C y acabado con protección UV para el sol directo."},
+    {"titulo": "100 % sólidos, sin disolventes", "texto": "Sin compuestos orgánicos volátiles: se aplica en plantas en operación y en espacios cerrados con ventilación."}
+  ],
+  "comparativa": {
+    "columnas": ["Manto asfáltico", "Acrílico o poliuretano a rodillo", "Poliurea caliente"],
+    "filas": [
+      {"criterio": "Juntas y solapes", "valores": ["Sí, cada rollo", "No, pero en capas finas", "No: membrana continua"]},
+      {"criterio": "Puesta en servicio", "valores": ["Días", "Horas a días, según el clima", "Minutos: pisable a los 5"]},
+      {"criterio": "Depende del clima al aplicar", "valores": ["Sí", "Sí: lluvia y humedad lo arruinan", "No: cura en segundos"]},
+      {"criterio": "Encuentros y pasantes", "valores": ["Puntos débiles", "Depende del sellador", "Encapsulados con la misma membrana"]},
+      {"criterio": "Vida útil", "valores": ["Reparación periódica", "Reparación periódica", "Certificada: 25 años en cubiertas (categoría W3)"]}
+    ],
+    "nota": "Comparación cualitativa entre sistemas. La vida útil de 25 años corresponde a la clasificación W3 del sistema de poliurea caliente según la Evaluación Técnica Europea para cubiertas."
+  }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lopsa.com.pa/sitemap.xml

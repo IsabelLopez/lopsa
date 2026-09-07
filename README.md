@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# lopsa.com.pa — sitio web de LOPSA, S.A.
 
-## Getting Started
+Sitio estático de **LOPSA, S.A.**, aplicadores especialistas en poliurea caliente en Panamá. Una página larga más
+`/privacidad`, `/aviso-legal`, `/gracias` y `/404`. Sin base de datos, sin framework: HTML, CSS y JavaScript
+generados con Python a partir de archivos de datos.
 
-First, run the development server:
+El brief, los textos fuente, la identidad visual, el plan de trabajo y el estado vivo están en el repositorio
+de gestión de LOPSA: `04_COMERCIAL/Web_LOPSA/`. Este repositorio es **el código y lo que se publica**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Cómo está organizado
+
+| Carpeta / archivo | Qué es |
+|---|---|
+| `datos/*.json` | **El contenido.** `sitio.json` (datos de la empresa, textos de portada, contacto), `aplicaciones.json`, `poliurea.json`, `proceso.json`, `proyectos.json`, `preguntas.json` y `imagenes.json` (manifiesto de fotos). Para cambiar un texto o agregar un proyecto se edita aquí. |
+| `plantillas/*.html` | Plantillas Jinja2: `base.html` (cabecera, pie, metadatos) y una por página. |
+| `estaticos/` | CSS, JavaScript, logos, favicons y las fotos ya optimizadas (`img/`). |
+| `preparar_imagenes.py` | Toma las fotos originales de `Fotos_LOPSA/` (repositorio de gestión), las recorta, difumina rótulos ajenos y exporta WebP **sin EXIF ni GPS**. |
+| `construir_sitio.py` | Genera `dist/` (datos + plantillas + estáticos + `robots.txt` + `sitemap.xml`). |
+| `verificar_sitio.py` | Revisa `dist/`: palabras prohibidas, un solo H1, imágenes y enlaces, metadatos y peso. Sale con error si algo falla. |
+| `dist/` | **Lo que se publica.** Se versiona para que Netlify lo sirva sin construir nada. |
+| `netlify.toml` | Carpeta a publicar, cabeceras de seguridad, caché y redirecciones. |
+| `legacy/coming-soon/` | El «Coming Soon» en Next.js entregado por Isabel López el 02-sep-2026 (etiqueta `coming-soon-isabel`). Solo referencia. |
+
+## Flujo de trabajo
+
+```
+python preparar_imagenes.py      # solo cuando cambia el manifiesto de fotos
+python construir_sitio.py        # datos + plantillas → dist/
+python verificar_sitio.py        # debe decir OK
+python -m http.server 8080 --directory dist   # previsualizar en http://localhost:8080
+git add -A && git commit -m "…" && git push
+npx netlify-cli deploy --prod --dir=dist       # publicar (token de Netlify de LOPSA)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requisitos: Python 3.12 con `jinja2` y `Pillow` (el `.venv` del repositorio de gestión ya los tiene). Node solo
+hace falta para la CLI de Netlify (`npx`), no para el sitio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Reglas de contenido (no se negocian)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Español con tildes y ñ en todo texto visible.
+- Nunca se nombran marcas de material ni de equipo.
+- «Garantía por escrito», sin número de años. Los 25 años solo como vida útil certificada del sistema en cubiertas.
+- Posicionamiento 100 % poliurea caliente; la construcción es una línea al final.
+- Fotos propias, sin caras reconocibles sin autorización, sin rótulos de terceros y sin datos de GPS.
+- Sin datos privados: el único teléfono es el +507 6604-4196 y los correos son `ventas@` y `admin@`.
 
-## Learn More
+## Publicación y accesos
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Hosting:** Netlify, cuenta de LOPSA (`admin@lopsa.com.pa`). El token vive en `07_HERRAMIENTAS/config/` del
+  repositorio de gestión, nunca aquí.
+- **Formulario:** Netlify Forms (`cotizacion`), con aviso por correo a `ventas@` y copia a Manuel; se configura en
+  el panel de Netlify.
+- **DNS:** zona en Cloudflare. Solo se tocan los registros A y CNAME de `lopsa.com.pa` y `www`; los servidores de
+  nombre en NIC y el MX de Google no se tocan nunca.
+- **Medición:** `sitio.json` → `gtm_id`. Vacío = no se carga nada.

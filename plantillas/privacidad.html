@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block titulo %}Política de privacidad | LOPSA{% endblock %}
+{% block descripcion %}Política de privacidad de LOPSA, S.A., aplicadores especialistas en poliurea caliente en Panamá: qué datos recogemos, para qué y cómo ejercer sus derechos.{% endblock %}
+{% block canonical %}/privacidad/{% endblock %}
+{% block contenido %}
+<article class="pagina-texto">
+  <div class="contenedor contenedor--angosto">
+    <p class="etiqueta">Legal</p>
+    <h1>Política de privacidad</h1>
+    <p class="pagina-texto__fecha">Última actualización: {{ sitio.privacidad_fecha }}</p>
+
+    <h2>1. Quiénes somos</h2>
+    <p>{{ sitio.razon_social }} (RUC {{ sitio.ruc }}) es una empresa panameña especialista en impermeabilización y revestimientos con poliurea caliente, con domicilio en Costa del Este, Ave. Marina del Norte, PH Plaza Real, Piso 3, Oficina 306, Corregimiento Juan Díaz, Ciudad de Panamá, República de Panamá. Para efectos de esta política, {{ sitio.razon_social }} es la responsable del tratamiento de los datos personales que se recogen a través de este sitio web y de nuestros canales de atención.</p>
+
+    <h2>2. Qué datos recopilamos</h2>
+    <p>Podemos recopilar: (a) datos de contacto que usted nos facilita voluntariamente (nombre, empresa, teléfono, correo electrónico, dirección de la obra o proyecto); (b) el contenido de los mensajes que nos envía por los formularios del sitio, por correo o por nuestros canales de mensajería (incluido WhatsApp); (c) fotografías, planos y documentos que usted comparta para cotizar o ejecutar un servicio; y (d) datos técnicos básicos de navegación (tipo de navegador, páginas visitadas) cuando el sitio utilice cookies o herramientas de medición.</p>
+
+    <h2>3. Para qué usamos sus datos</h2>
+    <p>Utilizamos los datos para: responder consultas y solicitudes de cotización; preparar y dar seguimiento a propuestas; coordinar y ejecutar los proyectos contratados; emitir facturas y cumplir obligaciones contables y fiscales; y mantener comunicación comercial relacionada con nuestros servicios. No vendemos ni alquilamos datos personales a terceros.</p>
+
+    <h2>4. WhatsApp y otros canales de mensajería</h2>
+    <p>LOPSA utiliza la Plataforma de WhatsApp Business (un servicio de Meta Platforms, Inc.) para atender consultas y coordinar proyectos. Al escribirnos por WhatsApp, sus mensajes se procesan a través de dicha plataforma conforme a los términos y la política de privacidad de WhatsApp/Meta, y pueden ser gestionados internamente con herramientas tecnológicas de apoyo (por ejemplo, sistemas que nos ayudan a organizar solicitudes, archivar documentos y preparar respuestas). El uso de estas herramientas se limita a los fines descritos en esta política.</p>
+
+    <h2>5. Con quién compartimos los datos</h2>
+    <p>Solo compartimos datos personales con: (a) proveedores de servicios que nos apoyan en la operación (por ejemplo, servicios de contabilidad, plataformas tecnológicas como Google Workspace, Meta/WhatsApp y el servicio que recibe los formularios de este sitio, y servicios de facturación electrónica autorizados por la DGI), quienes los tratan por cuenta de LOPSA; y (b) autoridades competentes cuando una obligación legal así lo exija.</p>
+
+    <h2>6. Conservación y seguridad</h2>
+    <p>Conservamos los datos durante el tiempo necesario para atender su solicitud, ejecutar los contratos y cumplir los plazos legales aplicables (contables, fiscales y de garantía de nuestros trabajos). Aplicamos medidas razonables de seguridad técnicas y organizativas para proteger la información contra acceso no autorizado, pérdida o alteración.</p>
+
+    <h2>7. Sus derechos</h2>
+    <p>De conformidad con la Ley 81 de 26 de marzo de 2019 sobre Protección de Datos Personales de la República de Panamá, usted puede ejercer sus derechos de acceso, rectificación, cancelación, oposición y portabilidad escribiendo a <a href="mailto:{{ sitio.correo_datos }}">{{ sitio.correo_datos }}</a>. Atenderemos su solicitud en los plazos que establece la ley.</p>
+
+    <h2>8. Eliminación de sus datos</h2>
+    <p>Si desea que eliminemos los datos personales que tenemos sobre usted, escríbanos a <a href="mailto:{{ sitio.correo_datos }}">{{ sitio.correo_datos }}</a> con el asunto «Eliminación de datos», indicando el nombre y el número de teléfono o el correo con el que nos contactó. Confirmaremos la eliminación dentro del plazo legal, salvo los datos que debamos conservar por obligación contable, fiscal o de garantía.</p>
+
+    <h2>9. Cambios a esta política</h2>
+    <p>Podemos actualizar esta política para reflejar cambios legales u operativos. La versión vigente estará siempre publicada en este sitio web con su fecha de última actualización.</p>
+
+    <h2>10. Contacto</h2>
+    <p>{{ sitio.razon_social }} · {{ sitio.direccion_linea }} · Tel.: <a href="tel:{{ sitio.telefono_tel }}">{{ sitio.telefono_visible }}</a> · Correo: <a href="mailto:{{ sitio.correo_datos }}">{{ sitio.correo_datos }}</a></p>
+  </div>
+</article>
+{% endblock %}

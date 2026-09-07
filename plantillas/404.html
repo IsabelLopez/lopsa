@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block titulo %}Página no encontrada | LOPSA{% endblock %}
+{% block descripcion %}La página que busca no existe. Vuelva al inicio o escríbanos por WhatsApp.{% endblock %}
+{% block canonical %}/404.html{% endblock %}
+{% block cabeza %}<meta name="robots" content="noindex">{% endblock %}
+{% block contenido %}
+<article class="pagina-texto pagina-texto--centro">
+  <div class="contenedor contenedor--angosto">
+    <p class="etiqueta">Error 404</p>
+    <h1>Esa página no existe</h1>
+    <p class="pagina-texto__lead">Puede que el enlace esté mal escrito o que la página se haya movido.</p>
+    <p><a class="boton boton--marino" href="/">Ir al inicio</a> <a class="boton boton--dorado" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="404">{{ m.icono_whatsapp('ico') }} Escribir por WhatsApp</a></p>
+  </div>
+</article>
+{% endblock %}
