@@ -19,7 +19,7 @@ PROHIBIDAS = [
     # marcas de material y equipo (regla de Manuel)
     "graco", "alchimica", "hyperdesmo", "adipan", "drizoro", "polinova", "tecnopol", "sherwin",
     # promesas no ratificadas / cifras de garantía
-    "precio fijo", "24 horas hábiles", "24 h hábiles", "garantía de 10 años", "10 años de garantía",
+    "precio fijo", "24 horas hábiles", "24 h hábiles",  # «10 años contra filtraciones» ratificado por Manuel el 09-sep-2026
     "garantía de 25 años", "25 años de garantía",
     # claims prohibidos
     "certificado nsf", "aprobado por el minsa", "fda", "farmacéutic", "auto-extinguible", "ignífug",

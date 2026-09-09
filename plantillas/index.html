@@ -40,7 +40,7 @@
   <picture class="portada__foto">
     {% set he = img.get('hero-escritorio') %}{% set hm = img.get('hero-movil') %}
     {% if he %}<source media="(min-width: 768px)" srcset="{% for a in he.anchos %}/img/hero-escritorio-{{ a }}.{{ he.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="100vw">{% endif %}
-    {% if hm %}<img src="/img/hero-movil-{{ hm.anchos[0] }}.{{ hm.formato }}" srcset="{% for a in hm.anchos %}/img/hero-movil-{{ a }}.{{ hm.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="100vw" alt="Aplicador proyectando un recubrimiento en caliente sobre una azotea, bajo cielo despejado" width="{{ hm.anchos[-1] }}" height="{{ (hm.anchos[-1] / hm.prop) | round | int }}" fetchpriority="high" decoding="async">{% endif %}
+    {% if hm %}<img src="/img/hero-movil-{{ hm.anchos[0] }}.{{ hm.formato }}" srcset="{% for a in hm.anchos %}/img/hero-movil-{{ a }}.{{ hm.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="100vw" alt="Camión de LOPSA, rotulado «Especialistas en poliurea caliente», frente a un edificio en construcción" width="{{ hm.anchos[-1] }}" height="{{ (hm.anchos[-1] / hm.prop) | round | int }}" fetchpriority="high" decoding="async">{% endif %}
   </picture>
   <div class="portada__velo" aria-hidden="true"></div>
   <div class="contenedor portada__texto">

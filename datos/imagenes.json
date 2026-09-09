@@ -19,26 +19,19 @@
     },
     {
       "id": "hero-movil",
-      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Web_LOPSA/05_Portafolio/_Candidatas_Portada_20260907/libres_01.jpg",
-      "licencia": "Unsplash License (Ömer Haktan Bulut, unsplash.com/photos/ce2r9sPR_9E) — uso comercial sin atribución; NO es obra de LOPSA",
+      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto/_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaFrenteEdificioObra_01.jpg",
+      "nota": "Decision Manuel 09-sep-2026: portada = camion rotulado con el edificio de fondo. Version vertical de la misma escena para celular.",
       "recorte": "4:5",
       "foco": [
-        0.66,
-        0.55
+        0.5,
+        0.58
       ],
       "anchos": [
         480,
         768,
-        1024
+        1080
       ],
-      "desenfocar": [
-        [
-          0.7,
-          0.321,
-          0.724,
-          0.346
-        ]
-      ]
+      "calidad": 72
     },
     {
       "id": "hero-propia-escritorio",
@@ -57,11 +50,11 @@
     },
     {
       "id": "hero-escritorio",
-      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Web_LOPSA/05_Portafolio/_Candidatas_Portada_20260907/libres_01.jpg",
-      "licencia": "Unsplash License — ver hero-movil",
+      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto/_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaVistaAmpliaEdificio_01.jpg",
+      "nota": "Decision Manuel 09-sep-2026: la foto COMPLETA (16:9 nativa, sin recorte). Se difumina solo el letrero ajeno de la derecha (QR, Grupo Do It, telefono y logos): regla de marcas ajenas.",
       "recorte": "16:9",
       "foco": [
-        0.55,
+        0.5,
         0.5
       ],
       "anchos": [
@@ -71,13 +64,25 @@
       ],
       "desenfocar": [
         [
-          0.7,
-          0.321,
-          0.724,
-          0.346
+          0.775,
+          0.705,
+          0.84,
+          0.795
+        ],
+        [
+          0.84,
+          0.705,
+          0.975,
+          0.83
+        ],
+        [
+          0.9,
+          0.82,
+          0.995,
+          0.865
         ]
       ],
-      "calidad": 72
+      "calidad": 70
     },
     {
       "id": "app-zinc",
