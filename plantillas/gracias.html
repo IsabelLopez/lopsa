@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block titulo %}Solicitud recibida | LOPSA{% endblock %}
+{% block descripcion %}Recibimos su solicitud de cotización. Le contactaremos por WhatsApp o correo para coordinar la visita técnica.{% endblock %}
+{% block canonical %}/gracias/{% endblock %}
+{% block cabeza %}<meta name="robots" content="noindex">{% endblock %}
+{% block contenido %}
+<article class="pagina-texto pagina-texto--centro">
+  <div class="contenedor contenedor--angosto">
+    <p class="etiqueta">Solicitud recibida</p>
+    <h1>Gracias. Ya tenemos su solicitud.</h1>
+    <p class="pagina-texto__lead">Le contactaremos por WhatsApp o correo para coordinar la visita técnica. Mientras tanto, puede adelantarnos fotos de la superficie: eso acelera la cotización.</p>
+    <p><a class="boton boton--dorado" href="{{ wa(sitio.whatsapp_evaluar) }}" target="_blank" rel="noopener" data-wa="gracias">{{ m.icono_whatsapp('ico') }} Adelantar fotos por WhatsApp</a></p>
+    <h2>Lo que sigue</h2>
+    <ol class="lista-pasos">
+      <li><strong>Revisamos su solicitud</strong> y le escribimos para confirmar los datos y agendar la visita.</li>
+      <li><strong>Visita técnica:</strong> medimos, fotografiamos y documentamos las patologías.</li>
+      <li><strong>Cotización detallada por escrito</strong>, con alcance, metros cuadrados y sistema propuesto.</li>
+    </ol>
+    <p><a href="/">Volver al inicio</a></p>
+  </div>
+</article>
+{% endblock %}

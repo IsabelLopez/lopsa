@@ -1,0 +1,311 @@
+{
+ "hero-propia-movil": {
+  "anchos": [
+   480,
+   768,
+   1080
+  ],
+  "prop": 0.8,
+  "formato": "webp",
+  "huella": "f2385fec6f"
+ },
+ "hero-movil": {
+  "anchos": [
+   480,
+   768,
+   1080
+  ],
+  "prop": 0.8,
+  "formato": "webp",
+  "huella": "bcf4e5535b"
+ },
+ "hero-propia-escritorio": {
+  "anchos": [
+   1024,
+   1600,
+   1920
+  ],
+  "prop": 1.7778,
+  "formato": "webp",
+  "huella": "5e5eedb464"
+ },
+ "hero-escritorio": {
+  "anchos": [
+   1024,
+   1600,
+   1920
+  ],
+  "prop": 1.7778,
+  "formato": "webp",
+  "huella": "977bb24b82"
+ },
+ "app-zinc": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "0c1fa6684b"
+ },
+ "app-losa": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "3f07523806"
+ },
+ "app-canal": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "0a5857b6fb"
+ },
+ "app-tanque": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "35c11e6469"
+ },
+ "app-piso": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "a8243b13ea"
+ },
+ "pat-losa": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "b51b168ebb"
+ },
+ "pat-zinc": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "51f0fc8d2e"
+ },
+ "pat-junta": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "ebc4232c73"
+ },
+ "paso-1": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "ab92c9cac8"
+ },
+ "paso-2": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "9903e16bbf"
+ },
+ "paso-3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "38ab9ad3c0"
+ },
+ "paso-4": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "4ebe2a99df"
+ },
+ "paso-5": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "5e77b0a325"
+ },
+ "probeta": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "8f69ac90a3"
+ },
+ "caso1-antes": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "9054c706e9"
+ },
+ "caso1-proceso": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "17f0c49d57"
+ },
+ "caso1-despues": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "505c8cf9c0"
+ },
+ "caso2-antes": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "ac9155faaa"
+ },
+ "caso2-proceso": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "d44b1aa11d"
+ },
+ "caso2-despues": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "2a7ec31fd5"
+ },
+ "caso3-antes": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "fd287aef6d"
+ },
+ "caso3-proceso": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "e0088d0779"
+ },
+ "caso3-despues": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "653c9bf44d"
+ },
+ "caso4-antes": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "5ea06b8155"
+ },
+ "caso4-proceso": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "a505a9311c"
+ },
+ "caso4-despues": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "376ef7da68"
+ },
+ "nosotros-camion": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "4f04c12f7b"
+ },
+ "nosotros-cuadrilla": {
+  "anchos": [
+   480,
+   960
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "5857a91a9c"
+ },
+ "contacto-fondo": {
+  "anchos": [
+   1024,
+   1600
+  ],
+  "prop": 1.7778,
+  "formato": "webp",
+  "huella": "d96a881a50"
+ },
+ "og": {
+  "anchos": [
+   1200
+  ],
+  "prop": 1.9048,
+  "formato": "jpg",
+  "huella": "b2948fa837"
+ }
+}

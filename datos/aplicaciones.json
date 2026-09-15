@@ -1,0 +1,87 @@
+[
+  {
+    "id": "zinc",
+    "titulo": "Techos de zinc y galeras",
+    "imagen": "app-zinc",
+    "alt": "Techo de zinc de una residencia en Costa del Este, mitad con la membrana de poliurea gris aplicada",
+    "resumen": "Anticorrosión e impermeabilización en una sola membrana, sobre la lámina existente, sin desmontar el techo.",
+    "puntos": [
+      "Se adhiere al zinc galvanizado y al zinc pintado",
+      "Encapsula traslapes, tornillería y extractores",
+      "Se aplica por tramos: la operación de la galera sigue"
+    ],
+    "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar la impermeabilización de un techo de zinc.",
+    "filtro": "Techos de zinc"
+  },
+  {
+    "id": "losas",
+    "titulo": "Losas y azoteas de concreto",
+    "imagen": "app-losa",
+    "alt": "Losa de concreto terminada con la membrana gris subiendo por el zócalo del parapeto",
+    "resumen": "Membrana continua sobre la losa, con el sellado de juntas y encuentros losa-muro que los sistemas tradicionales se saltan.",
+    "puntos": [
+      "Sube por el zócalo y encapsula pasantes y desagües",
+      "Sin juntas ni solapes por donde entre el agua",
+      "Acabado con protección UV, transitable"
+    ],
+    "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar la impermeabilización de una losa o azotea de concreto.",
+    "filtro": "Losas"
+  },
+  {
+    "id": "metal",
+    "titulo": "Canales y estructuras metálicas",
+    "imagen": "app-canal",
+    "alt": "Aplicación de poliurea sobre el canal metálico de una galera industrial",
+    "resumen": "Recubrimiento anticorrosivo y elástico para canalones, limahoyas y estructuras de acero expuestas a la intemperie.",
+    "puntos": [
+      "Puentea fisuras, traslapes y perforaciones",
+      "Resiste el agua estancada y la corrosión",
+      "Sin soldadura ni reemplazo del canal"
+    ],
+    "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar el recubrimiento de un canal o una estructura metálica.",
+    "filtro": "Metal"
+  },
+  {
+    "id": "tanques",
+    "titulo": "Tanques y depósitos de agua",
+    "imagen": "app-tanque",
+    "alt": "Piso de un tanque de agua con la poliurea aplicada en tono arena",
+    "resumen": "Revestimiento interior continuo para tanques y depósitos de concreto, incluidos los de agua potable.",
+    "puntos": [
+      "Membrana ensayada sin migración al agua potable según norma europea",
+      "Encapsula drenajes, escalones y encuentros",
+      "Sin juntas donde se acumule sedimento"
+    ],
+    "nota": "Obra en curso",
+    "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar el revestimiento de un tanque o depósito de agua.",
+    "filtro": "Tanques"
+  },
+  {
+    "id": "pisos",
+    "titulo": "Pisos industriales y plantas de alimentos",
+    "imagen": "app-piso",
+    "alt": "Pasillo de una planta de alimentos con el piso industrial gris terminado",
+    "resumen": "Pisos continuos, lavables y resistentes al tránsito, aptos para suelos de industria alimentaria según el Reglamento (CE) 852/2004.",
+    "puntos": [
+      "Jornadas nocturnas y por zonas: la planta no se detiene",
+      "Sin juntas donde se acumule suciedad",
+      "Acabado antideslizante opcional"
+    ],
+    "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar el revestimiento de un piso industrial.",
+    "filtro": "Pisos"
+  },
+  {
+    "id": "parking",
+    "titulo": "Estacionamientos y rampas",
+    "imagen": null,
+    "alt": "",
+    "resumen": "Sistema clasificado para tránsito de vehículos (cargas de uso hasta P4): impermeabiliza la losa de sótanos, rampas y cubiertas de estacionamiento.",
+    "puntos": [
+      "Resiste rodadura, giros y frenado",
+      "Membrana continua sobre losas con pendiente",
+      "Se evalúa por proyecto"
+    ],
+    "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar la impermeabilización de un estacionamiento o una rampa.",
+    "filtro": "Losas"
+  }
+]

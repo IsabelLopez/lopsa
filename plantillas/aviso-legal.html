@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block titulo %}Aviso legal | LOPSA{% endblock %}
+{% block descripcion %}Aviso legal del sitio web de LOPSA, S.A.: titular, condiciones de uso, propiedad intelectual y alcance de la información técnica publicada.{% endblock %}
+{% block canonical %}/aviso-legal/{% endblock %}
+{% block contenido %}
+<article class="pagina-texto">
+  <div class="contenedor contenedor--angosto">
+    <p class="etiqueta">Legal</p>
+    <h1>Aviso legal</h1>
+    <p class="pagina-texto__fecha">Última actualización: {{ sitio.aviso_fecha }}</p>
+
+    <h2>1. Titular del sitio</h2>
+    <p>Este sitio web, publicado en <a href="{{ sitio.url }}">lopsa.com.pa</a>, es propiedad de {{ sitio.razon_social }}, sociedad anónima constituida en la República de Panamá, con RUC {{ sitio.ruc }} y domicilio en {{ sitio.direccion_linea }}. Contacto: <a href="tel:{{ sitio.telefono_tel }}">{{ sitio.telefono_visible }}</a> · <a href="mailto:{{ sitio.correo }}">{{ sitio.correo }}</a>.</p>
+
+    <h2>2. Objeto</h2>
+    <p>El sitio tiene una finalidad informativa y comercial: presentar los servicios de aplicación de poliurea caliente de LOPSA (impermeabilización, anticorrosión y revestimiento industrial) y facilitar el contacto para solicitar una cotización. El uso del sitio implica la aceptación de este aviso y de la <a href="/privacidad/">política de privacidad</a>.</p>
+
+    <h2>3. Información técnica y comercial</h2>
+    <p>Los datos técnicos publicados (tiempos de curado, resistencias, temperaturas de servicio, vida útil estimada y clasificaciones) son valores de referencia tomados de la documentación técnica del sistema que aplicamos, y pueden variar según las condiciones de obra, el soporte y la preparación. No constituyen una oferta ni una garantía por sí mismos. El alcance, las condiciones y la garantía de cada trabajo se fijan por escrito en la propuesta y en el contrato correspondientes.</p>
+    <p>Las fotografías de proyectos corresponden a obras ejecutadas por LOPSA y se publican sin identificar a los clientes, salvo autorización expresa.</p>
+
+    <h2>4. Propiedad intelectual</h2>
+    <p>Los textos, fotografías, esquemas, el nombre y el logotipo de LOPSA que aparecen en este sitio son propiedad de {{ sitio.razon_social }} o se usan con autorización de sus titulares. No está permitida su reproducción, distribución o modificación sin consentimiento previo y por escrito, salvo para uso personal o para citar la fuente.</p>
+
+    <h2>5. Enlaces y servicios de terceros</h2>
+    <p>El sitio contiene enlaces a WhatsApp y puede utilizar servicios de terceros para el alojamiento, la recepción de formularios y la medición de visitas. LOPSA no controla esos servicios y no responde por su contenido ni por sus políticas, que se rigen por sus propios términos.</p>
+
+    <h2>6. Responsabilidad</h2>
+    <p>LOPSA procura que la información publicada sea correcta y esté actualizada, pero no garantiza la ausencia de errores ni la disponibilidad permanente del sitio. LOPSA no se hace responsable de decisiones tomadas únicamente a partir de la información de este sitio sin la evaluación técnica correspondiente.</p>
+
+    <h2>7. Legislación aplicable</h2>
+    <p>Este aviso se rige por las leyes de la República de Panamá. Cualquier controversia relacionada con el sitio se someterá a los tribunales competentes de la Ciudad de Panamá.</p>
+  </div>
+</article>
+{% endblock %}
