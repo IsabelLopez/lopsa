@@ -1,6 +1,12 @@
 [build]
   publish = "dist"
-  command = ""
+  # Sitio estatico ya construido: el comando explicito anula cualquier build command del panel de Netlify
+  command = "echo 'Sitio estatico: nada que construir, se publica dist/'"
+
+[build.environment]
+  # Apaga el runtime de Next.js si el sitio de Netlify lo tiene instalado desde el panel
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "22"
 
 [[headers]]
   for = "/*"
