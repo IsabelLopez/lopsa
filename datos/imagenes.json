@@ -897,6 +897,21 @@
         1200
       ],
       "nota": "Fotografía real de referencia de Claudio Schwarz / Unsplash. https://unsplash.com/photos/empty-white-concrete-pillared-parking-lot-fAmj2spOqxc · https://unsplash.com/license . No es una obra LOPSA; no se atribuye un material específico al pavimento."
+    },
+    {
+      "id": "app-parking-v5",
+      "origen_abs": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Marketing/Referencias/Web_20260915/20260915_Referencia_Estacionamiento_Unsplash_81zwxdDiNAg_01.jpg",
+      "recorte": "4:3",
+      "foco": [
+        0.5,
+        0.62
+      ],
+      "anchos": [
+        480,
+        800,
+        1200
+      ],
+      "nota": "Fotografía real de referencia: Jakub Żerdzicki / Unsplash. https://unsplash.com/photos/an-empty-parking-garage-with-yellow-and-black-stripes-81zwxdDiNAg · https://unsplash.com/license . No es una obra LOPSA ni se atribuye composición química al piso."
     }
   ]
 }
