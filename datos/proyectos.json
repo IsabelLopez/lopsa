@@ -1,146 +1,72 @@
 {
-  "intro": "Cada caso muestra el estado inicial, el proceso y el resultado.",
-  "filtros": [
-    "Todos",
-    "Techos de zinc",
-    "Losas",
-    "Pisos"
-  ],
   "mostrar_detalle": false,
-  "casos": [
+  "intro": "Fotografías de nuestras intervenciones, agrupadas por etapa: el estado de la superficie, su preparación y el recubrimiento aplicado.",
+  "etapas": [
     {
-      "id": "galera-betania",
-      "titulo": "Galera industrial",
-      "tipo": "Techos de zinc",
-      "ficha": {
-        "Tipo de obra": "Impermeabilización y anticorrosión",
-        "Sustrato": "Zinc pintado y galvanizado",
-        "Área": "320 m²",
-        "Sector": "Industrial",
-        "Año": "2026"
-      },
-      "reto": "Techo de zinc pintado con traslapes abiertos, tornillería oxidada y un canal que filtraba sobre el área de trabajo.",
-      "solucion": "Lavado a presión, sellado de traslapes y tornillería, imprimación para metal y membrana de poliurea proyectada sobre el techo y el canal, por tramos y sin detener la operación.",
-      "resultado": "Cubierta continua sin puntos de filtración; el canal quedó encapsulado con la misma membrana.",
-      "sistema": "Sistema en 5 pasos · 2,0 kg/m² · acabado con protección UV",
+      "id": "estado-inicial",
+      "titulo": "Estados iniciales",
+      "texto": "El diagnóstico identifica desgaste, fisuras y deterioro antes de definir la intervención.",
       "fotos": [
         {
-          "imagen": "caso1-antes",
-          "etapa": "Estado inicial",
-          "alt": "Techo de zinc rojo de la galera antes de la intervención, con la ciudad al fondo"
+          "imagen": "galeria-inicial-piso-v3",
+          "alt": "Recubrimiento de piso marrón deteriorado y desprendido, con el concreto expuesto",
+          "pie": "Desprendimiento del recubrimiento existente"
         },
         {
-          "imagen": "caso1-proceso",
-          "etapa": "Aplicación en caliente",
-          "alt": "Proyección de la poliurea sobre el canal metálico de la galera"
+          "imagen": "galeria-inicial-zinc-v3",
+          "alt": "Cubierta de zinc con pintura deteriorada y parches sobre las láminas",
+          "pie": "Deterioro de una cubierta metálica"
         },
         {
-          "imagen": "caso1-despues",
-          "etapa": "Membrana aplicada",
-          "alt": "Techo de la galera cubierto con la membrana gris bajo cielo despejado"
+          "imagen": "galeria-inicial-fisura-v3",
+          "alt": "Detalle de una fisura en una losa de concreto antes de su tratamiento",
+          "pie": "Fisura en una losa de concreto"
         }
       ]
     },
     {
-      "id": "residencia-costa-este",
-      "titulo": "Residencia",
-      "tipo": "Techos de zinc",
-      "ficha": {
-        "Tipo de obra": "Impermeabilización",
-        "Sustrato": "Zinc bajo teja de barro",
-        "Área": "Techo del anexo",
-        "Sector": "Residencial",
-        "Año": "2026"
-      },
-      "reto": "Filtraciones por los traslapes de la lámina de zinc bajo la teja de un anexo, con paneles solares sobre la cubierta.",
-      "solucion": "Levantamiento de tejas, lavado a presión, reparación de traslapes, imprimación y membrana de poliurea hasta la cumbrera.",
-      "resultado": "Membrana continua bajo la teja; filtración resuelta sin cambiar el techo.",
-      "sistema": "Sistema en 5 pasos · 2,0 kg/m²",
+      "id": "preparacion",
+      "titulo": "Preparación y sellado",
+      "texto": "La preparación mecánica y el tratamiento de juntas, encuentros y drenajes forman la base del sistema.",
       "fotos": [
         {
-          "imagen": "caso2-antes",
-          "etapa": "Estado inicial",
-          "alt": "Techo de teja con paneles solares antes de la intervención"
+          "imagen": "galeria-preparacion-piso-v3",
+          "alt": "Operario trabajando con una desbastadora industrial amarilla sobre un piso de concreto",
+          "pie": "Preparación mecánica del piso"
         },
         {
-          "imagen": "caso2-proceso",
-          "etapa": "Preparación",
-          "alt": "Lavado a presión de la lámina de zinc bajo la teja"
+          "imagen": "galeria-preparacion-juntas-v3",
+          "alt": "Operario sellando el encuentro entre una losa de concreto y un muro",
+          "pie": "Sellado del encuentro losa–muro"
         },
         {
-          "imagen": "caso2-despues",
-          "etapa": "Membrana aplicada",
-          "alt": "Lámina de zinc cubierta con la membrana gris junto a la teja"
+          "imagen": "galeria-preparacion-drenaje-v3",
+          "alt": "Operario reparando el perímetro de un drenaje en un piso industrial",
+          "pie": "Reparación del encuentro con drenaje"
         }
       ]
     },
     {
-      "id": "deposito-juan-diaz",
-      "titulo": "Depósito logístico",
-      "tipo": "Losas",
-      "ficha": {
-        "Tipo de obra": "Impermeabilización",
-        "Sustrato": "Concreto",
-        "Área": "130 m²",
-        "Sector": "Logística",
-        "Año": "2026"
-      },
-      "reto": "Alero de concreto con una grieta longitudinal y manchas de humedad sobre el andén de carga.",
-      "solucion": "Retiro del material viejo, sellado de la grieta y de las juntas, imprimación para concreto y membrana con acabado UV hasta el parapeto.",
-      "resultado": "Alero encapsulado hasta el parapeto; sin goteo sobre el andén.",
-      "sistema": "Sistema en 5 pasos · 2,0 kg/m² · acabado con protección UV",
+      "id": "recubrimientos",
+      "titulo": "Recubrimientos aplicados",
+      "texto": "Superficies de piso, concreto y zinc con el recubrimiento correspondiente a cada intervención.",
       "fotos": [
         {
-          "imagen": "caso3-antes",
-          "etapa": "Estado inicial",
-          "alt": "Alero de concreto con manchas de humedad antes de la intervención"
+          "imagen": "galeria-recubrimiento-piso-v3",
+          "alt": "Pasillo industrial con un recubrimiento de piso gris claro y brillante",
+          "pie": "Recubrimiento de piso industrial"
         },
         {
-          "imagen": "caso3-proceso",
-          "etapa": "Sellado de la grieta",
-          "alt": "Operario sellando la grieta longitudinal del alero"
+          "imagen": "galeria-recubrimiento-losa-v3",
+          "alt": "Membrana gris aplicada en una losa de concreto y en sus encuentros con muros",
+          "pie": "Membrana aplicada en losa de concreto"
         },
         {
-          "imagen": "caso3-despues",
-          "etapa": "Terminado",
-          "alt": "Alero de concreto cubierto con la membrana gris hasta el parapeto"
-        }
-      ]
-    },
-    {
-      "id": "planta-alimentos",
-      "titulo": "Planta de alimentos",
-      "tipo": "Pisos",
-      "ficha": {
-        "Tipo de obra": "Revestimiento de piso industrial",
-        "Sustrato": "Concreto",
-        "Área": "305 m²",
-        "Sector": "Alimentos",
-        "Año": "2026"
-      },
-      "reto": "Pasillos de planta con el piso desgastado, en una instalación que no puede detener la producción.",
-      "solucion": "Desbaste mecánico, resane y revestimiento de piso industrial en cuatro zonas, en jornadas nocturnas de sábado.",
-      "resultado": "Piso continuo, lavable y en servicio el lunes siguiente.",
-      "sistema": "Revestimiento de piso industrial aplicado a rodillo",
-      "fotos": [
-        {
-          "imagen": "caso4-antes",
-          "etapa": "Estado inicial",
-          "alt": "Pasillo de la planta con el piso de concreto desgastado"
-        },
-        {
-          "imagen": "caso4-proceso",
-          "etapa": "Preparación",
-          "alt": "Operario puliendo el piso de la planta con máquina"
-        },
-        {
-          "imagen": "caso4-despues",
-          "etapa": "Terminado",
-          "alt": "Pasillo largo de la planta con el piso gris terminado"
+          "imagen": "galeria-recubrimiento-zinc-v3",
+          "alt": "Poliurea gris aplicada sobre una cubierta de zinc durante la intervención",
+          "pie": "Recubrimiento aplicado en cubierta de zinc"
         }
       ]
     }
-  ],
-  "cta": "Quiero algo así en mi edificio o planta",
-  "cta_whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Vi sus proyectos y quiero evaluar el mío."
+  ]
 }

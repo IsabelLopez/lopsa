@@ -317,5 +317,206 @@
   "prop": 1.5,
   "formato": "webp",
   "huella": "82df1730cc"
+ },
+ "app-zinc-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "1f3e8036f9"
+ },
+ "app-losa-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "b31d75527e"
+ },
+ "app-piso-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "96f4b46c3c"
+ },
+ "app-parking-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "23330e9a66"
+ },
+ "paso-1-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "95e48bc352"
+ },
+ "paso-2-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "6f6e46d436"
+ },
+ "paso-3-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "647c07ad26"
+ },
+ "paso-4-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "c23cec8bd3"
+ },
+ "paso-5-v3": {
+  "anchos": [
+   480,
+   800
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "835b960509"
+ },
+ "equipo-v3": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.7778,
+  "formato": "webp",
+  "huella": "80a96e3f42"
+ },
+ "galeria-inicial-piso-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "852ab74cd3"
+ },
+ "galeria-inicial-zinc-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "6fd25276db"
+ },
+ "galeria-inicial-fisura-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "a72aa5651f"
+ },
+ "galeria-preparacion-piso-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "b40801e463"
+ },
+ "galeria-preparacion-juntas-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "d7abecb3b4"
+ },
+ "galeria-preparacion-drenaje-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "ce6e0be3a3"
+ },
+ "galeria-recubrimiento-piso-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "077ef81acb"
+ },
+ "galeria-recubrimiento-losa-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "50ee2fdf20"
+ },
+ "galeria-recubrimiento-zinc-v3": {
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "prop": 0.75,
+  "formato": "webp",
+  "huella": "82d327be10"
+ },
+ "app-parking-v4": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "96ee94b67c"
+ },
+ "app-parking-v5": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "4c8505c299"
  }
 }
