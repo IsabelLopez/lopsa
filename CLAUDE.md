@@ -16,7 +16,7 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
 | Tarjetas de aplicaciones (zinc, losas, canales, tanques, pisos, estacionamientos) | `datos/aplicaciones.json` |
 | Sección «Poliurea» | `datos/poliurea.json` |
 | Pasos del proceso | `datos/proceso.json` |
-| Proyectos | `datos/proyectos.json` |
+| Galería por etapas (sin dividir por proyectos) | `datos/proyectos.json` → `etapas` |
 | Preguntas frecuentes | `datos/preguntas.json` |
 | Estructura o diseño de una sección | `plantillas/*.html` y `estaticos/css/` |
 
@@ -50,6 +50,10 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
 - **Sin RUC** en ninguna página. Ubicación pública: solo **«Ciudad de Panamá, Panamá»**, nunca la dirección exacta.
 - Proyectos: sin nombre del cliente, ubicación, áreas ni descripción. En `datos/proyectos.json`, `mostrar_detalle`
   se queda en `false` hasta que Manuel López diga lo contrario.
+- Criterio vigente (15-sep-2026): mostrar fotografías por estados iniciales, preparación y recubrimientos, mezclando
+  intervenciones. No volver a separar proyectos. Proceso completo visible sin clics y sin efecto de goteo.
+- Manuel ratificó «equipo capacitado y certificado» para aplicación de recubrimientos. No añadir certificadores ni
+  sellos concretos sin respaldo.
 - Garantía: **«10 años contra filtraciones»**. «Vida útil certificada de 25 años» solo para cubiertas. Ninguna otra cifra.
 - Sin precios, tarifas ni descuentos. Sin marcas de materiales ni de equipos. Sin promesas que LOPSA no haya
   confirmado (plazos, certificaciones, «precio fijo»).

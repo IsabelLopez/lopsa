@@ -6,7 +6,7 @@
   "descripcion": "Aplicadores especialistas en poliurea caliente en Panamá: impermeabilización de losas y techos de zinc, anticorrosión de canales y estructuras metálicas, tanques y pisos industriales. Equipo y cuadrillas propias. Garantía de 10 años contra filtraciones.",
   "eyebrow": "Especialistas en poliurea caliente · Panamá",
   "h1": "Poliurea caliente. Protección duradera.",
-  "lead": "Impermeabilizamos losas, techos, tanques y superficies industriales con un sistema continuo, aplicado con dirección técnica y equipo propio.",
+  "lead": "Protegemos cubiertas, losas y superficies industriales con poliurea caliente y recubrimientos especializados. Ingeniería, preparación y ejecución en cada etapa.",
   "tagline": "Impermeabilizamos y protegemos sus activos.",
   "chips": [
     "Dirección técnica de ingeniero civil idóneo",
@@ -57,12 +57,12 @@
   "anio": "2026",
   "nav": [
     {
-      "ancla": "#poliurea",
-      "texto": "Poliurea"
-    },
-    {
       "ancla": "#aplicaciones",
       "texto": "Aplicaciones"
+    },
+    {
+      "ancla": "#poliurea",
+      "texto": "Poliurea"
     },
     {
       "ancla": "#proceso",
@@ -70,11 +70,11 @@
     },
     {
       "ancla": "#proyectos",
-      "texto": "Proyectos"
+      "texto": "Nuestro trabajo"
     },
     {
       "ancla": "#nosotros",
-      "texto": "Nosotros"
+      "texto": "Equipo"
     }
   ],
   "compromisos": [
@@ -84,12 +84,12 @@
     },
     {
       "titulo": "Ejecución propia",
-      "texto": "Personal capacitado y equipo de aplicación de LOPSA."
+      "texto": "Cuadrillas y equipos de LOPSA, con supervisión en obra."
     },
     {
       "titulo": "Entrega documentada",
       "texto": "Informe fotográfico y garantía por escrito."
     }
   ],
-  "quienes": "Somos una empresa panameña especializada en poliurea caliente. Unimos dirección de ingeniería civil, personal capacitado y equipo propio para ejecutar cada proyecto, desde el diagnóstico hasta la entrega."
+  "quienes": "Somos una empresa panameña especializada en impermeabilización y recubrimientos. Contamos con un equipo capacitado y certificado en la aplicación de recubrimientos especializados, dirección de ingeniería civil y equipos propios para ejecutar cada intervención."
 }

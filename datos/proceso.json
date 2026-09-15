@@ -3,43 +3,48 @@
   "pasos": [
     {
       "titulo": "Diagnóstico técnico",
-      "imagen": "paso-1",
+      "imagen": "paso-1-v3",
       "alt": "Vista panorámica de un techo de zinc rojo durante la visita de diagnóstico",
       "texto": "Inspeccionamos la superficie y definimos el alcance de la solución.",
       "detalle": "Evaluamos el estado de la superficie, los puntos de filtración y las condiciones de uso. Con esta información definimos la preparación, los materiales del sistema y el alcance de la propuesta.",
-      "control": "Estado del soporte, encuentros, drenajes y accesibilidad."
+      "control": "Estado del soporte, encuentros, drenajes y accesibilidad.",
+      "pie": "Inspección del estado de una cubierta de zinc"
     },
     {
       "titulo": "Preparación del soporte",
-      "imagen": "paso-2",
-      "alt": "Cuadrilla lavando a presión el techo de zinc de una galera industrial",
+      "imagen": "paso-2-v3",
+      "alt": "Operario preparando un piso con una desbastadora industrial amarilla",
       "texto": "Limpiamos y reparamos el soporte hasta dejarlo sano y seco.",
       "detalle": "Retiramos suciedad y material deteriorado mediante el método adecuado para cada superficie. Reparamos las zonas necesarias y verificamos que la base esté sana, limpia y seca antes de continuar.",
-      "control": "Limpieza, humedad, cohesión y condición de la superficie."
+      "control": "Limpieza, humedad, cohesión y condición de la superficie.",
+      "pie": "Preparación mecánica de un piso con desbastadora industrial"
     },
     {
-      "titulo": "Sellado de juntas y encuentros",
-      "imagen": "paso-3",
+      "titulo": "Sellado de juntas y tornillería",
+      "imagen": "paso-3-v3",
       "alt": "Operario sellando una grieta longitudinal en una losa de concreto",
-      "texto": "Tratamos juntas, fisuras y puntos singulares según su condición.",
-      "detalle": "Tratamos fisuras, juntas, traslapes y encuentros con muros o elementos pasantes. Cada detalle se resuelve según su geometría y movimiento; la membrana no sustituye las reparaciones del soporte.",
-      "control": "Continuidad del tratamiento en puntos singulares y juntas."
+      "texto": "Tratamos juntas, fisuras, encuentros y tornillería según el soporte.",
+      "detalle": "Tratamos fisuras y juntas en concreto, además de traslapes, tornillería y encuentros en cubiertas de zinc. Cada detalle se resuelve según su geometría y movimiento; la membrana no sustituye las reparaciones del soporte.",
+      "control": "Continuidad del sellado en juntas, tornillería, traslapes y puntos singulares.",
+      "pie": "Sellado de una fisura en losa de concreto"
     },
     {
       "titulo": "Imprimación y aplicación en caliente",
-      "imagen": "paso-4",
-      "alt": "Operario proyectando la poliurea caliente sobre el canal de una galera",
+      "imagen": "paso-4-v3",
+      "alt": "Cuadrilla aplicando poliurea caliente por proyección sobre una cubierta de zinc",
       "texto": "Imprimamos y proyectamos los dos componentes con equipo de alta presión.",
       "detalle": "Seleccionamos la imprimación para concreto o metal y proyectamos la poliurea con equipo de dos componentes, calentamiento y alta presión. Controlamos el consumo y el espesor especificados para la intervención.",
-      "control": "Condiciones de aplicación, adherencia y espesor del sistema."
+      "control": "Condiciones de aplicación, adherencia y espesor del sistema.",
+      "pie": "Aplicación por proyección sobre una cubierta de zinc"
     },
     {
-      "titulo": "Acabado y entrega",
-      "imagen": "paso-5",
-      "alt": "Losa de concreto terminada con la membrana y el zócalo recubiertos",
-      "texto": "Aplicamos el acabado especificado y entregamos el registro de la obra.",
-      "detalle": "Completamos el sistema con el acabado requerido por la exposición y el uso: protección UV o textura antideslizante cuando corresponde. Revisamos la intervención y entregamos el registro fotográfico con la garantía acordada.",
-      "control": "Acabado, detalles de cierre y condiciones de puesta en servicio."
+      "titulo": "Acabado y revisión",
+      "imagen": "paso-5-v3",
+      "alt": "Recubrimiento de poliurea aplicado en una cubierta de zinc durante la intervención",
+      "texto": "Aplicamos el acabado especificado y revisamos el sistema.",
+      "detalle": "Completamos el sistema con el acabado requerido por la exposición y el uso: protección UV o textura antideslizante cuando corresponde. Revisamos el recubrimiento y los detalles de cierre antes de definir la puesta en servicio y documentar la entrega.",
+      "control": "Continuidad del recubrimiento, acabado y condiciones de puesta en servicio.",
+      "pie": "Recubrimiento aplicado en cubierta de zinc"
     }
   ],
   "capas": {

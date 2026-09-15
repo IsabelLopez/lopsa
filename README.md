@@ -11,7 +11,7 @@ de gestión de LOPSA: `04_COMERCIAL/Web_LOPSA/`. Este repositorio es **el códig
 
 | Carpeta / archivo | Qué es |
 |---|---|
-| `datos/*.json` | **El contenido.** `sitio.json` (datos de la empresa, textos de portada, contacto), `aplicaciones.json`, `poliurea.json`, `proceso.json`, `proyectos.json`, `preguntas.json` y `imagenes.json` (manifiesto de fotos). Para cambiar un texto o agregar un proyecto se edita aquí. |
+| `datos/*.json` | **El contenido.** `sitio.json` (datos de la empresa, textos de portada, contacto), `aplicaciones.json`, `poliurea.json`, `proceso.json`, `proyectos.json` (galería por etapas), `preguntas.json` y `imagenes.json` (manifiesto de fotos). |
 | `plantillas/*.html` | Plantillas Jinja2: `base.html` (cabecera, pie, metadatos) y una por página. |
 | `estaticos/` | CSS, JavaScript, logos, favicons y las fotos ya optimizadas (`img/`). |
 | `preparar_imagenes.py` | Toma las fotos originales de `Fotos_LOPSA/` (repositorio de gestión), las recorta, difumina rótulos ajenos y exporta WebP **sin EXIF ni GPS**. |
@@ -33,6 +33,15 @@ Previsualizar en local: `python -m http.server 8080 --directory dist`.
 ## Reglas de contenido
 
 Están en `CLAUDE.md`, sección «Reglas de contenido (no se negocian)».
+
+### Criterio visual vigente — 15 de septiembre de 2026
+
+- Fotografía propia como protagonista, con títulos y números grandes. Sin efecto de goteo.
+- Los cinco pasos del proceso se muestran completos; no se ocultan tras pestañas.
+- `proyectos.json` contiene `etapas`, cada una con `titulo`, `texto` y `fotos` (`imagen`, `alt`, `pie`). La galería mezcla distintas intervenciones por estado inicial, preparación y recubrimiento. No agrupar por cliente ni por proyecto.
+- El mensaje «Equipo capacitado y certificado» fue confirmado por la dirección. No añadir organismos ni sellos de certificación sin una fuente.
+- Las fotos externas se identifican como referencia. La foto de estacionamientos es de [Jan van der Wolf / Pexels](https://www.pexels.com/photo/modern-parking-garage-interior-design-31673671/), bajo la [licencia Pexels](https://www.pexels.com/license/); no representa una obra de LOPSA.
+- Las imágenes nuevas usan identificadores nuevos para renovar la caché. En la PC con acceso a los originales se incorporan mediante el manifiesto y `preparar_imagenes.py`; en sesiones remotas se reutilizan las versiones procesadas. Nunca publicar originales ni metadatos.
 
 ## Publicación y accesos
 

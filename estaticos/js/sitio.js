@@ -63,8 +63,8 @@
     cambiarMenu(false, false);
   }
 
-  /* Pestañas de capas y proceso; sin JavaScript, el proceso se lee completo. */
-  document.querySelectorAll('.pestanas, .proceso-tabs').forEach(function (lista) {
+  /* Pestañas de capas en la ficha técnica complementaria. */
+  document.querySelectorAll('.pestanas').forEach(function (lista) {
     var tabs = Array.prototype.slice.call(lista.querySelectorAll('[role="tab"]'));
     function activarTab(tab, enfocar) {
       tabs.forEach(function (t) {
@@ -90,92 +90,7 @@
         activarTab(tabs[siguiente], true);
       });
     });
-    if (lista.classList.contains('proceso-tabs') && tabs.length) {
-      lista.hidden = false;
-      activarTab(tabs[0], false);
-    }
-  });
 
-  /* La capa desciende por la escena fija al avanzar, sin bloquear rueda ni tacto. */
-  var recubrimiento = document.querySelector('.recubrimiento');
-  var capa = recubrimiento && recubrimiento.querySelector('.recubrimiento__capa');
-  if (capa) {
-    var escena = recubrimiento.querySelector('.recubrimiento__escena');
-    var textoCapa = recubrimiento.querySelector('.recubrimiento__texto');
-    var reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce), (max-height: 640px)');
-    var observadorCapa;
-    var cuadroCapa = 0;
-    var siguiendoCapa = false;
-    function limitar(valor) {
-      return Math.min(1, Math.max(0, valor));
-    }
-    function mostrarCobertura(progreso) {
-      recubrimiento.style.setProperty('--avance', progreso.toFixed(4));
-      recubrimiento.style.setProperty('--revelado', limitar((progreso - 0.62) / 0.16).toFixed(4));
-      recubrimiento.classList.toggle('recubierto', progreso >= 0.65);
-      if (textoCapa) textoCapa.inert = progreso < 0.65;
-    }
-    function pintarCapa() {
-      cuadroCapa = 0;
-      var posicion = recubrimiento.getBoundingClientRect();
-      var recorrido = posicion.height - escena.getBoundingClientRect().height;
-      var margenSuperior = parseFloat(window.getComputedStyle(escena).top) || 0;
-      mostrarCobertura(recorrido > 0 ? limitar((margenSuperior - posicion.top) / recorrido) : 1);
-    }
-    function solicitarCuadro() {
-      if (!cuadroCapa) cuadroCapa = window.requestAnimationFrame(pintarCapa);
-    }
-    function detenerCapa() {
-      window.removeEventListener('scroll', solicitarCuadro);
-      window.removeEventListener('resize', solicitarCuadro);
-      if (cuadroCapa) window.cancelAnimationFrame(cuadroCapa);
-      cuadroCapa = 0;
-      siguiendoCapa = false;
-    }
-    function configurarCapa() {
-      detenerCapa();
-      if (observadorCapa) observadorCapa.disconnect();
-      var estatico = reducirMovimiento.matches || !('IntersectionObserver' in window) || !escena;
-      recubrimiento.classList.toggle('sin-movimiento', estatico);
-      recubrimiento.classList.toggle('con-movimiento', !estatico);
-      if (estatico) {
-        mostrarCobertura(1);
-        return;
-      }
-      pintarCapa();
-      var observador = new IntersectionObserver(function (entradas) {
-        if (observadorCapa !== observador || recubrimiento.classList.contains('sin-movimiento')) return;
-        if (entradas[0].isIntersecting) {
-          if (!siguiendoCapa) {
-            window.addEventListener('scroll', solicitarCuadro, { passive: true });
-            window.addEventListener('resize', solicitarCuadro, { passive: true });
-            siguiendoCapa = true;
-          }
-          solicitarCuadro();
-        } else {
-          detenerCapa();
-          pintarCapa();
-        }
-      });
-      observadorCapa = observador;
-      observadorCapa.observe(recubrimiento);
-    }
-    if (reducirMovimiento.addEventListener) reducirMovimiento.addEventListener('change', configurarCapa);
-    else reducirMovimiento.addListener(configurarCapa);
-    configurarCapa();
-  }
-
-  /* Filtro de proyectos */
-  var filtros = document.querySelectorAll('.filtros [data-filtro]');
-  var casos = document.querySelectorAll('.caso');
-  filtros.forEach(function (b) {
-    b.addEventListener('click', function () {
-      var f = b.getAttribute('data-filtro');
-      filtros.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-      casos.forEach(function (c) {
-        c.hidden = !(f === 'Todos' || c.getAttribute('data-tipo') === f);
-      });
-    });
   });
 
   /* Visor de fotos */
@@ -183,7 +98,7 @@
   var visorImg = document.getElementById('visor-img');
   var visorPie = document.getElementById('visor-pie');
   if (visor && visorImg && typeof visor.showModal === 'function') {
-    document.querySelectorAll('.caso__abrir').forEach(function (b) {
+    document.querySelectorAll('.foto-ampliable').forEach(function (b) {
       b.addEventListener('click', function () {
         var img = b.querySelector('img');
         if (!img) return;

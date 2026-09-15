@@ -2,8 +2,8 @@
   {
     "id": "zinc",
     "titulo": "Techos de zinc y galeras",
-    "imagen": "app-zinc",
-    "alt": "Techo de zinc de una galera industrial con la membrana de poliurea gris aplicada, bajo cielo despejado",
+    "imagen": "app-zinc-v3",
+    "alt": "Cuadrilla proyectando poliurea caliente sobre una cubierta de zinc",
     "resumen": "Protección continua para láminas, traslapes y tornillería, previa evaluación del techo.",
     "puntos": [
       "Evaluación del estado de las láminas y sus fijaciones",
@@ -16,8 +16,8 @@
   {
     "id": "losas",
     "titulo": "Losas y azoteas de concreto",
-    "imagen": "app-losa",
-    "alt": "Losa de concreto terminada con la membrana gris subiendo por el zócalo del parapeto",
+    "imagen": "app-losa-v3",
+    "alt": "Membrana gris aplicada sobre una losa de concreto y sus encuentros con muros",
     "resumen": "Impermeabilización de cubiertas, terrazas y encuentros con muros y desagües.",
     "puntos": [
       "Revisión de fisuras, juntas, pendientes y desagües",
@@ -59,8 +59,8 @@
   {
     "id": "pisos",
     "titulo": "Pisos industriales",
-    "imagen": "app-piso",
-    "alt": "Pasillo de una planta de alimentos con el piso industrial gris terminado",
+    "imagen": "app-piso-v3",
+    "alt": "Pasillo de una instalación industrial con recubrimiento de piso gris claro y brillante",
     "resumen": "Superficies continuas y lavables, con acabado adaptado al uso de cada instalación.",
     "puntos": [
       "Selección del sistema según tránsito, desgaste y limpieza",
@@ -73,8 +73,8 @@
   {
     "id": "parking",
     "titulo": "Estacionamientos y rampas",
-    "imagen": null,
-    "alt": "",
+    "imagen": "app-parking-v3",
+    "alt": "Fotografía de referencia de una superficie de estacionamiento con acabado gris, áreas negras y franja roja",
     "resumen": "Impermeabilización y acabado definidos según el tránsito y las exigencias del proyecto.",
     "puntos": [
       "Especificación según circulación, maniobras y cargas previstas",
@@ -82,6 +82,8 @@
       "Acabado y textura seleccionados para rampas y zonas de paso"
     ],
     "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar la impermeabilización de un estacionamiento o una rampa.",
-    "filtro": "Losas"
+    "filtro": "Losas",
+    "nota": "Fotografía de referencia · Jan van der Wolf / Pexels",
+    "fuente_url": "https://www.pexels.com/photo/modern-parking-garage-interior-design-31673671/"
   }
 ]
