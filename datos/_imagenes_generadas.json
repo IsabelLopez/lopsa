@@ -307,5 +307,15 @@
   "prop": 1.9048,
   "formato": "jpg",
   "huella": "b2948fa837"
+ },
+ "poliurea-ilustracion": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "82df1730cc"
  }
 }

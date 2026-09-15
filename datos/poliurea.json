@@ -1,44 +1,57 @@
 {
-  "intro": "En Panamá llueve nueve meses al año y el sol hace el resto. Estas son las tres patologías que más encontramos en las visitas de diagnóstico y lo que hace la poliurea caliente en cada caso.",
-  "patologias": [
+  "intro": "La poliurea caliente es un recubrimiento de dos componentes que se calientan y se proyectan a alta presión. Al mezclarse en la pistola, reaccionan y forman una membrana continua y elástica, adherida a la superficie. Se utiliza para impermeabilizar y proteger cubiertas, estructuras y otras superficies, con un sistema definido para cada uso.",
+  "fundamentos": [
     {
-      "titulo": "Losas que empozan y fisuran",
-      "imagen": "pat-losa",
-      "alt": "Azotea de un edificio con agua empozada y el manto viejo deteriorado",
-      "problema": "El agua estancada y el sol dilatan y agrietan la losa; el manto viejo se levanta en las juntas y en los encuentros con el muro.",
-      "solucion": "La membrana es continua, elástica (más del 400 %) y sube por el zócalo: el agua no encuentra por dónde entrar."
+      "titulo": "Dos componentes, una reacción",
+      "texto": "El equipo dosifica y calienta los componentes por separado. Estos se encuentran en la pistola y reaccionan al proyectarse: así se forma la membrana directamente sobre el soporte preparado."
     },
     {
-      "titulo": "Traslapes y tornillería oxidados en el zinc",
-      "imagen": "pat-zinc",
-      "alt": "Techo de zinc con óxido en los traslapes y la tornillería",
-      "problema": "Cada tornillo y cada traslape es un punto de filtración, y el óxido avanza por debajo de la pintura hasta perforar la lámina.",
-      "solucion": "La poliurea encapsula tornillos y traslapes y protege la lámina de la corrosión, sin desmontar el techo."
+      "titulo": "La adherencia empieza en la base",
+      "texto": "La limpieza, la solidez y la humedad del soporte influyen en el resultado. Antes de aplicar, se reparan las zonas deterioradas, se tratan las juntas y se selecciona la imprimación adecuada."
     },
     {
-      "titulo": "Selladores y mantos que se despegan",
-      "imagen": "pat-junta",
-      "alt": "Junta entre un techo de zinc y una pared con el sellador roto",
-      "problema": "Los selladores y los sistemas a rodillo pierden adherencia con el sol y la humedad, y se vuelven a reparar cada pocos años.",
-      "solucion": "Aplicada en caliente y a alta presión sobre el soporte imprimado, la membrana cura en segundos y forma una sola pieza con la superficie."
+      "titulo": "Un sistema definido para su proyecto",
+      "texto": "La imprimación, la membrana y el acabado trabajan como un conjunto. Su especificación depende de la superficie, la exposición al sol, el contacto con agua y el tipo de tránsito previsto."
     }
   ],
   "beneficios": [
-    {"titulo": "Membrana continua, sin juntas", "texto": "Una sola pieza sobre toda la superficie, incluidos zócalos, pasantes y encuentros."},
-    {"titulo": "Cura en segundos", "texto": "Tiempo de gel de 8 a 14 segundos; pisable a los 5 minutos. Sus operaciones no se detienen."},
-    {"titulo": "Elasticidad superior al 400 %", "texto": "Acompaña los movimientos de la estructura y puentea fisuras sin romperse."},
-    {"titulo": "Resiste el clima de Panamá", "texto": "Temperatura de servicio de -40 °C a +80 °C y acabado con protección UV para el sol directo."},
-    {"titulo": "100 % sólidos, sin disolventes", "texto": "Sin compuestos orgánicos volátiles: se aplica en plantas en operación y en espacios cerrados con ventilación."}
+    {
+      "titulo": "Membrana continua",
+      "texto": "Se adapta a la geometría de la superficie, incluidos encuentros y pasantes. Las juntas de movimiento reciben un tratamiento específico."
+    },
+    {
+      "titulo": "Flexibilidad",
+      "texto": "Acompaña los movimientos del soporte dentro de los límites del sistema. La preparación de fisuras y juntas forma parte de la solución."
+    },
+    {
+      "titulo": "Resistencia al desgaste",
+      "texto": "Sus propiedades mecánicas permiten especificar recubrimientos para usos exigentes. El sistema y el acabado se eligen según el tránsito y la exposición."
+    },
+    {
+      "titulo": "Formación rápida de la membrana",
+      "texto": "La reacción forma gel en segundos. El curado completo y el momento de habilitar el área se determinan según la ficha técnica y el uso previsto."
+    },
+    {
+      "titulo": "Acabado según el uso",
+      "texto": "En superficies expuestas se especifica protección UV. En áreas transitables se define el acabado de acuerdo con el desgaste y la textura requeridos."
+    }
   ],
   "comparativa": {
-    "columnas": ["Manto asfáltico", "Acrílico o poliuretano a rodillo", "Poliurea caliente"],
+    "columnas": ["Membranas en rollo", "Líquidos a rodillo", "Poliurea caliente"],
     "filas": [
-      {"criterio": "Juntas y solapes", "valores": ["Sí, cada rollo", "No, pero en capas finas", "No: membrana continua"]},
-      {"criterio": "Puesta en servicio", "valores": ["Días", "Horas a días, según el clima", "Minutos: pisable a los 5"]},
-      {"criterio": "Depende del clima al aplicar", "valores": ["Sí", "Sí: lluvia y humedad lo arruinan", "No: cura en segundos"]},
-      {"criterio": "Encuentros y pasantes", "valores": ["Puntos débiles", "Depende del sellador", "Encapsulados con la misma membrana"]},
-      {"criterio": "Vida útil", "valores": ["Reparación periódica", "Reparación periódica", "Certificada: 25 años en cubiertas (categoría W3)"]}
+      {
+        "criterio": "Colocación",
+        "valores": ["Paños unidos mediante solapes", "Aplicación por capas", "Proyección con equipo bicomponente"]
+      },
+      {
+        "criterio": "Encuentros y detalles",
+        "valores": ["Piezas y remates según el sistema", "Tratamiento y refuerzos según el sistema", "Recubrimiento proyectado sobre detalles preparados"]
+      },
+      {
+        "criterio": "Puesta en servicio",
+        "valores": ["Según fijación, uniones y acabado", "Según curado de las capas y acabado", "Gel rápido; servicio según curado y acabado"]
+      }
     ],
-    "nota": "Comparación cualitativa entre sistemas. La vida útil de 25 años corresponde a la clasificación W3 del sistema de poliurea caliente según la Evaluación Técnica Europea para cubiertas."
+    "nota": "Comparación orientativa de métodos de aplicación. Todos requieren evaluar el soporte, las condiciones ambientales y los detalles de la obra. La elección depende del uso previsto y de la especificación del sistema completo."
   }
 }
