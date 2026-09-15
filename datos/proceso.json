@@ -1,58 +1,116 @@
 {
-  "intro": "El mismo sistema en cada obra. Cinco pasos, cada uno con su evidencia fotográfica en el informe de entrega.",
+  "intro": "La calidad empieza en el soporte. Cada etapa se ejecuta con supervisión técnica y registro del proceso.",
   "pasos": [
     {
       "titulo": "Diagnóstico técnico",
       "imagen": "paso-1",
       "alt": "Vista panorámica de un techo de zinc rojo durante la visita de diagnóstico",
-      "texto": "Visitamos, medimos y documentamos las patologías. Entregamos una cotización detallada por escrito, con alcance, metros cuadrados y sistema propuesto."
+      "texto": "Inspeccionamos la superficie y definimos el alcance de la solución.",
+      "detalle": "Evaluamos el estado de la superficie, los puntos de filtración y las condiciones de uso. Con esta información definimos la preparación, los materiales del sistema y el alcance de la propuesta.",
+      "control": "Estado del soporte, encuentros, drenajes y accesibilidad."
     },
     {
       "titulo": "Preparación del soporte",
       "imagen": "paso-2",
       "alt": "Cuadrilla lavando a presión el techo de zinc de una galera industrial",
-      "texto": "Lavado a presión, pulido o desbaste mecánico y reparación de fisuras. La membrana solo dura si el soporte está limpio, seco y sano."
+      "texto": "Limpiamos y reparamos el soporte hasta dejarlo sano y seco.",
+      "detalle": "Retiramos suciedad y material deteriorado mediante el método adecuado para cada superficie. Reparamos las zonas necesarias y verificamos que la base esté sana, limpia y seca antes de continuar.",
+      "control": "Limpieza, humedad, cohesión y condición de la superficie."
     },
     {
       "titulo": "Sellado de juntas y encuentros",
       "imagen": "paso-3",
       "alt": "Operario sellando una grieta longitudinal en una losa de concreto",
-      "texto": "Juntas losa-muro, encuentros, pasantes y rajaduras se sellan con sellador de poliuretano antes de imprimar. Es el paso que los sistemas convencionales se saltan."
+      "texto": "Tratamos juntas, fisuras y puntos singulares según su condición.",
+      "detalle": "Tratamos fisuras, juntas, traslapes y encuentros con muros o elementos pasantes. Cada detalle se resuelve según su geometría y movimiento; la membrana no sustituye las reparaciones del soporte.",
+      "control": "Continuidad del tratamiento en puntos singulares y juntas."
     },
     {
       "titulo": "Imprimación y aplicación en caliente",
       "imagen": "paso-4",
       "alt": "Operario proyectando la poliurea caliente sobre el canal de una galera",
-      "texto": "Imprimación según el soporte (concreto o metal) y proyección de la poliurea a 70-80 °C y alta presión, en espesor de diseño de 2,0 kg/m², con supervisión en tiempo real."
+      "texto": "Imprimamos y proyectamos los dos componentes con equipo de alta presión.",
+      "detalle": "Seleccionamos la imprimación para concreto o metal y proyectamos la poliurea con equipo de dos componentes, calentamiento y alta presión. Controlamos el consumo y el espesor especificados para la intervención.",
+      "control": "Condiciones de aplicación, adherencia y espesor del sistema."
     },
     {
       "titulo": "Acabado y entrega",
       "imagen": "paso-5",
       "alt": "Losa de concreto terminada con la membrana y el zócalo recubiertos",
-      "texto": "Acabado alifático con protección UV (antideslizante opcional), informe con fotos del proceso y garantía por escrito."
+      "texto": "Aplicamos el acabado especificado y entregamos el registro de la obra.",
+      "detalle": "Completamos el sistema con el acabado requerido por la exposición y el uso: protección UV o textura antideslizante cuando corresponde. Revisamos la intervención y entregamos el registro fotográfico con la garantía acordada.",
+      "control": "Acabado, detalles de cierre y condiciones de puesta en servicio."
     }
   ],
   "capas": {
-    "concreto": ["Losa de concreto sana y limpia", "Sellado de juntas y encuentros", "Imprimación para concreto", "Membrana de poliurea caliente · 2,0 kg/m²", "Acabado alifático con protección UV"],
-    "metal": ["Lámina de zinc o acero preparada", "Sellado de traslapes y tornillería", "Imprimación para metal", "Membrana de poliurea caliente · 2,0 kg/m²", "Acabado alifático con protección UV"]
+    "concreto": [
+      "Losa de concreto sana y limpia",
+      "Sellado de juntas y encuentros",
+      "Imprimación para concreto",
+      "Membrana de poliurea caliente",
+      "Acabado alifático con protección UV"
+    ],
+    "metal": [
+      "Lámina de zinc o acero preparada",
+      "Sellado de traslapes y tornillería",
+      "Imprimación para metal",
+      "Membrana de poliurea caliente",
+      "Acabado alifático con protección UV"
+    ]
   },
   "tecnica": {
     "titulo": "Datos técnicos de la membrana",
     "filas": [
-      {"dato": "Tiempo de formación de gel", "valor": "8 a 14 segundos"},
-      {"dato": "Transitable", "valor": "A los 5 minutos"},
-      {"dato": "Temperatura de servicio", "valor": "-40 °C a +80 °C"},
-      {"dato": "Temperatura de choque", "valor": "250 °C"},
-      {"dato": "Dureza", "valor": "Shore A 90 · Shore D 40"},
-      {"dato": "Resistencia a la tracción (23 °C)", "valor": "150 kg/cm²"},
-      {"dato": "Elasticidad (23 °C)", "valor": "Superior al 400 %"},
-      {"dato": "Transmisión de vapor de agua", "valor": "0,02 g/m² por día"},
-      {"dato": "Espesor de diseño", "valor": "2,0 kg/m² (aprox. 2 mm)"},
-      {"dato": "Ciclo de vida estimado en cubiertas", "valor": "W3 · 25 años"},
-      {"dato": "Zona climática y cargas de uso", "valor": "S (severa) · P1 a P4"},
-      {"dato": "Contenido de sólidos", "valor": "100 %, sin disolventes"}
+      {
+        "dato": "Tiempo de formación de gel",
+        "valor": "Rápida; consultar la ficha del sistema especificado"
+      },
+      {
+        "dato": "Tránsito peatonal inicial de referencia",
+        "valor": "Consultar ficha y condiciones del proyecto"
+      },
+      {
+        "dato": "Temperatura de servicio",
+        "valor": "-40 °C a +80 °C"
+      },
+      {
+        "dato": "Temperatura de choque",
+        "valor": "250 °C"
+      },
+      {
+        "dato": "Dureza",
+        "valor": "Shore A 90 · Shore D 40"
+      },
+      {
+        "dato": "Resistencia a la tracción (23 °C)",
+        "valor": "150 kg/cm²"
+      },
+      {
+        "dato": "Elasticidad (23 °C)",
+        "valor": "Superior al 400 %"
+      },
+      {
+        "dato": "Transmisión de vapor de agua",
+        "valor": "0,02 g/m² por día"
+      },
+      {
+        "dato": "Consumo de referencia",
+        "valor": "2,0 kg/m²; espesor según especificación del sistema"
+      },
+      {
+        "dato": "Ciclo de vida estimado en cubiertas",
+        "valor": "W3 · 25 años"
+      },
+      {
+        "dato": "Zona climática y cargas de uso",
+        "valor": "S (severa) · P1 a P4"
+      },
+      {
+        "dato": "Contenido de sólidos",
+        "valor": "100 %, sin disolventes"
+      }
     ],
-    "nota": "Valores de referencia de la ficha técnica del sistema. Los tiempos de curado dependen de la temperatura y la humedad en obra."
+    "nota": "Valores de referencia del sistema. La formación de gel no equivale a curado completo ni a puesta en servicio. Los tiempos y el espesor se definen según la ficha técnica y las condiciones de obra."
   },
   "probeta": {
     "imagen": "probeta",
@@ -62,13 +120,34 @@
   "respaldo": {
     "titulo": "Respaldo documental del sistema",
     "items": [
-      {"badge": "ETE 11/0016", "texto": "Evaluación Técnica Europea (EOTA) del sistema para impermeabilización de cubiertas"},
-      {"badge": "W3 · 25 años", "texto": "Ciclo de vida estimado en cubiertas, la máxima categoría de la guía"},
-      {"badge": "Marcado CE", "texto": "Todos los productos del sistema"},
-      {"badge": "B ROOF (t1)", "texto": "Comportamiento frente a fuego exterior en cubiertas (EN 13501-5)"},
-      {"badge": "Agua potable", "texto": "Ensayo sin migración según UNE-EN 12873-1 en laboratorio acreditado"},
-      {"badge": "Anti-raíces", "texto": "Resistencia a la penetración de raíces (UNE-CEN/TS 14416) para cubiertas ajardinadas"},
-      {"badge": "Industria alimentaria", "texto": "Declaración del fabricante: apto para suelos, paredes y techos según el Reglamento (CE) 852/2004"}
+      {
+        "badge": "ETE 11/0016",
+        "texto": "Evaluación Técnica Europea (EOTA) del sistema para impermeabilización de cubiertas"
+      },
+      {
+        "badge": "W3 · 25 años",
+        "texto": "Ciclo de vida estimado en cubiertas, la máxima categoría de la guía"
+      },
+      {
+        "badge": "Marcado CE",
+        "texto": "Todos los productos del sistema"
+      },
+      {
+        "badge": "B ROOF (t1)",
+        "texto": "Comportamiento frente a fuego exterior en cubiertas (EN 13501-5)"
+      },
+      {
+        "badge": "Agua potable",
+        "texto": "Ensayo sin migración según UNE-EN 12873-1 en laboratorio acreditado"
+      },
+      {
+        "badge": "Anti-raíces",
+        "texto": "Resistencia a la penetración de raíces (UNE-CEN/TS 14416) para cubiertas ajardinadas"
+      },
+      {
+        "badge": "Industria alimentaria",
+        "texto": "Declaración del fabricante: apto para suelos, paredes y techos según el Reglamento (CE) 852/2004"
+      }
     ],
     "nota": "La documentación completa está disponible a solicitud."
   }

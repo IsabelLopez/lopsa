@@ -9,6 +9,7 @@ Previsualizar: python -m http.server 8080 --directory dist
 import json
 import os
 import shutil
+import hashlib
 from datetime import date
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -43,6 +44,9 @@ def main():
         "preguntas": cargar("preguntas.json"),
         "img": cargar("_imagenes_generadas.json") if os.path.exists(os.path.join(DATOS, "_imagenes_generadas.json")) else {},
         "hoy": date.today().isoformat(),
+        # La versión cambia con el contenido para renovar la caché del navegador.
+        "version_css": hashlib.sha256(open(os.path.join(ESTATICOS, "css", "estilos.css"), encoding="utf-8").read().encode("utf-8")).hexdigest()[:12],
+        "version_js": hashlib.sha256(open(os.path.join(ESTATICOS, "js", "sitio.js"), encoding="utf-8").read().encode("utf-8")).hexdigest()[:12],
     }
     env = Environment(
         loader=FileSystemLoader(PLANTILLAS),

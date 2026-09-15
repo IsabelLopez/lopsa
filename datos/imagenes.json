@@ -502,6 +502,18 @@
         1200
       ],
       "formato": "jpg"
+    },
+    {
+      "id": "poliurea-ilustracion",
+      "origen_abs": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Marketing/03_Contenido/Piezas/2026-09/Ilustracion_Aplicacion_Poliurea_Caliente_IA_20260915.png",
+      "recorte": "3:2",
+      "anchos": [
+        480,
+        800,
+        1200
+      ],
+      "calidad": 82,
+      "nota": "Ilustración conceptual generada con IA para explicar la proyección y continuidad de la membrana; no representa una obra real. Encargo de Manuel 15-sep-2026."
     }
   ]
 }
