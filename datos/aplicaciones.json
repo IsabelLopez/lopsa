@@ -73,8 +73,8 @@
   {
     "id": "parking",
     "titulo": "Estacionamientos y rampas",
-    "imagen": "app-parking-v3",
-    "alt": "Fotografía de referencia de una superficie de estacionamiento con acabado gris, áreas negras y franja roja",
+    "imagen": "app-parking-v4",
+    "alt": "Vista real de un estacionamiento cubierto con columnas, piso de concreto y espacios demarcados",
     "resumen": "Impermeabilización y acabado definidos según el tránsito y las exigencias del proyecto.",
     "puntos": [
       "Especificación según circulación, maniobras y cargas previstas",
@@ -83,7 +83,7 @@
     ],
     "whatsapp": "Hola LOPSA, escribo desde lopsa.com.pa. Quiero cotizar la impermeabilización de un estacionamiento o una rampa.",
     "filtro": "Losas",
-    "nota": "Fotografía de referencia · Jan van der Wolf / Pexels",
-    "fuente_url": "https://www.pexels.com/photo/modern-parking-garage-interior-design-31673671/"
+    "nota": "Fotografía de referencia · Claudio Schwarz / Unsplash",
+    "fuente_url": "https://unsplash.com/photos/empty-white-concrete-pillared-parking-lot-fAmj2spOqxc"
   }
 ]

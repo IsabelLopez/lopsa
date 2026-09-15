@@ -498,5 +498,15 @@
   "prop": 0.75,
   "formato": "webp",
   "huella": "82d327be10"
+ },
+ "app-parking-v4": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.3333,
+  "formato": "webp",
+  "huella": "96ee94b67c"
  }
 }
