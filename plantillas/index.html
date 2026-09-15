@@ -14,7 +14,7 @@
       "email": "{{ sitio.correo }}",
       "description": "{{ sitio.descripcion }}",
       "image": "{{ sitio.url }}/img/og-1200.jpg",
-      "address": {"@type": "PostalAddress", "streetAddress": "Ave. Marina del Norte, PH Plaza Real, Piso 3, Oficina 306, Costa del Este", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
+      "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
       "areaServed": {"@type": "Country", "name": "Panamá"},
       "openingHoursSpecification": [
         {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
@@ -245,6 +245,7 @@
         </div>
         <div class="caso__texto">
           <h3>{{ c.titulo }}</h3>
+          {% if proyectos.mostrar_detalle %}
           <dl class="caso__ficha">
             {% for k, v in c.ficha.items() %}<div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}
           </dl>
@@ -252,6 +253,9 @@
           <p><strong>Solución.</strong> {{ c.solucion }}</p>
           <p><strong>Resultado.</strong> {{ c.resultado }}</p>
           <p class="caso__sistema">{{ c.sistema }}</p>
+          {% else %}
+          <p class="caso__sistema">{{ c.tipo }}</p>
+          {% endif %}
         </div>
       </article>
       {% endfor %}
@@ -330,7 +334,7 @@
       <ul class="contacto__datos">
         <li><span>WhatsApp y teléfono</span><a href="tel:{{ sitio.telefono_tel }}">{{ sitio.telefono_visible }}</a></li>
         <li><span>Correo</span><a href="mailto:{{ sitio.correo }}">{{ sitio.correo }}</a></li>
-        <li><span>Oficina</span>{{ sitio.direccion_linea }}</li>
+        <li><span>Ubicación</span>{{ sitio.direccion_linea }}</li>
         <li><span>Horario</span>{{ sitio.horario }}</li>
         <li><span>Cobertura</span>{{ sitio.cobertura }}</li>
       </ul>

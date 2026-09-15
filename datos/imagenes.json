@@ -1,7 +1,7 @@
 {
   "_nota": "Manifiesto de fotos. 'origen' es relativo a 'raiz' (la carpeta Fotos_LOPSA del repositorio LOPSA_CLAUDE). preparar_imagenes.py las recorta, las convierte a WebP sin datos EXIF ni GPS y las deja en estaticos/img/. 'recorte' = proporción ancho:alto; 'foco' = punto de interés (0-1, 0-1); 'caja' = recorte previo en fracciones [izq, arriba, der, abajo]; 'desenfocar' = zonas a difuminar en fracciones [[x0, y0, x1, y1], ...]. 'origen_abs' = ruta absoluta para fotos externas con licencia (registrar la licencia en 'licencia').",
-  "raiz": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto",
-  "raiz_material": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Material_Ventas/Fotos",
+  "raiz": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto",
+  "raiz_material": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Material_Ventas/Fotos",
   "imagenes": [
     {
       "id": "hero-propia-movil",
@@ -19,7 +19,7 @@
     },
     {
       "id": "hero-movil",
-      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto/_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaFrenteEdificioObra_01.jpg",
+      "origen_abs": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto/_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaFrenteEdificioObra_01.jpg",
       "nota": "Decision Manuel 09-sep-2026: portada = camion rotulado con el edificio de fondo. Version vertical de la misma escena para celular.",
       "recorte": "4:5",
       "foco": [
@@ -50,7 +50,7 @@
     },
     {
       "id": "hero-escritorio",
-      "origen_abs": "C:/Users/lopez/OneDrive/Documents/Trabajo/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto/_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaVistaAmpliaEdificio_01.jpg",
+      "origen_abs": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Fotos_LOPSA/Por_Proyecto/_EQUIPO_LOPSA/20260623_Equipo_CamionLopsaVistaAmpliaEdificio_01.jpg",
       "nota": "Decision Manuel 09-sep-2026: la foto COMPLETA (16:9 nativa, sin recorte). Se difumina solo el letrero ajeno de la derecha (QR, Grupo Do It, telefono y logos): regla de marcas ajenas.",
       "recorte": "16:9",
       "foco": [
@@ -86,7 +86,7 @@
     },
     {
       "id": "app-zinc",
-      "origen": "2026015_Filtraciones_Royal_Pacific/20260618_Aplicacion_PoliureaTechoZincAvance_03.jpg",
+      "origen": "2026014_Galera_Inmobiliaria_Sthevali/20260707_Aplicacion_TechoZincPoliureaGrisAvance_01.jpg",
       "recorte": "4:3",
       "foco": [
         0.5,
@@ -95,7 +95,8 @@
       "anchos": [
         480,
         800
-      ]
+      ],
+      "nota": "Manuel 15-sep-2026: «pon algo más bonito» → galera de Betania con cielo azul (antes: anexo de zinc de Costa del Este, nublado y con plástico). No repite la foto del caso 1 (caso1-despues)."
     },
     {
       "id": "app-losa",
