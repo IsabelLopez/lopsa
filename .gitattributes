@@ -1,0 +1,10 @@
+# Texto siempre con fin de línea LF en cualquier sistema (Windows, Mac o la nube):
+# así construir_sitio.py genera dist/ idéntico para todos y no hay choques falsos entre socios.
+* text=auto eol=lf
+*.webp binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary

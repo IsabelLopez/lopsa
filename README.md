@@ -23,33 +23,20 @@ de gestión de LOPSA: `04_COMERCIAL/Web_LOPSA/`. Este repositorio es **el códig
 
 ## Flujo de trabajo
 
-```
-python preparar_imagenes.py      # solo cuando cambia el manifiesto de fotos
-python construir_sitio.py        # datos + plantillas → dist/
-python verificar_sitio.py        # debe decir OK
-python -m http.server 8080 --directory dist   # previsualizar en http://localhost:8080
-git add -A && git commit -m "…" && git push
-npx netlify-cli deploy --prod --dir=dist       # publicar (token de Netlify de LOPSA)
-```
+Las instrucciones completas para cualquier sesión de Claude (y para cualquier persona) están en **`CLAUDE.md`**:
+rama nueva desde `main` → `python construir_sitio.py` → `python verificar_sitio.py` (debe decir OK) → pull request →
+merge a `main`. **Lo que llega a `main` lo publica Netlify solo**; no se despliega a mano. `dist/` nunca se edita a mano.
 
-Requisitos: Python 3.12 con `jinja2` y `Pillow` (el `.venv` del repositorio de gestión ya los tiene). Node solo
-hace falta para la CLI de Netlify (`npx`), no para el sitio.
+Requisitos: Python 3.12 o superior y `pip install -r requirements.txt` (Jinja2 y Pillow).
+Previsualizar en local: `python -m http.server 8080 --directory dist`.
 
-## Reglas de contenido (no se negocian)
+## Reglas de contenido
 
-- Español con tildes y ñ en todo texto visible.
-- Nunca se nombran marcas de material ni de equipo.
-- «Garantía por escrito», sin número de años. Los 25 años solo como vida útil certificada del sistema en cubiertas.
-- Posicionamiento 100 % poliurea caliente; la construcción es una línea al final.
-- Fotos propias, sin caras reconocibles sin autorización, sin rótulos de terceros y sin datos de GPS.
-- Sin datos privados: el único teléfono es el +507 6604-4196 y los correos son `ventas@` y `admin@`.
+Están en `CLAUDE.md`, sección «Reglas de contenido (no se negocian)».
 
 ## Publicación y accesos
 
-- **Hosting:** Netlify, cuenta de LOPSA (`admin@lopsa.com.pa`). El token vive en `07_HERRAMIENTAS/config/` del
-  repositorio de gestión, nunca aquí.
-- **Formulario:** Netlify Forms (`cotizacion`), con aviso por correo a `ventas@` y copia a Manuel; se configura en
-  el panel de Netlify.
-- **DNS:** zona en Cloudflare. Solo se tocan los registros A y CNAME de `lopsa.com.pa` y `www`; los servidores de
-  nombre en NIC y el MX de Google no se tocan nunca.
+- **Hosting:** Netlify, sitio `lopsa-pty` del equipo «Lopsa», enlazado a este repositorio (rama `main`).
+- **Formulario:** Netlify Forms (`cotizacion`); los avisos por correo se configuran en el panel de Netlify.
+- **DNS:** zona en Cloudflare. Los servidores de nombre en NIC y el MX de Google no se tocan nunca.
 - **Medición:** `sitio.json` → `gtm_id`. Vacío = no se carga nada.
