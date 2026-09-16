@@ -912,6 +912,18 @@
         1200
       ],
       "nota": "Fotografía real de referencia: Jakub Żerdzicki / Unsplash. https://unsplash.com/photos/an-empty-parking-garage-with-yellow-and-black-stripes-81zwxdDiNAg · https://unsplash.com/license . No es una obra LOPSA ni se atribuye composición química al piso."
+    },
+    {
+      "id": "poliurea-capas-v1",
+      "origen_abs": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Marketing/03_Contenido/Piezas/2026-09/Render_Capas_Poliurea_IA_20260915.png",
+      "recorte": "3:2",
+      "anchos": [
+        480,
+        800,
+        1200
+      ],
+      "calidad": 80,
+      "nota": "Render educativo generado con IA: base de concreto, imprimacion, membrana y acabado. Capas con colores y espesores ilustrativos, no a escala. Encargo de Manuel 15-sep-2026."
     }
   ]
 }

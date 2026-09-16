@@ -1,5 +1,5 @@
 {
-  "intro": "La poliurea caliente es un recubrimiento de dos componentes que se calientan y se proyectan a alta presión. Al mezclarse en la pistola, reaccionan y forman una membrana continua y elástica, adherida a la superficie. Se utiliza para impermeabilizar y proteger cubiertas, estructuras y otras superficies, con un sistema definido para cada uso.",
+  "intro": "La poliurea caliente es un recubrimiento que forma una capa continua y flexible para impedir el paso del agua y proteger una superficie. Se llama «caliente» porque sus dos componentes se calientan antes de mezclarse y proyectarse con una pistola. Al reaccionar, forman en segundos la membrana protectora sobre la base preparada.",
   "fundamentos": [
     {
       "titulo": "Dos componentes, una reacción",
@@ -16,34 +16,26 @@
   ],
   "beneficios": [
     {
-      "titulo": "Membrana continua",
-      "texto": "Se adapta a la geometría de la superficie, incluidos encuentros y pasantes. Las juntas de movimiento reciben un tratamiento específico."
+      "titulo": "Múltiples campos de aplicación",
+      "texto": "Techos y losas, canales, tanques y pisos industriales. Se elige el sistema según la superficie, el contacto con agua y el tipo de tránsito."
     },
     {
-      "titulo": "Flexibilidad",
-      "texto": "Acompaña los movimientos del soporte dentro de los límites del sistema. La preparación de fisuras y juntas forma parte de la solución."
+      "titulo": "Protección continua y flexible",
+      "texto": "Recubre esquinas, encuentros con muros y pasos de tuberías. Las juntas que permiten el movimiento de la estructura reciben un tratamiento específico."
     },
     {
-      "titulo": "Resistencia al desgaste",
-      "texto": "Sus propiedades mecánicas permiten especificar recubrimientos para usos exigentes. El sistema y el acabado se eligen según el tránsito y la exposición."
-    },
-    {
-      "titulo": "Formación rápida de la membrana",
-      "texto": "La reacción forma gel en segundos. El curado completo y el momento de habilitar el área se determinan según la ficha técnica y el uso previsto."
-    },
-    {
-      "titulo": "Acabado según el uso",
-      "texto": "En superficies expuestas se especifica protección UV. En áreas transitables se define el acabado de acuerdo con el desgaste y la textura requeridos."
+      "titulo": "Resistencia para usos exigentes",
+      "texto": "Protección frente al desgaste, con espesor y acabado definidos según la exposición y el uso de cada superficie."
     }
   ],
   "comparativa": {
     "titulo": "Poliurea frente a otros impermeabilizantes",
-    "intro": "Conozca cómo se aplican, cómo resuelven las uniones y qué considerar al elegir un sistema para su superficie.",
+    "intro": "Compare la aplicación, las uniones, los usos y la puesta en servicio de cada sistema.",
     "criterios": [
       "Cómo se aplica",
       "Uniones de la membrana",
       "Usos habituales",
-      "Qué considerar"
+      "Puesta en servicio"
     ],
     "sistemas": [
       {
@@ -53,7 +45,7 @@
           "Proyección en caliente con equipo bicomponente. Forma gel en segundos.",
           "Membrana continua, sin solapes de láminas.",
           "Cubiertas, estructuras y superficies de uso industrial.",
-          "Requiere equipo especializado. El curado y el acabado determinan cuándo habilitar el área."
+          "Formación de gel en segundos. Habilitación según curado, acabado y uso; intervención planificable por zonas."
         ]
       },
       {
@@ -62,7 +54,7 @@
           "Láminas en rollo; adheridas, soldadas o fijadas según el sistema.",
           "Solapes sellados entre los paños.",
           "Azoteas, losas y cubiertas.",
-          "La continuidad depende del sellado de solapes y de los remates en desagües y perímetros."
+          "Tras completar la adherencia o fijación, el sellado de solapes y la protección prevista."
         ]
       },
       {
@@ -71,7 +63,7 @@
           "Láminas sintéticas fijadas o adheridas al soporte.",
           "Solapes soldados con aire caliente.",
           "Cubiertas comerciales e industriales de gran superficie.",
-          "Requiere controlar soldaduras, fijaciones y piezas de detalle en encuentros y pasantes."
+          "Tras completar y revisar fijaciones, soldaduras y remates del sistema."
         ]
       },
       {
@@ -80,7 +72,7 @@
           "Recubrimiento líquido aplicado por capas con rodillo, brocha o equipo de aspersión.",
           "Membrana continua, con refuerzos según el sistema.",
           "Impermeabilización y mantenimiento de techos y azoteas.",
-          "Hay que respetar el espesor y el secado entre capas, y prever las condiciones de lluvia."
+          "Después del secado de las capas; los tiempos dependen del producto y las condiciones ambientales."
         ]
       },
       {
@@ -89,10 +81,67 @@
           "Membrana líquida aplicada por capas con rodillo, brocha o equipo de aspersión.",
           "Membrana continua, con refuerzos según el sistema.",
           "Cubiertas, terrazas y balcones.",
-          "La humedad del soporte, el curado y el acabado deben ajustarse a la especificación del producto."
+          "Después del curado de la membrana y el acabado; según producto, ambiente y uso previsto."
         ]
       }
     ],
     "nota": "Todos los sistemas requieren preparar el soporte y tratar juntas, desagües y encuentros. La elección depende de la superficie, la exposición y el uso previsto."
+  },
+  "cifras": [
+    {
+      "valor": "25",
+      "unidad": "años",
+      "titulo": "Durabilidad en cubiertas",
+      "detalle": "Vida útil estimada del sistema evaluado · categoría W3.",
+      "icono": "cubierta"
+    },
+    {
+      "valor": "8–14",
+      "unidad": "segundos",
+      "titulo": "Formación de gel",
+      "detalle": "Referencia de la ficha técnica española del sistema.",
+      "icono": "reloj"
+    },
+    {
+      "valor": "10",
+      "unidad": "años",
+      "titulo": "Garantía LOPSA",
+      "detalle": "Contra filtraciones en cubiertas, por escrito.",
+      "icono": "escudo"
+    }
+  ],
+  "operacion": {
+    "etiqueta": "Rapidez que aporta a su operación",
+    "titulo": "Menos espera. Más continuidad operativa.",
+    "texto": "La rápida formación de la membrana facilita intervenciones ágiles. Planificamos por zonas y coordinamos horarios para reducir paradas y mantener la actividad en las áreas que puedan seguir operando.",
+    "nota": "La habilitación del área intervenida depende del curado, del acabado y del uso previsto."
+  },
+  "capas": {
+    "titulo": "Cada capa tiene una función",
+    "intro": "La protección combina una base bien preparada, adherencia, impermeabilización y acabado. Este corte ilustrado muestra un ejemplo sobre concreto.",
+    "imagen": "poliurea-capas-v1",
+    "alt": "Corte ilustrado de una losa: concreto preparado, imprimación ocre, membrana de poliurea azul y acabado protector gris claro, visibles de abajo hacia arriba.",
+    "pasos": [
+      {
+        "titulo": "Base preparada",
+        "texto": "Se limpia y repara el concreto o metal. Las fisuras, juntas y tornillos se tratan antes de recubrir.",
+        "color": "base"
+      },
+      {
+        "titulo": "Imprimación",
+        "texto": "Es la capa de unión: ayuda a que la membrana quede adherida a la superficie.",
+        "color": "primer"
+      },
+      {
+        "titulo": "Poliurea caliente",
+        "texto": "La capa continua y flexible que impermeabiliza y protege la superficie.",
+        "color": "membrana"
+      },
+      {
+        "titulo": "Acabado protector",
+        "texto": "Se elige según el uso: protección frente al sol, resistencia al desgaste o textura antideslizante.",
+        "color": "acabado"
+      }
+    ]
   }
 }

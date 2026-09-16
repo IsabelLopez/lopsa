@@ -54,7 +54,10 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
   intervenciones. No volver a separar proyectos. Proceso completo visible sin clics y sin efecto de goteo.
 - Manuel ratificó «equipo capacitado y certificado» para aplicación de recubrimientos. No añadir certificadores ni
   sellos concretos sin respaldo.
-- Garantía: **«10 años contra filtraciones»**. «Vida útil certificada de 25 años» solo para cubiertas. Ninguna otra cifra.
+- Orden vigente: 01 Qué es la poliurea; 02 Aplicaciones. Explicación para personas sin conocimientos previos, cifras y capas visibles sin clics.
+- Garantía: **«10 años contra filtraciones en cubiertas»**. Separar de **25 años de vida útil estimada W3 en cubiertas**.
+- **8–14 segundos** es formación de gel, referencia de la ficha técnica española del sistema; no secado completo ni habilitación instantánea. La ficha internacional da otros tiempos: la puesta en servicio depende del producto suministrado, curado, acabado y uso. Promover reducción de paradas y planificación por zonas.
+- Respaldo público: ETE 11/0016, marcado CE del sistema de cubiertas y BROOF(t1) sobre concreto. No extender a certificación de LOPSA, todos los soportes o todos los productos.
 - Sin precios, tarifas ni descuentos. Sin marcas de materiales ni de equipos. Sin promesas que LOPSA no haya
   confirmado (plazos, certificaciones, «precio fijo»).
 - LOPSA se presenta como especialista en poliurea caliente; la construcción es secundaria.

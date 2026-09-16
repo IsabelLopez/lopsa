@@ -3,16 +3,16 @@
   "razon_social": "LOPSA, S.A.",
   "url": "https://lopsa.com.pa",
   "titulo": "Poliurea caliente en Panamá | LOPSA",
-  "descripcion": "Aplicadores especialistas en poliurea caliente en Panamá: impermeabilización de losas y techos de zinc, anticorrosión de canales y estructuras metálicas, tanques y pisos industriales. Equipo y cuadrillas propias. Garantía de 10 años contra filtraciones.",
+  "descripcion": "Aplicadores especialistas en poliurea caliente en Panamá: impermeabilización de losas y techos de zinc, anticorrosión de canales y estructuras metálicas, tanques y pisos industriales. Equipo y cuadrillas propias. Garantía de 10 años contra filtraciones en cubiertas.",
   "eyebrow": "Especialistas en poliurea caliente · Panamá",
   "h1": "Poliurea caliente. Protección duradera.",
   "lead": "Protegemos cubiertas, losas y superficies industriales con poliurea caliente y recubrimientos especializados. Ingeniería, preparación y ejecución en cada etapa.",
   "tagline": "Impermeabilizamos y protegemos sus activos.",
   "chips": [
     "Dirección técnica de ingeniero civil idóneo",
-    "Vida útil certificada de 25 años en cubiertas",
+    "Vida útil estimada de 25 años en cubiertas · W3",
     "Equipo de aplicación en caliente y cuadrillas propias",
-    "Garantía de 10 años contra filtraciones"
+    "Garantía de 10 años contra filtraciones en cubiertas"
   ],
   "posicionamiento": "Somos aplicadores especialistas en poliurea caliente. No vendemos material ni alquilamos equipo: el diagnóstico y la aplicación los hace personal propio de LOPSA, con equipo propio.",
   "triada": [
@@ -57,12 +57,12 @@
   "anio": "2026",
   "nav": [
     {
-      "ancla": "#aplicaciones",
-      "texto": "Aplicaciones"
-    },
-    {
       "ancla": "#poliurea",
       "texto": "Poliurea"
+    },
+    {
+      "ancla": "#aplicaciones",
+      "texto": "Aplicaciones"
     },
     {
       "ancla": "#proceso",

@@ -57,35 +57,14 @@
       <figcaption><span>Ingeniería que se lleva a obra.</span><span>LOPSA · Panamá</span></figcaption>
     </figure>
   </div>
-  <div class="portada__credenciales"><div class="contenedor credenciales"><div><strong>10 años</strong><span>Garantía contra filtraciones</span></div><div><strong>Equipo propio</strong><span>Tecnología de proyección a alta presión</span></div><div><strong>Dirección de ingeniería</strong><span>Diagnóstico, ejecución y entrega documentada</span></div></div></div>
-</section>
-
-<section class="seccion seccion--hueso" id="aplicaciones">
-  <div class="contenedor">
-    <div class="seccion__cabeza seccion__cabeza--fila"><div><p class="seccion__indice"><span>01</span> Aplicaciones</p><h2>Una solución para<br>cada superficie.</h2></div><p>El uso, el soporte y la exposición definen el sistema que necesita su proyecto.</p></div>
-    <div class="tarjetas">
-      {% for a in aplicaciones %}
-      <article class="tarjeta" id="app-{{ a.id }}">
-        <figure class="tarjeta__foto">
-          {% if a.imagen %}{{ m.foto(a.imagen, a.alt, '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw') }}{% else %}
-          <div class="ilustracion" role="img" aria-label="Esquema conceptual de una losa de estacionamiento con acabado continuo">
-            <svg viewBox="0 0 480 300" aria-hidden="true"><rect width="480" height="300" fill="#e9ecee"/><path d="M50 190 275 63 438 153 213 280Z" fill="#d6dadd"/><path d="M50 179 275 52 438 142 213 269Z" fill="#a8b1bc"/><g fill="none" stroke="#f8f7f4" stroke-width="4"><path d="m160 135 91 51m-42-79 91 51m-42-79 91 51m-235 30 157 88"/></g><path d="m50 179 163 90 225-127" fill="none" stroke="#1a2f50" stroke-width="5"/></svg>
-          </div>
-          {% endif %}
-          {% if not a.imagen %}<figcaption class="tarjeta__nota">Esquema ilustrativo</figcaption>{% elif a.nota %}<figcaption class="tarjeta__nota">{{ a.nota }}{% if a.fuente_url %} · <a href="{{ a.fuente_url }}" target="_blank" rel="noopener">Fuente</a>{% endif %}</figcaption>{% endif %}
-        </figure>
-        <div class="tarjeta__cuerpo"><h3>{{ a.titulo }}</h3><p>{{ a.resumen }}</p><ul class="aplicacion__puntos">{% for punto in a.puntos %}<li>{{ punto }}</li>{% endfor %}</ul><a class="tarjeta__enlace" href="{{ wa(a.whatsapp) }}" target="_blank" rel="noopener" data-wa="app-{{ a.id }}" aria-label="Consultar por WhatsApp sobre {{ a.titulo | lower }}">Consultar <span aria-hidden="true">↗</span></a></div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
+  <div class="portada__credenciales"><div class="contenedor credenciales"><div><strong>10 años</strong><span>Garantía contra filtraciones en cubiertas</span></div><div><strong>Equipo propio</strong><span>Tecnología de proyección a alta presión</span></div><div><strong>Dirección de ingeniería</strong><span>Diagnóstico, ejecución y entrega documentada</span></div></div></div>
 </section>
 
 <section class="seccion" id="poliurea">
   <div class="contenedor">
     <div class="explicacion">
       <div>
-        <p class="seccion__indice"><span>02</span> La tecnología</p>
+        <p class="seccion__indice"><span>01</span> La tecnología</p>
         <h2>¿Qué es la<br>poliurea caliente?</h2>
         <p class="seccion__intro">{{ poliurea.intro }}</p>
         <ul class="beneficios">
@@ -96,6 +75,29 @@
         {{ m.foto('poliurea-ilustracion', 'Ilustración de aplicación de poliurea por proyección sobre concreto: imprimación y membrana continua que recubre el encuentro con un muro.', '(min-width: 900px) 50vw, 100vw') }}
         <ol class="ilustracion__leyenda"><li><span>01</span> Soporte preparado</li><li><span>02</span> Imprimación</li><li><span>03</span> Membrana continua</li></ol>
       </figure>
+    </div>
+    <div class="poliurea-cifras" aria-label="Durabilidad, formación de gel y garantía">
+      {% for cifra in poliurea.cifras %}
+      <article class="poliurea-cifra poliurea-cifra--{{ cifra.icono }}">
+        <svg class="poliurea-cifra__icono" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          {% if cifra.icono == 'cubierta' %}<path d="m4 19 16-12 16 12M9 18v16h22V18M16 34V23h8v11M4 36h32"/>{% elif cifra.icono == 'reloj' %}<circle cx="20" cy="22" r="13"/><path d="M20 9V4m-5 0h10M30 12l4-4M20 14v9l6 3"/>{% else %}<path d="m20 4 13 5v12c0 8-13 15-13 15S7 29 7 21V9Z"/><path d="m13 20 5 5 9-10"/>{% endif %}
+        </svg>
+        <p class="poliurea-cifra__valor">{{ cifra.valor }} <span>{{ cifra.unidad }}</span></p>
+        <h3>{{ cifra.titulo }}</h3>
+        <p class="poliurea-cifra__detalle">{{ cifra.detalle }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="continuidad">
+      <div><p class="etiqueta">{{ poliurea.operacion.etiqueta }}</p><h3>{{ poliurea.operacion.titulo }}</h3></div>
+      <div><p>{{ poliurea.operacion.texto }}</p><p class="continuidad__nota">{{ poliurea.operacion.nota }}</p></div>
+    </div>
+    <div class="capas-visuales" aria-labelledby="capas-titulo">
+      <div class="capas-visuales__cabeza"><p class="etiqueta">La protección, por dentro</p><h3 id="capas-titulo">{{ poliurea.capas.titulo }}</h3><p>{{ poliurea.capas.intro }}</p></div>
+      <div class="capas-visuales__contenido">
+        <figure class="capas-visuales__imagen">{{ m.foto(poliurea.capas.imagen, poliurea.capas.alt, '(min-width: 900px) 50vw, 100vw') }}</figure>
+        <ol class="capas-visuales__lista">{% for capa in poliurea.capas.pasos %}<li class="capa-visual capa-visual--{{ capa.color }}"><span class="capa-visual__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span><div><h4>{{ capa.titulo }}</h4><p>{{ capa.texto }}</p></div></li>{% endfor %}</ol>
+      </div>
     </div>
     <div class="comparacion" aria-labelledby="comparacion-titulo">
       <div class="comparacion__cabeza">
@@ -128,6 +130,27 @@
   </div>
 </section>
 
+<section class="seccion seccion--hueso" id="aplicaciones">
+  <div class="contenedor">
+    <div class="seccion__cabeza seccion__cabeza--fila"><div><p class="seccion__indice"><span>02</span> Aplicaciones</p><h2>Una solución para<br>cada superficie.</h2></div><p>El uso, el soporte y la exposición definen el sistema que necesita su proyecto.</p></div>
+    <div class="tarjetas">
+      {% for a in aplicaciones %}
+      <article class="tarjeta" id="app-{{ a.id }}">
+        <figure class="tarjeta__foto">
+          {% if a.imagen %}{{ m.foto(a.imagen, a.alt, '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw') }}{% else %}
+          <div class="ilustracion" role="img" aria-label="Esquema conceptual de una losa de estacionamiento con acabado continuo">
+            <svg viewBox="0 0 480 300" aria-hidden="true"><rect width="480" height="300" fill="#e9ecee"/><path d="M50 190 275 63 438 153 213 280Z" fill="#d6dadd"/><path d="M50 179 275 52 438 142 213 269Z" fill="#a8b1bc"/><g fill="none" stroke="#f8f7f4" stroke-width="4"><path d="m160 135 91 51m-42-79 91 51m-42-79 91 51m-235 30 157 88"/></g><path d="m50 179 163 90 225-127" fill="none" stroke="#1a2f50" stroke-width="5"/></svg>
+          </div>
+          {% endif %}
+          {% if not a.imagen %}<figcaption class="tarjeta__nota">Esquema ilustrativo</figcaption>{% elif a.nota %}<figcaption class="tarjeta__nota">{{ a.nota }}{% if a.fuente_url %} · <a href="{{ a.fuente_url }}" target="_blank" rel="noopener">Fuente</a>{% endif %}</figcaption>{% endif %}
+        </figure>
+        <div class="tarjeta__cuerpo"><h3>{{ a.titulo }}</h3><p>{{ a.resumen }}</p><ul class="aplicacion__puntos">{% for punto in a.puntos %}<li>{{ punto }}</li>{% endfor %}</ul><a class="tarjeta__enlace" href="{{ wa(a.whatsapp) }}" target="_blank" rel="noopener" data-wa="app-{{ a.id }}" aria-label="Consultar por WhatsApp sobre {{ a.titulo | lower }}">Consultar <span aria-hidden="true">↗</span></a></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="seccion" id="proceso">
   <div class="contenedor">
     <div class="seccion__cabeza seccion__cabeza--fila"><div><p class="seccion__indice"><span>03</span> El proceso</p><h2>Bien hecho,<br>desde la base.</h2></div><p>{{ proceso.intro }}</p></div>
@@ -142,22 +165,18 @@
       </li>
       {% endfor %}
     </ol>
+    <div class="respaldo-sistema" aria-labelledby="respaldo-titulo">
+      <div class="respaldo-sistema__cabeza"><p class="etiqueta">Desempeño documentado</p><h3 id="respaldo-titulo">{{ proceso.respaldo.titulo }}</h3><p>{{ proceso.respaldo.intro }}</p></div>
+      <div class="respaldo-sistema__tarjetas">
+        {% for item in proceso.respaldo["items"] %}
+        <article class="respaldo-sistema__item"><p class="respaldo-sistema__badge">{{ item.badge }}</p><h4>{{ item.titulo }}</h4><p>{{ item.texto }}</p></article>
+        {% endfor %}
+      </div>
+      <p class="nota">{{ proceso.respaldo.nota }}</p>
+    </div>
     <details class="detalle-tecnico">
-      <summary>Capas del sistema y ficha técnica de referencia <span aria-hidden="true">+</span></summary>
-      <div class="sistema">
-        <div>
-          <h3>De la superficie al acabado</h3>
-          <div class="pestanas" role="tablist" aria-label="Tipo de soporte">
-            <button role="tab" aria-selected="true" aria-controls="capas-concreto" id="tab-concreto" type="button">Concreto</button>
-            <button role="tab" aria-selected="false" aria-controls="capas-metal" id="tab-metal" type="button" tabindex="-1">Metal</button>
-          </div>
-          {% for soporte in ['concreto', 'metal'] %}
-          <div class="capas" id="capas-{{ soporte }}" role="tabpanel" aria-labelledby="tab-{{ soporte }}" tabindex="0"{% if soporte == 'metal' %} hidden{% endif %}>
-            <ol class="capas__lista">{% for c in proceso.capas[soporte] %}<li>{{ c }}</li>{% endfor %}</ol>
-          </div>
-          {% endfor %}
-          <p class="nota">Secuencia de aplicación. El acabado se especifica según exposición y uso.</p>
-        </div>
+      <summary>Consultar los datos técnicos del sistema <span aria-hidden="true">+</span></summary>
+      <div class="sistema sistema--ficha">
         <div>
           <h3>{{ proceso.tecnica.titulo }}</h3>
           <div class="tabla-envoltura"><table class="tecnica"><tbody>{% for f in proceso.tecnica.filas %}<tr><th scope="row">{{ f.dato }}</th><td>{{ f.valor }}</td></tr>{% endfor %}</tbody></table></div>
