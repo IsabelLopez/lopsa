@@ -40,7 +40,7 @@ Están en `CLAUDE.md`, sección «Reglas de contenido (no se negocian)».
 - Los cinco pasos del proceso se muestran completos; no se ocultan tras pestañas.
 - `proyectos.json` contiene `etapas`, cada una con `titulo`, `texto` y `fotos` (`imagen`, `alt`, `pie`). La galería mezcla distintas intervenciones por estado inicial, preparación y recubrimiento. No agrupar por cliente ni por proyecto.
 - El mensaje «Equipo capacitado y certificado» fue confirmado por la dirección. No añadir organismos ni sellos de certificación sin una fuente.
-- Las fotos externas se identifican como referencia. La foto de estacionamientos es de [Jakub Żerdzicki / Unsplash](https://unsplash.com/photos/an-empty-parking-garage-with-yellow-and-black-stripes-81zwxdDiNAg), bajo la [licencia Unsplash](https://unsplash.com/license); no representa una obra de LOPSA.
+- Las fotos de Aplicaciones se muestran sin pies superpuestos por indicación de Manuel. Se conservan las fuentes y licencias en la documentación; la foto de estacionamientos es de [Jakub Żerdzicki / Unsplash](https://unsplash.com/photos/an-empty-parking-garage-with-yellow-and-black-stripes-81zwxdDiNAg), bajo la [licencia Unsplash](https://unsplash.com/license); no representa una obra de LOPSA.
 - Las imágenes nuevas usan identificadores nuevos para renovar la caché. En la PC con acceso a los originales se incorporan mediante el manifiesto y `preparar_imagenes.py`; en sesiones remotas se reutilizan las versiones procesadas. Nunca publicar originales ni metadatos.
 
 ## Publicación y accesos
