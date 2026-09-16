@@ -528,5 +528,15 @@
   "prop": 1.5,
   "formato": "webp",
   "huella": "0d2aaf962b"
+ },
+ "poliurea-capas-rotuladas-v2": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.0,
+  "formato": "webp",
+  "huella": "c0a340d95f"
  }
 }

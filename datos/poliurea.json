@@ -29,84 +29,167 @@
     }
   ],
   "comparativa": {
-    "titulo": "Poliurea frente a otros impermeabilizantes",
-    "intro": "Compare la aplicación, las uniones, los usos y la puesta en servicio de cada sistema.",
-    "criterios": [
-      "Cómo se aplica",
-      "Uniones de la membrana",
-      "Usos habituales",
-      "Puesta en servicio"
-    ],
+    "titulo": "Las ventajas de la poliurea, comparadas",
+    "intro": "Reacción en segundos, membrana continua y protección duradera: compare los datos y la forma de aplicación.",
     "sistemas": [
+      "Poliurea caliente",
+      "Manto asfáltico",
+      "Membrana TPO",
+      "Acrílico",
+      "Poliuretano líquido"
+    ],
+    "filas": [
       {
-        "nombre": "Poliurea caliente",
-        "destacado": true,
+        "criterio": "Reacción / secado inicial",
         "valores": [
-          "Proyección en caliente con equipo bicomponente. Forma gel en segundos.",
-          "Membrana continua, sin solapes de láminas.",
-          "Cubiertas, estructuras y superficies de uso industrial.",
-          "Formación de gel en segundos. Habilitación según curado, acabado y uso; intervención planificable por zonas."
+          {
+            "dato": "8–14 s",
+            "detalle": "Formación de gel¹"
+          },
+          {
+            "dato": "Prefabricado",
+            "detalle": "Sin secado de membrana líquida"
+          },
+          {
+            "dato": "Prefabricada",
+            "detalle": "Sin secado de membrana líquida"
+          },
+          {
+            "dato": "≈2 h",
+            "detalle": "Seco al tacto²"
+          },
+          {
+            "dato": "≈10 h",
+            "detalle": "Seco al tacto²"
+          }
         ]
       },
       {
-        "nombre": "Manto asfáltico",
+        "criterio": "Durabilidad de referencia",
         "valores": [
-          "Láminas en rollo; adheridas, soldadas o fijadas según el sistema.",
-          "Solapes sellados entre los paños.",
-          "Azoteas, losas y cubiertas.",
-          "Tras completar la adherencia o fijación, el sellado de solapes y la protección prevista."
+          {
+            "dato": "25 años",
+            "detalle": "Vida útil estimada W3 · cubiertas"
+          },
+          {
+            "dato": "Según sistema",
+            "detalle": "Producto, instalación y mantenimiento"
+          },
+          {
+            "dato": "Según sistema",
+            "detalle": "Producto, instalación y mantenimiento"
+          },
+          {
+            "dato": "3 o 5 años",
+            "detalle": "Duración declarada del producto de referencia²"
+          },
+          {
+            "dato": "25 años · W3",
+            "detalle": "En la configuración de cubierta evaluada²"
+          }
         ]
       },
       {
-        "nombre": "Membrana TPO",
+        "criterio": "Uniones de la membrana",
         "valores": [
-          "Láminas sintéticas fijadas o adheridas al soporte.",
-          "Solapes soldados con aire caliente.",
-          "Cubiertas comerciales e industriales de gran superficie.",
-          "Tras completar y revisar fijaciones, soldaduras y remates del sistema."
+          {
+            "dato": "Sin solapes",
+            "detalle": "Membrana continua proyectada"
+          },
+          {
+            "dato": "Con solapes",
+            "detalle": "Uniones selladas entre paños"
+          },
+          {
+            "dato": "Con solapes",
+            "detalle": "Uniones soldadas con aire caliente"
+          },
+          {
+            "dato": "Continua",
+            "detalle": "Aplicada por capas y con refuerzos"
+          },
+          {
+            "dato": "Continua",
+            "detalle": "Aplicada por capas y con refuerzos"
+          }
         ]
       },
       {
-        "nombre": "Acrílico elastomérico",
+        "criterio": "Esquinas y encuentros",
         "valores": [
-          "Recubrimiento líquido aplicado por capas con rodillo, brocha o equipo de aspersión.",
-          "Membrana continua, con refuerzos según el sistema.",
-          "Impermeabilización y mantenimiento de techos y azoteas.",
-          "Después del secado de las capas; los tiempos dependen del producto y las condiciones ambientales."
+          {
+            "dato": "Proyección directa",
+            "detalle": "Sobre detalles previamente preparados"
+          },
+          {
+            "dato": "Piezas y remates",
+            "detalle": "Corte y unión de paños"
+          },
+          {
+            "dato": "Piezas especiales",
+            "detalle": "Remates y soldaduras de detalle"
+          },
+          {
+            "dato": "Capas y refuerzos",
+            "detalle": "Tratamiento de puntos singulares"
+          },
+          {
+            "dato": "Capas y refuerzos",
+            "detalle": "Tratamiento de puntos singulares"
+          }
         ]
       },
       {
-        "nombre": "Poliuretano líquido",
+        "criterio": "Garantía",
         "valores": [
-          "Membrana líquida aplicada por capas con rodillo, brocha o equipo de aspersión.",
-          "Membrana continua, con refuerzos según el sistema.",
-          "Cubiertas, terrazas y balcones.",
-          "Después del curado de la membrana y el acabado; según producto, ambiente y uso previsto."
+          {
+            "dato": "10 años · LOPSA",
+            "detalle": "Contra filtraciones en cubiertas, por escrito"
+          },
+          {
+            "dato": "Según contrato",
+            "detalle": "Depende del proveedor y alcance"
+          },
+          {
+            "dato": "Según contrato",
+            "detalle": "Depende del proveedor y alcance"
+          },
+          {
+            "dato": "Según contrato",
+            "detalle": "Depende del proveedor y alcance"
+          },
+          {
+            "dato": "Según contrato",
+            "detalle": "Depende del proveedor y alcance"
+          }
         ]
       }
     ],
-    "nota": "Todos los sistemas requieren preparar el soporte y tratar juntas, desagües y encuentros. La elección depende de la superficie, la exposición y el uso previsto."
+    "notas": [
+      "¹ Los 8–14 segundos son formación de gel según la ficha española. Gel, secado al tacto y curado completo son etapas distintas; la habilitación depende de la ficha del sistema y del acabado.",
+      "² Ejemplos de productos documentados, no valores universales de cada familia. Tiempos del acrílico y poliuretano a 20 °C y 50 % de humedad relativa. La vida útil estimada y la garantía son conceptos distintos."
+    ]
   },
   "cifras": [
     {
       "valor": "25",
       "unidad": "años",
-      "titulo": "Durabilidad en cubiertas",
-      "detalle": "Vida útil estimada del sistema evaluado · categoría W3.",
+      "titulo": "Vida útil W3",
+      "detalle": "Estimada en cubiertas",
       "icono": "cubierta"
     },
     {
       "valor": "8–14",
       "unidad": "segundos",
       "titulo": "Formación de gel",
-      "detalle": "Referencia de la ficha técnica española del sistema.",
+      "detalle": "Ficha técnica española",
       "icono": "reloj"
     },
     {
       "valor": "10",
       "unidad": "años",
       "titulo": "Garantía LOPSA",
-      "detalle": "Contra filtraciones en cubiertas, por escrito.",
+      "detalle": "Contra filtraciones en cubiertas",
       "icono": "escudo"
     }
   ],
@@ -118,9 +201,9 @@
   },
   "capas": {
     "titulo": "Cada capa tiene una función",
-    "intro": "La protección combina una base bien preparada, adherencia, impermeabilización y acabado. Este corte ilustrado muestra un ejemplo sobre concreto.",
-    "imagen": "poliurea-capas-v1",
-    "alt": "Corte ilustrado de una losa: concreto preparado, imprimación ocre, membrana de poliurea azul y acabado protector gris claro, visibles de abajo hacia arriba.",
+    "intro": "Base preparada, imprimación, poliurea y acabado: así se forma la protección sobre una losa.",
+    "imagen": "poliurea-capas-rotuladas-v2",
+    "alt": "Corte de cuatro capas con nombres y líneas indicadoras integrados: acabado protector gris, poliurea caliente azul, imprimación ocre y base preparada de concreto.",
     "pasos": [
       {
         "titulo": "Base preparada",

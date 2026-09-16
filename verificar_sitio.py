@@ -67,7 +67,9 @@ def main():
         rel = os.path.relpath(p, DIST)
         bajo = html.lower()
         for palabra in PROHIBIDAS:
-            if palabra in bajo:
+            # FDA es una sigla, no una coincidencia dentro de la huella hexadecimal de un recurso.
+            coincide = re.search(r"\bfda\b", bajo) if palabra == "fda" else palabra in bajo
+            if coincide:
                 problemas.append(f"{rel}: contiene «{palabra}»")
         an = Analizador()
         an.feed(html)

@@ -924,6 +924,18 @@
       ],
       "calidad": 80,
       "nota": "Render educativo generado con IA: base de concreto, imprimacion, membrana y acabado. Capas con colores y espesores ilustrativos, no a escala. Encargo de Manuel 15-sep-2026."
+    },
+    {
+      "id": "poliurea-capas-rotuladas-v2",
+      "origen_abs": "C:/Users/lopez/OneDrive/Desktop/CONTROL_GLOBAL/NEGOCIO/LOPSA/04_COMERCIAL/Marketing/03_Contenido/Piezas/2026-09/Render_Capas_Poliurea_Rotulado_IA_20260915.png",
+      "recorte": "1:1",
+      "anchos": [
+        480,
+        800,
+        1200
+      ],
+      "calidad": 85,
+      "nota": "Render IA editado con cuatro etiquetas integradas y lineas a las capas, mismo encuadre en todas las pantallas. Colores y espesores ilustrativos. Revision de Manuel 15-sep-2026."
     }
   ]
 }

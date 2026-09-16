@@ -79,9 +79,6 @@
     <div class="poliurea-cifras" aria-label="Durabilidad, formación de gel y garantía">
       {% for cifra in poliurea.cifras %}
       <article class="poliurea-cifra poliurea-cifra--{{ cifra.icono }}">
-        <svg class="poliurea-cifra__icono" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-          {% if cifra.icono == 'cubierta' %}<path d="m4 19 16-12 16 12M9 18v16h22V18M16 34V23h8v11M4 36h32"/>{% elif cifra.icono == 'reloj' %}<circle cx="20" cy="22" r="13"/><path d="M20 9V4m-5 0h10M30 12l4-4M20 14v9l6 3"/>{% else %}<path d="m20 4 13 5v12c0 8-13 15-13 15S7 29 7 21V9Z"/><path d="m13 20 5 5 9-10"/>{% endif %}
-        </svg>
         <p class="poliurea-cifra__valor">{{ cifra.valor }} <span>{{ cifra.unidad }}</span></p>
         <h3>{{ cifra.titulo }}</h3>
         <p class="poliurea-cifra__detalle">{{ cifra.detalle }}</p>
@@ -95,8 +92,8 @@
     <div class="capas-visuales" aria-labelledby="capas-titulo">
       <div class="capas-visuales__cabeza"><p class="etiqueta">La protección, por dentro</p><h3 id="capas-titulo">{{ poliurea.capas.titulo }}</h3><p>{{ poliurea.capas.intro }}</p></div>
       <div class="capas-visuales__contenido">
-        <figure class="capas-visuales__imagen">{{ m.foto(poliurea.capas.imagen, poliurea.capas.alt, '(min-width: 900px) 50vw, 100vw') }}</figure>
-        <ol class="capas-visuales__lista">{% for capa in poliurea.capas.pasos %}<li class="capa-visual capa-visual--{{ capa.color }}"><span class="capa-visual__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span><div><h4>{{ capa.titulo }}</h4><p>{{ capa.texto }}</p></div></li>{% endfor %}</ol>
+        <figure class="capas-visuales__imagen">{{ m.foto(poliurea.capas.imagen, poliurea.capas.alt, '(min-width: 680px) 640px, 100vw') }}</figure>
+        <ol class="visualmente-oculto">{% for capa in poliurea.capas.pasos %}<li class="capa-visual capa-visual--{{ capa.color }}"><span class="capa-visual__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span><div><h4>{{ capa.titulo }}</h4><p>{{ capa.texto }}</p></div></li>{% endfor %}</ol>
       </div>
     </div>
     <div class="comparacion" aria-labelledby="comparacion-titulo">
@@ -105,27 +102,19 @@
         <h3 id="comparacion-titulo">{{ poliurea.comparativa.titulo }}</h3>
         <p class="comparacion__intro">{{ poliurea.comparativa.intro }}</p>
       </div>
-      <table class="comparativa">
-        <caption class="visualmente-oculto">Comparación de poliurea caliente, manto asfáltico, TPO, acrílico y poliuretano</caption>
-        <thead><tr><th scope="col">Sistema</th>{% for criterio in poliurea.comparativa.criterios %}<th scope="col">{{ criterio }}</th>{% endfor %}</tr></thead>
-        <tbody>
-          {% for sistema in poliurea.comparativa.sistemas %}
-          <tr{% if sistema.destacado | default(false) %} class="comparativa__destacado"{% endif %}>
-            <th scope="row">{% if sistema.destacado | default(false) %}<span class="comparacion__sello">Nuestra especialidad</span>{% endif %}<span class="comparativa__nombre">{{ sistema.nombre }}</span></th>
-            {% for valor in sistema.valores %}<td>{{ valor }}</td>{% endfor %}
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <div class="comparacion__tarjetas">
-        {% for sistema in poliurea.comparativa.sistemas %}
-        <article class="comparacion__sistema{% if sistema.destacado | default(false) %} comparacion__sistema--destacado{% endif %}">
-          <div class="comparacion__sistema-titulo">{% if sistema.destacado | default(false) %}<span class="comparacion__sello">Nuestra especialidad</span>{% endif %}<h4>{{ sistema.nombre }}</h4></div>
-          <dl>{% for valor in sistema.valores %}<div><dt>{{ poliurea.comparativa.criterios[loop.index0] }}</dt><dd>{{ valor }}</dd></div>{% endfor %}</dl>
-        </article>
-        {% endfor %}
+      <p class="comparacion__deslizar" id="comparacion-ayuda">Deslice la tabla para ver todos los sistemas <span aria-hidden="true">↔</span></p>
+      <div class="comparacion__tabla" role="region" aria-labelledby="comparacion-titulo" aria-describedby="comparacion-ayuda" tabindex="0">
+        <table class="comparativa">
+          <caption class="visualmente-oculto">Comparación de ejemplos de sistemas: tiempos, durabilidad, continuidad, detalles y garantía.</caption>
+          <thead><tr><th scope="col">Qué compara</th>{% for sistema in poliurea.comparativa.sistemas %}<th scope="col">{% if loop.first %}<span class="comparacion__sello">Nuestra especialidad</span>{% endif %}{{ sistema }}</th>{% endfor %}</tr></thead>
+          <tbody>
+            {% for fila in poliurea.comparativa.filas %}
+            <tr><th scope="row">{{ fila.criterio }}</th>{% for valor in fila.valores %}<td><strong>{{ valor.dato }}</strong><span>{{ valor.detalle }}</span></td>{% endfor %}</tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-      <p class="nota">{{ poliurea.comparativa.nota }}</p>
+      <div class="comparacion__notas">{% for nota in poliurea.comparativa.notas %}<p>{{ nota }}</p>{% endfor %}</div>
     </div>
   </div>
 </section>
