@@ -37,21 +37,62 @@
     }
   ],
   "comparativa": {
-    "columnas": ["Membranas en rollo", "Líquidos a rodillo", "Poliurea caliente"],
-    "filas": [
+    "titulo": "Poliurea frente a otros impermeabilizantes",
+    "intro": "Conozca cómo se aplican, cómo resuelven las uniones y qué considerar al elegir un sistema para su superficie.",
+    "criterios": [
+      "Cómo se aplica",
+      "Uniones de la membrana",
+      "Usos habituales",
+      "Qué considerar"
+    ],
+    "sistemas": [
       {
-        "criterio": "Colocación",
-        "valores": ["Paños unidos mediante solapes", "Aplicación por capas", "Proyección con equipo bicomponente"]
+        "nombre": "Poliurea caliente",
+        "destacado": true,
+        "valores": [
+          "Proyección en caliente con equipo bicomponente. Forma gel en segundos.",
+          "Membrana continua, sin solapes de láminas.",
+          "Cubiertas, estructuras y superficies de uso industrial.",
+          "Requiere equipo especializado. El curado y el acabado determinan cuándo habilitar el área."
+        ]
       },
       {
-        "criterio": "Encuentros y detalles",
-        "valores": ["Piezas y remates según el sistema", "Tratamiento y refuerzos según el sistema", "Recubrimiento proyectado sobre detalles preparados"]
+        "nombre": "Manto asfáltico",
+        "valores": [
+          "Láminas en rollo; adheridas, soldadas o fijadas según el sistema.",
+          "Solapes sellados entre los paños.",
+          "Azoteas, losas y cubiertas.",
+          "La continuidad depende del sellado de solapes y de los remates en desagües y perímetros."
+        ]
       },
       {
-        "criterio": "Puesta en servicio",
-        "valores": ["Según fijación, uniones y acabado", "Según curado de las capas y acabado", "Gel rápido; servicio según curado y acabado"]
+        "nombre": "Membrana TPO",
+        "valores": [
+          "Láminas sintéticas fijadas o adheridas al soporte.",
+          "Solapes soldados con aire caliente.",
+          "Cubiertas comerciales e industriales de gran superficie.",
+          "Requiere controlar soldaduras, fijaciones y piezas de detalle en encuentros y pasantes."
+        ]
+      },
+      {
+        "nombre": "Acrílico elastomérico",
+        "valores": [
+          "Recubrimiento líquido aplicado por capas con rodillo, brocha o equipo de aspersión.",
+          "Membrana continua, con refuerzos según el sistema.",
+          "Impermeabilización y mantenimiento de techos y azoteas.",
+          "Hay que respetar el espesor y el secado entre capas, y prever las condiciones de lluvia."
+        ]
+      },
+      {
+        "nombre": "Poliuretano líquido",
+        "valores": [
+          "Membrana líquida aplicada por capas con rodillo, brocha o equipo de aspersión.",
+          "Membrana continua, con refuerzos según el sistema.",
+          "Cubiertas, terrazas y balcones.",
+          "La humedad del soporte, el curado y el acabado deben ajustarse a la especificación del producto."
+        ]
       }
     ],
-    "nota": "Comparación orientativa de métodos de aplicación. Todos requieren evaluar el soporte, las condiciones ambientales y los detalles de la obra. La elección depende del uso previsto y de la especificación del sistema completo."
+    "nota": "Todos los sistemas requieren preparar el soporte y tratar juntas, desagües y encuentros. La elección depende de la superficie, la exposición y el uso previsto."
   }
 }

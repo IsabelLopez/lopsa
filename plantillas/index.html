@@ -97,7 +97,34 @@
         <ol class="ilustracion__leyenda"><li><span>01</span> Soporte preparado</li><li><span>02</span> Imprimación</li><li><span>03</span> Membrana continua</li></ol>
       </figure>
     </div>
-    <div class="comparacion"><div class="comparacion__cabeza"><p class="etiqueta">Para elegir con criterio</p><h3>¿Qué distingue a cada sistema?</h3></div><div class="tabla-envoltura"><table class="comparativa"><caption>Características generales de sistemas de impermeabilización</caption><thead><tr><th scope="col">Criterio</th>{% for c in poliurea.comparativa.columnas %}<th scope="col">{{ c }}</th>{% endfor %}</tr></thead><tbody>{% for f in poliurea.comparativa.filas %}<tr><th scope="row">{{ f.criterio }}</th>{% for v in f.valores %}<td>{{ v }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div><p class="nota">{{ poliurea.comparativa.nota }}</p></div>
+    <div class="comparacion" aria-labelledby="comparacion-titulo">
+      <div class="comparacion__cabeza">
+        <p class="etiqueta">Para elegir con criterio</p>
+        <h3 id="comparacion-titulo">{{ poliurea.comparativa.titulo }}</h3>
+        <p class="comparacion__intro">{{ poliurea.comparativa.intro }}</p>
+      </div>
+      <table class="comparativa">
+        <caption class="visualmente-oculto">Comparación de poliurea caliente, manto asfáltico, TPO, acrílico y poliuretano</caption>
+        <thead><tr><th scope="col">Sistema</th>{% for criterio in poliurea.comparativa.criterios %}<th scope="col">{{ criterio }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for sistema in poliurea.comparativa.sistemas %}
+          <tr{% if sistema.destacado | default(false) %} class="comparativa__destacado"{% endif %}>
+            <th scope="row">{% if sistema.destacado | default(false) %}<span class="comparacion__sello">Nuestra especialidad</span>{% endif %}<span class="comparativa__nombre">{{ sistema.nombre }}</span></th>
+            {% for valor in sistema.valores %}<td>{{ valor }}</td>{% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="comparacion__tarjetas">
+        {% for sistema in poliurea.comparativa.sistemas %}
+        <article class="comparacion__sistema{% if sistema.destacado | default(false) %} comparacion__sistema--destacado{% endif %}">
+          <div class="comparacion__sistema-titulo">{% if sistema.destacado | default(false) %}<span class="comparacion__sello">Nuestra especialidad</span>{% endif %}<h4>{{ sistema.nombre }}</h4></div>
+          <dl>{% for valor in sistema.valores %}<div><dt>{{ poliurea.comparativa.criterios[loop.index0] }}</dt><dd>{{ valor }}</dd></div>{% endfor %}</dl>
+        </article>
+        {% endfor %}
+      </div>
+      <p class="nota">{{ poliurea.comparativa.nota }}</p>
+    </div>
   </div>
 </section>
 
