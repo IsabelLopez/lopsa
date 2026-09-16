@@ -68,11 +68,11 @@
     "filas": [
       {
         "dato": "Tiempo de formación de gel",
-        "valor": "Rápida; consultar la ficha del sistema especificado"
+        "valor": "8–14 segundos (ficha técnica española de referencia)"
       },
       {
         "dato": "Tránsito peatonal inicial de referencia",
-        "valor": "Consultar ficha y condiciones del proyecto"
+        "valor": "Según producto suministrado, acabado y condiciones del proyecto"
       },
       {
         "dato": "Temperatura de servicio",
@@ -123,37 +123,25 @@
     "texto": "Probeta de la membrana sumergida en agua durante 45 días, sin cambios de adherencia ni de aspecto. Es la prueba de estanqueidad que hacemos con nuestro propio material."
   },
   "respaldo": {
-    "titulo": "Respaldo documental del sistema",
+    "titulo": "Certificaciones y respaldo del sistema",
+    "intro": "La impermeabilización de cubiertas cuenta con una evaluación técnica y prestaciones documentadas para el sistema completo.",
     "items": [
       {
         "badge": "ETE 11/0016",
-        "texto": "Evaluación Técnica Europea (EOTA) del sistema para impermeabilización de cubiertas"
-      },
-      {
-        "badge": "W3 · 25 años",
-        "texto": "Ciclo de vida estimado en cubiertas, la máxima categoría de la guía"
+        "titulo": "Evaluación Técnica Europea",
+        "texto": "Evaluación del sistema de impermeabilización de cubiertas, con categoría W3 de vida útil estimada."
       },
       {
         "badge": "Marcado CE",
-        "texto": "Todos los productos del sistema"
+        "titulo": "Prestaciones declaradas",
+        "texto": "Marcado del sistema de cubiertas conforme a su evaluación técnica europea."
       },
       {
-        "badge": "B ROOF (t1)",
-        "texto": "Comportamiento frente a fuego exterior en cubiertas (EN 13501-5)"
-      },
-      {
-        "badge": "Agua potable",
-        "texto": "Ensayo sin migración según UNE-EN 12873-1 en laboratorio acreditado"
-      },
-      {
-        "badge": "Anti-raíces",
-        "texto": "Resistencia a la penetración de raíces (UNE-CEN/TS 14416) para cubiertas ajardinadas"
-      },
-      {
-        "badge": "Industria alimentaria",
-        "texto": "Declaración del fabricante: apto para suelos, paredes y techos según el Reglamento (CE) 852/2004"
+        "badge": "BROOF (t1)",
+        "titulo": "Fuego exterior en cubiertas",
+        "texto": "Clasificación de comportamiento frente al fuego exterior sobre soporte de concreto, según EN 13501-5."
       }
     ],
-    "nota": "La documentación completa está disponible a solicitud."
+    "nota": "Estas referencias corresponden al sistema de cubiertas evaluado, con sus componentes y condiciones de instalación. Documentación técnica disponible a solicitud."
   }
 }

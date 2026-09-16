@@ -518,5 +518,15 @@
   "prop": 1.3333,
   "formato": "webp",
   "huella": "4c8505c299"
+ },
+ "poliurea-capas-v1": {
+  "anchos": [
+   480,
+   800,
+   1200
+  ],
+  "prop": 1.5,
+  "formato": "webp",
+  "huella": "0d2aaf962b"
  }
 }
