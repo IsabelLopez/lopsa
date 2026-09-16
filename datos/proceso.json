@@ -123,13 +123,13 @@
     "texto": "Probeta de la membrana sumergida en agua durante 45 días, sin cambios de adherencia ni de aspecto. Es la prueba de estanqueidad que hacemos con nuestro propio material."
   },
   "respaldo": {
-    "titulo": "Certificaciones y respaldo del sistema",
-    "intro": "La impermeabilización de cubiertas cuenta con una evaluación técnica y prestaciones documentadas para el sistema completo.",
+    "titulo": "Certificaciones y respaldo técnico",
+    "intro": "Evaluaciones, ensayos y declaraciones documentadas para cubiertas y otras aplicaciones específicas.",
     "items": [
       {
         "badge": "ETE 11/0016",
-        "titulo": "Evaluación Técnica Europea",
-        "texto": "Evaluación del sistema de impermeabilización de cubiertas, con categoría W3 de vida útil estimada."
+        "titulo": "Evaluación europea",
+        "texto": "Evaluación Técnica Europea del sistema de impermeabilización de cubiertas."
       },
       {
         "badge": "Marcado CE",
@@ -137,11 +137,36 @@
         "texto": "Marcado del sistema de cubiertas conforme a su evaluación técnica europea."
       },
       {
+        "badge": "W3 · 25 años",
+        "titulo": "Vida útil estimada",
+        "texto": "Categoría W3 del sistema de cubiertas evaluado: 25 años de vida útil estimada."
+      },
+      {
         "badge": "BROOF (t1)",
-        "titulo": "Fuego exterior en cubiertas",
-        "texto": "Clasificación de comportamiento frente al fuego exterior sobre soporte de concreto, según EN 13501-5."
+        "titulo": "Fuego exterior",
+        "texto": "Clasificación sobre soporte de concreto según EN 13501-5."
+      },
+      {
+        "badge": "Agua potable",
+        "titulo": "Ensayo de migración",
+        "texto": "Ensayo conforme a UNE-EN 12873-1:2014, bajo las condiciones y parámetros evaluados."
+      },
+      {
+        "badge": "Raíces",
+        "titulo": "Resistencia ensayada",
+        "texto": "Sin perforación por raíces en el ensayo según UNE-CEN/TS 14416 EX:2014."
+      },
+      {
+        "badge": "Gas radón",
+        "titulo": "Ensayo de difusión",
+        "texto": "Difusión a través de la membrana ensayada según ISO/DTS 11665-13."
+      },
+      {
+        "badge": "Uso alimentario",
+        "titulo": "Declaración del fabricante",
+        "texto": "Para suelos, paredes y techos de áreas alimentarias, conforme al Reglamento (CE) 852/2004."
       }
     ],
-    "nota": "Estas referencias corresponden al sistema de cubiertas evaluado, con sus componentes y condiciones de instalación. Documentación técnica disponible a solicitud."
+    "nota": "La documentación corresponde a los materiales y sistemas evaluados, bajo las condiciones de cada ensayo. El alcance aplicable se define según el uso y los componentes del proyecto. Documentación disponible a solicitud."
   }
 }
