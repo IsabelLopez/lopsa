@@ -4,6 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
 <title>{% block titulo %}{{ sitio.titulo }}{% endblock %}</title>
 <meta name="description" content="{% block descripcion %}{{ sitio.descripcion }}{% endblock %}">
 <link rel="canonical" href="{{ sitio.url }}{% block canonical %}/{% endblock %}">
@@ -36,17 +37,18 @@
 <a class="saltar" href="#contenido">Ir al contenido</a>
 <header class="cabecera" id="arriba">
   <div class="contenedor cabecera__fila">
-    <a class="cabecera__logo" href="/#inicio" aria-label="LOPSA, inicio">
+    <a class="cabecera__logo" href="/" aria-label="LOPSA, inicio">
       <img src="/img/logo-blanco.svg" alt="LOPSA" width="172" height="51">
     </a>
-    <nav class="cabecera__nav" id="nav" aria-label="Secciones">
+    <nav class="cabecera__nav" id="nav" aria-label="Navegación principal">
       <ul>
-        {% for n in sitio.nav %}<li><a href="/{{ n.ancla }}">{{ n.texto }}</a></li>{% endfor %}
+        {% for n in sitio.nav %}<li><a href="{{ n.url }}"{% if pagina == n.pagina %} aria-current="page"{% endif %}>{{ n.texto }}</a></li>{% endfor %}
+        <li class="cabecera__contacto"><a href="/contacto/"{% if pagina == 'contacto' %} aria-current="page"{% endif %}>Contacto</a></li>
       </ul>
     </nav>
     <div class="cabecera__acciones">
       <a class="cabecera__tel" href="tel:{{ sitio.telefono_tel }}">{{ sitio.telefono_visible }}</a>
-      <a class="boton boton--dorado boton--chico" href="/#contacto">Solicitar cotización</a>
+      <a class="boton boton--dorado boton--chico" href="/contacto/"{% if pagina == 'contacto' %} aria-current="page"{% endif %}>Cotizar proyecto <span aria-hidden="true">↗</span></a>
       <button class="cabecera__menu" type="button" aria-expanded="false" aria-controls="nav" id="btn-menu">
         <span class="visualmente-oculto">Abrir menú</span>
         <span class="hamburguesa" aria-hidden="true"></span>
@@ -57,6 +59,9 @@
 
 <main id="contenido">
 {% block contenido %}{% endblock %}
+{% if pagina in ['poliurea', 'aplicaciones', 'proceso', 'trabajos', 'equipo'] %}
+<div class="pagina-cierre"><div class="contenedor"><p>¿Lo vemos en su proyecto?<span>Conversemos sobre la superficie que necesita proteger.</span></p><a class="boton boton--marino" href="/contacto/">Solicitar cotización <span aria-hidden="true">↗</span></a></div></div>
+{% endif %}
 </main>
 
 <footer class="pie">
@@ -74,9 +79,8 @@
     </div>
     <nav class="pie__nav" aria-label="Enlaces del pie">
       <ul>
-        <li><a href="/#inicio">Inicio</a></li>
-        {% for n in sitio.nav %}<li><a href="/{{ n.ancla }}">{{ n.texto }}</a></li>{% endfor %}
-        <li><a href="/#contacto">Contacto</a></li>
+        {% for n in sitio.nav %}<li><a href="{{ n.url }}">{{ n.texto }}</a></li>{% endfor %}
+        <li><a href="/contacto/">Contacto</a></li>
         <li><a href="/aviso-legal/">Aviso legal</a></li>
         <li><a href="/privacidad/">Política de privacidad</a></li>
       </ul>
@@ -99,9 +103,10 @@
 
 <div class="barra-movil" id="barra-movil">
   <a class="barra-movil__wa" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="barra-movil">{{ m.icono_whatsapp('ico') }} WhatsApp</a>
-  <a class="barra-movil__form" href="/#contacto">Formulario</a>
+  <a class="barra-movil__form" href="/contacto/">Solicitar cotización <span aria-hidden="true">↗</span></a>
 </div>
 
+<noscript><a class="sin-js-whatsapp" href="{{ wa(sitio.whatsapp_texto) }}">Escribir por WhatsApp</a></noscript>
 <script src="/js/sitio.js?v={{ version_js }}" defer></script>
 </body>
 </html>

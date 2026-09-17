@@ -1,7 +1,8 @@
 # lopsa.com.pa — sitio web de LOPSA, S.A.
 
-Sitio estático de **LOPSA, S.A.**, aplicadores especialistas en poliurea caliente en Panamá. Una página larga más
-`/privacidad`, `/aviso-legal`, `/gracias` y `/404`. Sin base de datos, sin framework: HTML, CSS y JavaScript
+Sitio estático de **LOPSA, S.A.**, aplicadores especialistas en poliurea caliente en Panamá. Inicio breve y páginas
+`/poliurea/`, `/aplicaciones/`, `/proceso/`, `/trabajos/`, `/equipo/` y `/contacto/`, además de
+`/privacidad/`, `/aviso-legal/`, `/gracias/` y `/404.html`. Sin base de datos, sin framework: HTML, CSS y JavaScript
 generados con Python a partir de archivos de datos.
 
 El brief, los textos fuente, la identidad visual, el plan de trabajo y el estado vivo están en el repositorio
@@ -34,7 +35,11 @@ Previsualizar en local: `python -m http.server 8080 --directory dist`.
 
 Están en `CLAUDE.md`, sección «Reglas de contenido (no se negocian)».
 
-### Criterio visual vigente — 15 de septiembre de 2026
+### Criterio visual vigente — 16 de septiembre de 2026
+
+- Inicio breve con información principal y accesos a secciones independientes. Menú activo en escritorio y móvil; navegación disponible sin JavaScript. Los enlaces antiguos con anclas llevan a su nueva página.
+- La fotografía de portada sigue siendo **el camión de LOPSA con el edificio de fondo**, fija, completa y sin carrusel en celular y escritorio.
+- Cada sección tiene URL, título, descripción y canonical propios. El formulario vive únicamente en `/contacto/`; conserva todos los campos y atributos de Netlify. La atribución UTM se mantiene al navegar.
 
 - Fotografía propia como protagonista, con títulos y números grandes. Sin efecto de goteo.
 - Los cinco pasos del proceso se muestran completos; no se ocultan tras pestañas.

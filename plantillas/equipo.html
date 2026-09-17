@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block titulo %}Nuestro equipo | LOPSA Panamá{% endblock %}
+{% block descripcion %}Conozca al equipo de LOPSA: personal capacitado y certificado, dirección de ingeniería y equipos propios para la aplicación de poliurea caliente.{% endblock %}
+{% block canonical %}/equipo/{% endblock %}
+{% block contenido %}
+<header class="pagina-intro">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Nuestro equipo</span></nav>
+    <p class="etiqueta">Nuestro equipo</p>
+    <h1>Personas preparadas. Trabajo bien ejecutado.</h1>
+    <p>Personal propio, coordinación en obra y supervisión técnica en cada etapa.</p>
+  </div>
+</header>
+<section class="seccion pagina-contenido seccion--marino" id="nosotros">
+  <div class="contenedor nosotros">
+    <div><h2>Especialistas en<br>poliurea caliente.</h2><p class="nosotros__intro">{{ sitio.quienes }}</p><ul class="compromisos">{% for c in sitio.compromisos %}<li><strong>{{ c.titulo }}</strong><span>{{ c.texto }}</span></li>{% endfor %}</ul><p class="nosotros__secundario">{{ sitio.construccion }}</p></div>
+    <figure class="nosotros__foto">{{ m.foto('equipo-v3', 'Cuadrilla de LOPSA trabajando en la impermeabilización de una cubierta metálica', '(min-width: 900px) 40vw, 100vw') }}<figcaption>Personal propio, coordinación en obra y supervisión técnica.</figcaption></figure>
+  </div>
+</section>
+{% endblock %}

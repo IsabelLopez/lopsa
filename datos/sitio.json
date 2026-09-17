@@ -6,7 +6,7 @@
   "descripcion": "Aplicadores especialistas en poliurea caliente en Panamá: impermeabilización de losas y techos de zinc, anticorrosión de canales y estructuras metálicas, tanques y pisos industriales. Equipo y cuadrillas propias. Garantía de 10 años contra filtraciones en cubiertas.",
   "eyebrow": "Especialistas en poliurea caliente · Panamá",
   "h1": "Poliurea caliente. Protección duradera.",
-  "lead": "Protegemos cubiertas, losas y superficies industriales con poliurea caliente y recubrimientos especializados. Ingeniería, preparación y ejecución en cada etapa.",
+  "lead": "Impermeabilización y recubrimientos para cubiertas, losas y superficies industriales. Personal propio. Dirección de ingeniería. En todo Panamá.",
   "tagline": "Impermeabilizamos y protegemos sus activos.",
   "chips": [
     "Dirección técnica de ingeniero civil idóneo",
@@ -57,24 +57,63 @@
   "anio": "2026",
   "nav": [
     {
-      "ancla": "#poliurea",
+      "url": "/",
+      "pagina": "inicio",
+      "texto": "Inicio"
+    },
+    {
+      "url": "/poliurea/",
+      "pagina": "poliurea",
       "texto": "Poliurea"
     },
     {
-      "ancla": "#aplicaciones",
+      "url": "/aplicaciones/",
+      "pagina": "aplicaciones",
       "texto": "Aplicaciones"
     },
     {
-      "ancla": "#proceso",
+      "url": "/proceso/",
+      "pagina": "proceso",
       "texto": "Proceso"
     },
     {
-      "ancla": "#proyectos",
-      "texto": "Nuestro trabajo"
+      "url": "/trabajos/",
+      "pagina": "trabajos",
+      "texto": "Trabajos"
     },
     {
-      "ancla": "#nosotros",
+      "url": "/equipo/",
+      "pagina": "equipo",
       "texto": "Equipo"
+    }
+  ],
+  "inicio_accesos": [
+    {
+      "id": "poliurea",
+      "url": "/poliurea/",
+      "titulo": "Conozca la poliurea",
+      "texto": "Una membrana continua que se adapta a la superficie y la protege.",
+      "imagen": "poliurea-ilustracion",
+      "alt": "Ilustración de poliurea aplicada sobre una base de concreto",
+      "enlace": "Tecnología y ventajas"
+    },
+    {
+      "id": "aplicaciones",
+      "url": "/aplicaciones/",
+      "titulo": "Encuentre su aplicación",
+      "texto": "Techos, losas, canales, tanques, pisos y estacionamientos.",
+      "imagen": "app-zinc-v3",
+      "alt": "Aplicación de poliurea sobre una cubierta metálica",
+      "enlace": "Ver las 6 aplicaciones"
+    },
+    {
+      "id": "proyectos",
+      "url": "/trabajos/",
+      "titulo": "Vea nuestro trabajo",
+      "texto": "Del estado inicial al recubrimiento: fotografías de nuestras intervenciones.",
+      "imagen": "app-piso-v3",
+      "alt": "Recubrimiento continuo en un piso industrial",
+      "enlace": "Explorar fotografías"
     }
   ],
   "compromisos": [
