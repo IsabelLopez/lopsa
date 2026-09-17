@@ -4,6 +4,26 @@
 
   var WA = '50766044196';
 
+  /* Los enlaces compartidos antes de dividir el sitio conservan su destino. */
+  if (location.pathname === '/' || location.pathname === '/index.html') {
+    var anteriores = {
+      '#poliurea': '/poliurea/', '#aplicaciones': '/aplicaciones/',
+      '#proceso': '/proceso/', '#proyectos': '/trabajos/',
+      '#nosotros': '/equipo/', '#contacto': '/contacto/',
+      '#preguntas': '/contacto/#preguntas', '#comparacion-titulo': '/poliurea/#comparacion-titulo',
+      '#capas-titulo': '/poliurea/#capas-titulo', '#respaldo-titulo': '/proceso/#respaldo-titulo'
+    };
+    var destinoAnterior = anteriores[location.hash];
+    if (!destinoAnterior && /^#app-(zinc|losas|metal|tanques|pisos|parking)$/.test(location.hash)) destinoAnterior = '/aplicaciones/' + location.hash;
+    if (!destinoAnterior && /^#muestra-/.test(location.hash)) destinoAnterior = '/trabajos/' + location.hash;
+    if (destinoAnterior) {
+      var nuevaRuta = new URL(destinoAnterior, location.origin);
+      nuevaRuta.search = location.search;
+      location.replace(nuevaRuta.href);
+      return;
+    }
+  }
+
   /* Menú móvil */
   var btnMenu = document.getElementById('btn-menu');
   var nav = document.getElementById('nav');
@@ -46,6 +66,13 @@
       }
     });
     document.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' && esMenuMovil() && btnMenu.getAttribute('aria-expanded') === 'true') {
+        var enlaces = Array.prototype.slice.call(nav.querySelectorAll('a[href]'));
+        var ultimo = enlaces[enlaces.length - 1];
+        if (e.shiftKey && document.activeElement === enlaces[0]) { e.preventDefault(); btnMenu.focus(); }
+        else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); btnMenu.focus(); }
+        else if (document.activeElement === btnMenu) { e.preventDefault(); (e.shiftKey ? ultimo : enlaces[0]).focus(); }
+      }
       if (e.key === 'Escape' && btnMenu.getAttribute('aria-expanded') === 'true') {
         e.preventDefault();
         cambiarMenu(false, true);
@@ -163,10 +190,22 @@
       var visible = entradas[0].isIntersecting;
       if (flotante) flotante.classList.toggle('oculto', visible);
       if (barra) barra.classList.toggle('oculto', visible);
-    }, { threshold: 0.2 }).observe(contacto);
+    }, { threshold: 0 }).observe(contacto);
   }
 
   /* Origen del formulario y medición de clics a WhatsApp (dataLayer si existe) */
+  /* Mantener la atribución explícita al navegar entre las nuevas páginas. */
+  var parametros = new URLSearchParams(location.search);
+  if (Array.from(parametros.keys()).some(function (clave) { return /^utm_/.test(clave) || clave === 'origen'; })) {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var destino = new URL(a.href, location.href);
+      if (destino.origin !== location.origin || !/^\/(poliurea|aplicaciones|proceso|trabajos|equipo|contacto)?\/?$/.test(destino.pathname)) return;
+      parametros.forEach(function (valor, clave) {
+        if (/^utm_/.test(clave) || clave === 'origen') destino.searchParams.set(clave, valor);
+      });
+      a.href = destino.pathname + destino.search + destino.hash;
+    });
+  }
   var origen = document.getElementById('form-origen');
   if (origen) {
     var q = new URLSearchParams(location.search);

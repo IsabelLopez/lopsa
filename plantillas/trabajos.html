@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block titulo %}Trabajos de impermeabilización con poliurea | LOPSA{% endblock %}
+{% block descripcion %}Fotografías de superficies antes de la intervención, preparación del soporte y recubrimientos aplicados por LOPSA en Panamá.{% endblock %}
+{% block canonical %}/trabajos/{% endblock %}
+{% block contenido %}
+<header class="pagina-intro">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Nuestro trabajo</span></nav>
+    <p class="etiqueta">Nuestro trabajo</p>
+    <h1>Así transformamos las superficies.</h1>
+    <p>{{ proyectos.intro }}</p>
+  </div>
+</header>
+<section class="seccion pagina-contenido seccion--hueso" id="proyectos">
+  <div class="contenedor">
+    <h2 class="visualmente-oculto">Galería de nuestras intervenciones</h2>
+    <nav class="galeria__nav" aria-label="Etapas en fotografías">{% for e in proyectos.etapas %}<a href="#muestra-{{ e.id }}">{{ e.titulo }} <span aria-hidden="true">↓</span></a>{% endfor %}</nav>
+    <div class="galeria-etapas">
+      {% for e in proyectos.etapas %}
+      <article class="muestra-etapa" id="muestra-{{ e.id }}">
+        <header class="muestra-etapa__cabeza"><h3>{{ e.titulo }}</h3><p>{{ e.texto }}</p></header>
+        <div class="muestra-etapa__fotos">
+          {% for f in e.fotos %}<figure><button type="button" class="foto-ampliable" data-foto="{{ f.imagen }}" data-alt="{{ f.alt }}" aria-label="Ampliar: {{ f.pie }}">{{ m.foto(f.imagen, f.alt, '(min-width: 900px) 30vw, (min-width: 600px) 45vw, 100vw') }}<span aria-hidden="true">↗</span></button><figcaption>{{ f.pie }}</figcaption></figure>{% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<dialog class="visor" id="visor" aria-label="Foto ampliada"><button type="button" class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar">×</button><img id="visor-img" alt=""><p id="visor-pie"></p></dialog>
+{% endblock %}

@@ -21,6 +21,12 @@ DIST = os.path.join(AQUI, "dist")
 
 PAGINAS = {
     "index.html": "index.html",
+    "poliurea.html": "poliurea/index.html",
+    "aplicaciones.html": "aplicaciones/index.html",
+    "proceso.html": "proceso/index.html",
+    "trabajos.html": "trabajos/index.html",
+    "equipo.html": "equipo/index.html",
+    "contacto.html": "contacto/index.html",
     "privacidad.html": "privacidad/index.html",
     "aviso-legal.html": "aviso-legal/index.html",
     "gracias.html": "gracias/index.html",
@@ -76,7 +82,8 @@ def main():
             shutil.copy2(p, os.path.join(DIST, raiz_archivo))
     # páginas
     for plantilla, destino in PAGINAS.items():
-        html = env.get_template(plantilla).render(**ctx)
+        pagina = "inicio" if plantilla == "index.html" else os.path.splitext(plantilla)[0]
+        html = env.get_template(plantilla).render(**ctx, pagina=pagina)
         ruta = os.path.join(DIST, destino)
         os.makedirs(os.path.dirname(ruta), exist_ok=True)
         with open(ruta, "w", encoding="utf-8", newline="\n") as f:
@@ -85,7 +92,7 @@ def main():
     # robots y sitemap
     with open(os.path.join(DIST, "robots.txt"), "w", encoding="utf-8", newline="\n") as f:
         f.write(f"User-agent: *\nAllow: /\nSitemap: {sitio['url']}/sitemap.xml\n")
-    urls = ["/", "/privacidad/", "/aviso-legal/"]
+    urls = ["/", "/poliurea/", "/aplicaciones/", "/proceso/", "/trabajos/", "/equipo/", "/contacto/", "/privacidad/", "/aviso-legal/"]
     with open(os.path.join(DIST, "sitemap.xml"), "w", encoding="utf-8", newline="\n") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for u in urls:

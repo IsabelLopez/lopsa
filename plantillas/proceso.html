@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block titulo %}Nuestro proceso de aplicación | LOPSA Panamá{% endblock %}
+{% block descripcion %}Conozca cómo LOPSA prepara, aplica y verifica el sistema de poliurea caliente. Cinco etapas, controles de calidad y documentación técnica.{% endblock %}
+{% block canonical %}/proceso/{% endblock %}
+{% block contenido %}
+<header class="pagina-intro">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Nuestro proceso</span></nav>
+    <p class="etiqueta">Nuestro proceso</p>
+    <h1>Bien hecho, desde la base.</h1>
+    <p>{{ proceso.intro }}</p>
+  </div>
+</header>
+<section class="seccion pagina-contenido" id="proceso">
+  <div class="contenedor">
+    <h2 class="visualmente-oculto">Etapas de aplicación y respaldo del sistema</h2>
+    <ol class="proceso-recorrido">
+      {% for paso in proceso.pasos %}
+      <li class="etapa">
+        <span class="etapa__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span>
+        <div class="etapa__contenido">
+          <div class="etapa__texto"><h3>{{ paso.titulo }}</h3><p>{{ paso.detalle }}</p><div class="etapa__control"><strong>Control de calidad</strong><span>{{ paso.control }}</span></div></div>
+          <figure class="etapa__foto">{{ m.foto(paso.imagen, paso.alt, '(min-width: 900px) 34vw, 100vw') }}<figcaption>{{ paso.pie | default(paso.texto) }}</figcaption></figure>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="respaldo-sistema" aria-labelledby="respaldo-titulo">
+      <div class="respaldo-sistema__cabeza"><p class="etiqueta">Desempeño documentado</p><h3 id="respaldo-titulo">{{ proceso.respaldo.titulo }}</h3><p>{{ proceso.respaldo.intro }}</p></div>
+      <div class="respaldo-sistema__tarjetas">
+        {% for item in proceso.respaldo["items"] %}
+        <article class="respaldo-sistema__item"><p class="respaldo-sistema__badge">{{ item.badge }}</p><h4>{{ item.titulo }}</h4><p>{{ item.texto }}</p></article>
+        {% endfor %}
+      </div>
+      <p class="nota">{{ proceso.respaldo.nota }}</p>
+    </div>
+    <details class="detalle-tecnico">
+      <summary>Consultar Ficha Técnica <span aria-hidden="true">+</span></summary>
+      <div class="sistema sistema--ficha">
+        <div>
+          <h3>{{ proceso.tecnica.titulo }}</h3>
+          <div class="tabla-envoltura"><table class="tecnica"><tbody>{% for f in proceso.tecnica.filas %}<tr><th scope="row">{{ f.dato }}</th><td>{{ f.valor }}</td></tr>{% endfor %}</tbody></table></div>
+          <p class="nota">{{ proceso.tecnica.nota }}</p>
+        </div>
+      </div>
+      <p class="detalle-tecnico__nota">La preparación del soporte, la humedad y las condiciones ambientales se verifican antes de aplicar. Documentación del sistema disponible a solicitud.</p>
+    </details>
+  </div>
+</section>
+{% endblock %}

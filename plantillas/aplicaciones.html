@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as m with context %}
+{% block titulo %}Aplicaciones de poliurea caliente | LOPSA Panamá{% endblock %}
+{% block descripcion %}Soluciones de poliurea caliente para cubiertas de zinc, losas, canales, tanques, pisos industriales y estacionamientos en Panamá.{% endblock %}
+{% block canonical %}/aplicaciones/{% endblock %}
+{% block contenido %}
+<header class="pagina-intro">
+  <div class="contenedor">
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Aplicaciones</span></nav>
+    <p class="etiqueta">Aplicaciones</p>
+    <h1>Una solución para cada superficie.</h1>
+    <p>El uso, el soporte y la exposición definen el sistema que necesita su proyecto.</p>
+  </div>
+</header>
+<section class="seccion pagina-contenido seccion--hueso" id="aplicaciones">
+  <div class="contenedor">
+    <h2 class="visualmente-oculto">Aplicaciones por tipo de superficie</h2>
+    <div class="tarjetas">
+      {% for a in aplicaciones %}
+      <article class="tarjeta" id="app-{{ a.id }}">
+        <figure class="tarjeta__foto">
+          {% if a.imagen %}{{ m.foto(a.imagen, a.alt, '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw') }}{% else %}
+          <div class="ilustracion" role="img" aria-label="Esquema conceptual de una losa de estacionamiento con acabado continuo">
+            <svg viewBox="0 0 480 300" aria-hidden="true"><rect width="480" height="300" fill="#e9ecee"/><path d="M50 190 275 63 438 153 213 280Z" fill="#d6dadd"/><path d="M50 179 275 52 438 142 213 269Z" fill="#a8b1bc"/><g fill="none" stroke="#f8f7f4" stroke-width="4"><path d="m160 135 91 51m-42-79 91 51m-42-79 91 51m-235 30 157 88"/></g><path d="m50 179 163 90 225-127" fill="none" stroke="#1a2f50" stroke-width="5"/></svg>
+          </div>
+          {% endif %}
+          {% if not a.imagen %}<figcaption class="tarjeta__nota">Esquema ilustrativo</figcaption>{% elif a.nota %}<figcaption class="tarjeta__nota">{{ a.nota }}{% if a.fuente_url %} · <a href="{{ a.fuente_url }}" target="_blank" rel="noopener">Fuente</a>{% endif %}</figcaption>{% endif %}
+        </figure>
+        <div class="tarjeta__cuerpo"><h3>{{ a.titulo }}</h3><p>{{ a.resumen }}</p><ul class="aplicacion__puntos">{% for punto in a.puntos %}<li>{{ punto }}</li>{% endfor %}</ul><a class="tarjeta__enlace" href="{{ wa(a.whatsapp) }}" target="_blank" rel="noopener" data-wa="app-{{ a.id }}" aria-label="Consultar por WhatsApp sobre {{ a.titulo | lower }}">Consultar <span aria-hidden="true">↗</span></a></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

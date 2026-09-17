@@ -3,247 +3,78 @@
 {% block cabeza %}
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": "{{ sitio.url }}/#empresa",
-      "name": "{{ sitio.razon_social }}",
-      "url": "{{ sitio.url }}/",
-      "telephone": "{{ sitio.telefono_tel }}",
-      "email": "{{ sitio.correo }}",
-      "description": "{{ sitio.descripcion }}",
-      "image": "{{ sitio.url }}/img/og-1200.jpg",
-      "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
-      "areaServed": {"@type": "Country", "name": "Panamá"},
-      "openingHoursSpecification": [
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
-      ],
-      "sameAs": []
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {% for p in preguntas %}{"@type": "Question", "name": {{ p.pregunta | tojson }}, "acceptedAnswer": {"@type": "Answer", "text": {{ p.respuesta | tojson }}}}{% if not loop.last %},{% endif %}
-        {% endfor %}
-      ]
-    }
+  "@context": "https://schema.org", "@type": "LocalBusiness",
+  "@id": "{{ sitio.url }}/#empresa", "name": {{ sitio.razon_social | tojson }},
+  "url": "{{ sitio.url }}/", "telephone": "{{ sitio.telefono_tel }}", "email": "{{ sitio.correo }}",
+  "description": {{ sitio.descripcion | tojson }}, "image": "{{ sitio.url }}/img/og-1200.jpg",
+  "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
+  "areaServed": {"@type": "Country", "name": "Panamá"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
   ]
 }
 </script>
 {% endblock %}
-
 {% block contenido %}
-<section class="portada" id="inicio">
-  <div class="contenedor portada__grid">
-    <div class="portada__texto">
+<section class="inicio-hero" id="inicio" aria-labelledby="inicio-titulo">
+  <div class="contenedor inicio-hero__grid">
+    <div class="inicio-hero__texto">
       <p class="etiqueta">{{ sitio.eyebrow }}</p>
-      <h1>{{ sitio.h1 }}</h1>
-      <p class="portada__lead">{{ sitio.lead }}</p>
-      <div class="portada__certificacion"><strong>Equipo capacitado y certificado</strong><small>Aplicación de recubrimientos especializados</small></div>
-      <div class="portada__botones">
-        <a class="boton boton--marino" href="#contacto">Hablemos de su proyecto <span aria-hidden="true">↗</span></a>
-        <a class="enlace" href="#poliurea">Conozca la poliurea <span aria-hidden="true">↓</span></a>
+      {% set titulo = sitio.h1.split('. ', 1) %}
+      <h1 id="inicio-titulo">{{ titulo[0] }}{% if titulo | length > 1 %}.<br><span>{{ titulo[1] }}</span>{% endif %}</h1>
+      <p class="inicio-hero__lead">{{ sitio.lead }}</p>
+      <div class="inicio-hero__acciones">
+        <a class="boton boton--dorado" href="/contacto/">Hablemos de su proyecto <span aria-hidden="true">↗</span></a>
+        <a class="enlace" href="/poliurea/">Conozca la poliurea <span aria-hidden="true">→</span></a>
       </div>
-
+      <p class="inicio-hero__firma"><span aria-hidden="true">✓</span> Equipo capacitado y certificado</p>
     </div>
-    <figure class="portada__imagen">
-      <picture>
-        {% set he = img.get('hero-escritorio') %}{% set hm = img.get('hero-movil') %}
-        {% if he %}<source media="(min-width: 768px)" srcset="{% for a in he.anchos %}/img/hero-escritorio-{{ a }}.{{ he.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="(min-width: 1536px) 1536px, 100vw">{% endif %}
-        {% if hm %}<img src="/img/hero-movil-{{ hm.anchos[0] }}.{{ hm.formato }}" srcset="{% for a in hm.anchos %}/img/hero-movil-{{ a }}.{{ hm.formato }} {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="100vw" alt="Camión de LOPSA, especialistas en poliurea caliente, frente a un edificio en construcción" width="{{ hm.anchos[-1] }}" height="{{ (hm.anchos[-1] / hm.prop) | round | int }}" fetchpriority="high" decoding="async">{% endif %}
-      </picture>
-      <figcaption><span>Ingeniería que se lleva a obra.</span><span>LOPSA · Panamá</span></figcaption>
-    </figure>
-  </div>
-  <div class="portada__credenciales"><div class="contenedor credenciales"><div><strong>10 años</strong><span>Garantía contra filtraciones en cubiertas</span></div><div><strong>Equipo propio</strong><span>Tecnología de proyección a alta presión</span></div><div><strong>Dirección de ingeniería</strong><span>Diagnóstico, ejecución y entrega documentada</span></div></div></div>
-</section>
-
-<section class="seccion" id="poliurea">
-  <div class="contenedor">
-    <div class="explicacion">
-      <div>
-        <p class="seccion__indice"><span>01</span> La tecnología</p>
-        <h2>¿Qué es la<br>poliurea caliente?</h2>
-        <p class="seccion__intro">{{ poliurea.intro }}</p>
-        <ul class="beneficios">
-          {% for b in poliurea.beneficios %}<li><strong>{{ b.titulo }}</strong><span>{{ b.texto }}</span></li>{% endfor %}
-        </ul>
-      </div>
-      <figure class="explicacion__grafico">
-        {{ m.foto('poliurea-ilustracion', 'Ilustración de aplicación de poliurea por proyección sobre concreto: imprimación y membrana continua que recubre el encuentro con un muro.', '(min-width: 900px) 50vw, 100vw') }}
-        <ol class="ilustracion__leyenda"><li><span>01</span> Soporte preparado</li><li><span>02</span> Imprimación</li><li><span>03</span> Membrana continua</li></ol>
-      </figure>
-    </div>
-    <div class="poliurea-cifras" aria-label="Durabilidad, formación de gel y garantía">
-      {% for cifra in poliurea.cifras %}
-      <article class="poliurea-cifra poliurea-cifra--{{ cifra.icono }}">
-        <p class="poliurea-cifra__valor">{{ cifra.valor }} <span>{{ cifra.unidad }}</span></p>
-        <h3>{{ cifra.titulo }}</h3>
-        <p class="poliurea-cifra__detalle">{{ cifra.detalle }}</p>
-      </article>
-      {% endfor %}
-    </div>
-    <div class="continuidad">
-      <div><p class="etiqueta">{{ poliurea.operacion.etiqueta }}</p><h3>{{ poliurea.operacion.titulo }}</h3></div>
-      <div><p>{{ poliurea.operacion.texto }}</p><p class="continuidad__nota">{{ poliurea.operacion.nota }}</p></div>
-    </div>
-    <div class="capas-visuales" aria-labelledby="capas-titulo">
-      <div class="capas-visuales__cabeza"><p class="etiqueta">La protección, por dentro</p><h3 id="capas-titulo">{{ poliurea.capas.titulo }}</h3><p>{{ poliurea.capas.intro }}</p></div>
-      <div class="capas-visuales__contenido">
-        <figure class="capas-visuales__imagen">{{ m.foto(poliurea.capas.imagen, poliurea.capas.alt, '(min-width: 680px) 640px, 100vw') }}</figure>
-        <ol class="visualmente-oculto">{% for capa in poliurea.capas.pasos %}<li class="capa-visual capa-visual--{{ capa.color }}"><span class="capa-visual__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span><div><h4>{{ capa.titulo }}</h4><p>{{ capa.texto }}</p></div></li>{% endfor %}</ol>
-      </div>
-    </div>
-    <div class="comparacion" aria-labelledby="comparacion-titulo">
-      <div class="comparacion__cabeza">
-        <p class="etiqueta">Para elegir con criterio</p>
-        <h3 id="comparacion-titulo">{{ poliurea.comparativa.titulo }}</h3>
-        <p class="comparacion__intro">{{ poliurea.comparativa.intro }}</p>
-      </div>
-      <p class="comparacion__deslizar" id="comparacion-ayuda">Deslice la tabla para ver todos los sistemas <span aria-hidden="true">↔</span></p>
-      <div class="comparacion__tabla" role="region" aria-labelledby="comparacion-titulo" aria-describedby="comparacion-ayuda" tabindex="0">
-        <table class="comparativa">
-          <caption class="visualmente-oculto">Comparación de ejemplos de sistemas: tiempos, durabilidad, continuidad, detalles y garantía.</caption>
-          <thead><tr><th scope="col">Qué compara</th>{% for sistema in poliurea.comparativa.sistemas %}<th scope="col">{% if loop.first %}<span class="comparacion__sello">Nuestra especialidad</span>{% endif %}{{ sistema }}</th>{% endfor %}</tr></thead>
-          <tbody>
-            {% for fila in poliurea.comparativa.filas %}
-            <tr><th scope="row">{{ fila.criterio }}</th>{% for valor in fila.valores %}<td><strong>{{ valor.dato }}</strong><span>{{ valor.detalle }}</span></td>{% endfor %}</tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-      <div class="comparacion__notas">{% for nota in poliurea.comparativa.notas %}<p>{{ nota }}</p>{% endfor %}</div>
-    </div>
-  </div>
-</section>
-
-<section class="seccion seccion--hueso" id="aplicaciones">
-  <div class="contenedor">
-    <div class="seccion__cabeza seccion__cabeza--fila"><div><p class="seccion__indice"><span>02</span> Aplicaciones</p><h2>Una solución para<br>cada superficie.</h2></div><p>El uso, el soporte y la exposición definen el sistema que necesita su proyecto.</p></div>
-    <div class="tarjetas">
-      {% for a in aplicaciones %}
-      <article class="tarjeta" id="app-{{ a.id }}">
-        <figure class="tarjeta__foto">
-          {% if a.imagen %}{{ m.foto(a.imagen, a.alt, '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw') }}{% else %}
-          <div class="ilustracion" role="img" aria-label="Esquema conceptual de una losa de estacionamiento con acabado continuo">
-            <svg viewBox="0 0 480 300" aria-hidden="true"><rect width="480" height="300" fill="#e9ecee"/><path d="M50 190 275 63 438 153 213 280Z" fill="#d6dadd"/><path d="M50 179 275 52 438 142 213 269Z" fill="#a8b1bc"/><g fill="none" stroke="#f8f7f4" stroke-width="4"><path d="m160 135 91 51m-42-79 91 51m-42-79 91 51m-235 30 157 88"/></g><path d="m50 179 163 90 225-127" fill="none" stroke="#1a2f50" stroke-width="5"/></svg>
-          </div>
-          {% endif %}
-          {% if not a.imagen %}<figcaption class="tarjeta__nota">Esquema ilustrativo</figcaption>{% elif a.nota %}<figcaption class="tarjeta__nota">{{ a.nota }}{% if a.fuente_url %} · <a href="{{ a.fuente_url }}" target="_blank" rel="noopener">Fuente</a>{% endif %}</figcaption>{% endif %}
+    <div class="inicio-muestra" aria-label="LOPSA en obra">
+      <div class="inicio-muestra__fotos" id="inicio-fotografias">
+        <figure class="inicio-muestra__foto">
+          {% set hero = img['hero-escritorio'] %}
+          <img src="/img/hero-escritorio-1024.webp" srcset="{% for a in hero.anchos %}/img/hero-escritorio-{{ a }}.webp {{ a }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="(min-width: 960px) 55vw, 100vw" width="1600" height="900" alt="Camión de LOPSA frente a un edificio en construcción" fetchpriority="high" decoding="async">
+          <figcaption><span>LOPSA · Panamá</span> Ingeniería que se lleva a obra.</figcaption>
         </figure>
-        <div class="tarjeta__cuerpo"><h3>{{ a.titulo }}</h3><p>{{ a.resumen }}</p><ul class="aplicacion__puntos">{% for punto in a.puntos %}<li>{{ punto }}</li>{% endfor %}</ul><a class="tarjeta__enlace" href="{{ wa(a.whatsapp) }}" target="_blank" rel="noopener" data-wa="app-{{ a.id }}" aria-label="Consultar por WhatsApp sobre {{ a.titulo | lower }}">Consultar <span aria-hidden="true">↗</span></a></div>
-      </article>
-      {% endfor %}
+      </div>
     </div>
   </div>
 </section>
 
-<section class="seccion" id="proceso">
+<div class="inicio-respaldo">
+  <div class="contenedor inicio-respaldo__grid">
+    <p><strong>10 años</strong><span>Garantía contra filtraciones<br>en cubiertas</span></p>
+    <p><strong>Equipo propio</strong><span>Aplicación a alta presión<br>y cuadrillas de LOPSA</span></p>
+    <p><strong>Ingeniería</strong><span>Diagnóstico, ejecución<br>y entrega documentada</span></p>
+  </div>
+</div>
+
+<section class="inicio-explorar" aria-labelledby="explorar-titulo">
   <div class="contenedor">
-    <div class="seccion__cabeza seccion__cabeza--fila"><div><p class="seccion__indice"><span>03</span> El proceso</p><h2>Bien hecho,<br>desde la base.</h2></div><p>{{ proceso.intro }}</p></div>
-    <ol class="proceso-recorrido">
-      {% for paso in proceso.pasos %}
-      <li class="etapa">
-        <span class="etapa__numero" aria-hidden="true">{{ '%02d' % loop.index }}</span>
-        <div class="etapa__contenido">
-          <div class="etapa__texto"><h3>{{ paso.titulo }}</h3><p>{{ paso.detalle }}</p><div class="etapa__control"><strong>Control de calidad</strong><span>{{ paso.control }}</span></div></div>
-          <figure class="etapa__foto">{{ m.foto(paso.imagen, paso.alt, '(min-width: 900px) 34vw, 100vw') }}<figcaption>{{ paso.pie | default(paso.texto) }}</figcaption></figure>
-        </div>
-      </li>
-      {% endfor %}
-    </ol>
-    <div class="respaldo-sistema" aria-labelledby="respaldo-titulo">
-      <div class="respaldo-sistema__cabeza"><p class="etiqueta">Desempeño documentado</p><h3 id="respaldo-titulo">{{ proceso.respaldo.titulo }}</h3><p>{{ proceso.respaldo.intro }}</p></div>
-      <div class="respaldo-sistema__tarjetas">
-        {% for item in proceso.respaldo["items"] %}
-        <article class="respaldo-sistema__item"><p class="respaldo-sistema__badge">{{ item.badge }}</p><h4>{{ item.titulo }}</h4><p>{{ item.texto }}</p></article>
-        {% endfor %}
-      </div>
-      <p class="nota">{{ proceso.respaldo.nota }}</p>
+    <div class="inicio-explorar__cabeza">
+      <div><p class="etiqueta">Impermeabilización · Anticorrosión · Revestimiento</p><h2 id="explorar-titulo">La protección que<br>su proyecto necesita.</h2></div>
+      <p>Conozca la tecnología, encuentre su aplicación y vea cómo trabajamos.</p>
     </div>
-    <details class="detalle-tecnico">
-      <summary>Consultar Ficha Técnica <span aria-hidden="true">+</span></summary>
-      <div class="sistema sistema--ficha">
-        <div>
-          <h3>{{ proceso.tecnica.titulo }}</h3>
-          <div class="tabla-envoltura"><table class="tecnica"><tbody>{% for f in proceso.tecnica.filas %}<tr><th scope="row">{{ f.dato }}</th><td>{{ f.valor }}</td></tr>{% endfor %}</tbody></table></div>
-          <p class="nota">{{ proceso.tecnica.nota }}</p>
-        </div>
-      </div>
-      <p class="detalle-tecnico__nota">La preparación del soporte, la humedad y las condiciones ambientales se verifican antes de aplicar. Documentación del sistema disponible a solicitud.</p>
-    </details>
-  </div>
-</section>
-
-<section class="seccion seccion--hueso" id="proyectos">
-  <div class="contenedor">
-    <div class="seccion__cabeza seccion__cabeza--fila"><div><p class="seccion__indice"><span>04</span> Nuestro trabajo</p><h2>Así transformamos<br>las superficies.</h2></div><p>{{ proyectos.intro }}</p></div>
-    <nav class="galeria__nav" aria-label="Etapas en fotografías">{% for e in proyectos.etapas %}<a href="#muestra-{{ e.id }}">{{ e.titulo }} <span aria-hidden="true">↓</span></a>{% endfor %}</nav>
-    <div class="galeria-etapas">
-      {% for e in proyectos.etapas %}
-      <article class="muestra-etapa" id="muestra-{{ e.id }}">
-        <header class="muestra-etapa__cabeza"><h3>{{ e.titulo }}</h3><p>{{ e.texto }}</p></header>
-        <div class="muestra-etapa__fotos">
-          {% for f in e.fotos %}<figure><button type="button" class="foto-ampliable" data-foto="{{ f.imagen }}" data-alt="{{ f.alt }}" aria-label="Ampliar: {{ f.pie }}">{{ m.foto(f.imagen, f.alt, '(min-width: 900px) 30vw, (min-width: 600px) 45vw, 100vw') }}<span aria-hidden="true">↗</span></button><figcaption>{{ f.pie }}</figcaption></figure>{% endfor %}
-        </div>
-      </article>
+    <div class="inicio-accesos">
+      {% for tarjeta in sitio.inicio_accesos %}
+      <a class="inicio-acceso" href="{{ tarjeta.url }}" id="{{ tarjeta.id }}">
+        <div class="inicio-acceso__imagen">{{ m.foto(tarjeta.imagen, tarjeta.alt, '(min-width: 960px) 33vw, (min-width: 600px) 45vw, 40vw') }}</div>
+        <div class="inicio-acceso__texto"><span class="inicio-acceso__numero">{{ '%02d' % loop.index }}</span><h3>{{ tarjeta.titulo }}</h3><p>{{ tarjeta.texto }}</p><span class="inicio-acceso__enlace">{{ tarjeta.enlace }} <span aria-hidden="true">↗</span></span></div>
+      </a>
       {% endfor %}
     </div>
-  </div>
-</section>
-
-<section class="seccion seccion--marino" id="nosotros">
-  <div class="contenedor nosotros">
-    <div><p class="seccion__indice"><span>05</span> Nuestro equipo</p><h2>Personas preparadas.<br>Trabajo bien ejecutado.</h2><p class="nosotros__intro">{{ sitio.quienes }}</p><ul class="compromisos">{% for c in sitio.compromisos %}<li><strong>{{ c.titulo }}</strong><span>{{ c.texto }}</span></li>{% endfor %}</ul><p class="nosotros__secundario">{{ sitio.construccion }}</p></div>
-    <figure class="nosotros__foto">{{ m.foto('equipo-v3', 'Cuadrilla de LOPSA trabajando en la impermeabilización de una cubierta metálica', '(min-width: 900px) 40vw, 100vw') }}<figcaption>Personal propio, coordinación en obra y supervisión técnica.</figcaption></figure>
-  </div>
-</section>
-
-<section class="seccion" id="preguntas">
-  <div class="contenedor preguntas__grid">
-    <div><p class="etiqueta">Antes de empezar</p><h2>Resolvamos<br>sus dudas.</h2></div>
-    <div class="faq">{% for p in preguntas %}<details class="faq__item"><summary>{{ p.pregunta }}</summary><p>{{ p.respuesta }}</p></details>{% endfor %}</div>
-  </div>
-</section>
-
-<section class="seccion contacto" id="contacto">
-  <div class="contenedor contacto__grid">
-    <div class="contacto__col">
-      <p class="etiqueta">Hablemos de su proyecto</p><h2>La solución empieza<br>por conocer su superficie.</h2><p class="contacto__sub">Comparta unas fotos, el área aproximada y la ubicación. Le ayudamos a definir el siguiente paso.</p>
-      <a class="boton boton--marino" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="contacto">{{ m.icono_whatsapp('ico') }} Escribir por WhatsApp</a>
-      <details class="consulta-rapida"><summary>Preparar una consulta con área y ubicación</summary>
-        <div class="cotizador" id="cotizador"><p>Seleccione la superficie</p><div class="chips" role="group" aria-label="Tipo de superficie">{% for a in aplicaciones %}<button type="button" data-tipo="{{ a.titulo }}" aria-pressed="false">{{ a.titulo }}</button>{% endfor %}</div><div class="cotizador__campos"><label>Área aproximada (m²)<input type="number" inputmode="numeric" min="1" id="cot-area" placeholder="Ej. 250"></label><label>Ubicación<input type="text" id="cot-lugar" placeholder="Barrio o ciudad"></label></div><a class="enlace" id="cot-enviar" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="cotizador">Enviar consulta por WhatsApp ↗</a></div>
-      </details>
-      <ul class="contacto__datos"><li><span>Teléfono</span><a href="tel:{{ sitio.telefono_tel }}">{{ sitio.telefono_visible }}</a></li><li><span>Correo</span><a href="mailto:{{ sitio.correo }}">{{ sitio.correo }}</a></li><li><span>Ubicación</span>{{ sitio.direccion_linea }}</li><li><span>Horario</span>{{ sitio.horario }}</li><li><span>Cobertura</span>{{ sitio.cobertura }}</li></ul>
+    <div class="inicio-mas">
+      <a href="/proceso/" id="proceso"><span><strong>Un proceso bien hecho</strong><small>Preparación, aplicación y control de calidad.</small></span><span aria-hidden="true">↗</span></a>
+      <a href="/equipo/" id="nosotros"><span><strong>Conozca a LOPSA</strong><small>Equipo capacitado y dirección de ingeniería.</small></span><span aria-hidden="true">↗</span></a>
     </div>
-    <form class="formulario" name="cotizacion" method="POST" action="/gracias/" data-netlify="true" netlify-honeypot="campo-extra">
-      <input type="hidden" name="form-name" value="cotizacion">
-      <input type="hidden" name="origen" id="form-origen" value="web">
-      <p class="visualmente-oculto"><label>No llenar este campo: <input name="campo-extra"></label></p>
-      <h3>O déjenos sus datos</h3>
-      <div class="formulario__grid">
-        <label>Nombre <span aria-hidden="true">*</span><input type="text" name="nombre" required autocomplete="name"></label>
-        <label>Empresa o edificio<input type="text" name="empresa" autocomplete="organization"></label>
-        <label>Correo <span aria-hidden="true">*</span><input type="email" name="correo" required autocomplete="email"></label>
-        <label>Teléfono o WhatsApp <span aria-hidden="true">*</span><input type="tel" name="telefono" required autocomplete="tel"></label>
-        <label>Tipo de proyecto <span aria-hidden="true">*</span>
-          <select name="tipo" required>
-            <option value="">Seleccione</option>
-            {% for a in aplicaciones %}<option>{{ a.titulo }}</option>{% endfor %}
-            <option>Otro</option>
-          </select>
-        </label>
-        <label>Área aproximada (m²)<input type="number" name="area" inputmode="numeric" min="1"></label>
-        <label class="formulario__ancho">Ubicación (ciudad o sector)<input type="text" name="ubicacion"></label>
-        <label class="formulario__ancho">Cuéntenos el problema<textarea name="mensaje" rows="4"></textarea></label>
-      </div>
-      <label class="formulario__acepto"><input type="checkbox" name="acepta" required> He leído la <a href="/privacidad/">política de privacidad</a>.</label>
-      <button class="boton boton--marino" type="submit">Solicitar cotización</button>
-      <p class="nota">Respondemos desde {{ sitio.correo }} y por WhatsApp.</p>
-    </form>
   </div>
 </section>
-<dialog class="visor" id="visor" aria-label="Foto ampliada"><button type="button" class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar">×</button><img id="visor-img" alt=""><p id="visor-pie"></p></dialog>
+
+<section class="inicio-contacto" id="contacto" aria-labelledby="contacto-titulo">
+  <div class="contenedor inicio-contacto__grid">
+    <div><p class="etiqueta">Su proyecto, el siguiente paso</p><h2 id="contacto-titulo">Empecemos por<br>su superficie.</h2><p>Comparta fotos, ubicación y área aproximada.<br>Le ayudamos a definir la solución.</p></div>
+    <div class="inicio-contacto__acciones"><a class="boton boton--marino" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="inicio">{{ m.icono_whatsapp('ico') }} Escribir por WhatsApp</a><a class="enlace" href="/contacto/">Prefiero dejar mis datos <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
 {% endblock %}
