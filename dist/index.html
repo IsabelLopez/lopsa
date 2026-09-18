@@ -29,15 +29,26 @@
 <link rel="stylesheet" href="/css/estilos.css?v=e2a2bcb41600">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org", "@type": "LocalBusiness",
-  "@id": "https://lopsa.com.pa/#empresa", "name": "LOPSA, S.A.",
-  "url": "https://lopsa.com.pa/", "telephone": "+50766044196", "email": "ventas@lopsa.com.pa",
-  "description": "Aplicadores especialistas en poliurea caliente en Panam\u00e1: impermeabilizaci\u00f3n de losas y techos de zinc, anticorrosi\u00f3n de canales y estructuras met\u00e1licas, tanques y pisos industriales. Equipo y cuadrillas propias. Garant\u00eda de 10 a\u00f1os contra filtraciones en cubiertas.", "image": "https://lopsa.com.pa/img/og-1200.jpg",
-  "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
-  "areaServed": {"@type": "Country", "name": "Panamá"},
-  "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite", "@id": "https://lopsa.com.pa/#sitio",
+      "name": "LOPSA", "alternateName": ["LOPSA Panamá", "LOPSA, S.A."],
+      "url": "https://lopsa.com.pa/", "inLanguage": "es-PA", "publisher": {"@id": "https://lopsa.com.pa/#empresa"}
+    },
+    {
+      "@type": "LocalBusiness", "@id": "https://lopsa.com.pa/#empresa",
+      "name": "LOPSA, S.A.", "alternateName": "LOPSA",
+      "url": "https://lopsa.com.pa/", "logo": "https://lopsa.com.pa/icon-512.png", "image": "https://lopsa.com.pa/img/og-1200.jpg",
+      "telephone": "+50766044196", "email": "ventas@lopsa.com.pa",
+      "description": "Aplicadores especialistas en poliurea caliente en Panam\u00e1: impermeabilizaci\u00f3n de losas y techos de zinc, anticorrosi\u00f3n de canales y estructuras met\u00e1licas, tanques y pisos industriales. Equipo y cuadrillas propias. Garant\u00eda de 10 a\u00f1os contra filtraciones en cubiertas.",
+      "knowsAbout": ["Poliurea caliente", "Impermeabilización", "Anticorrosión", "Revestimiento de pisos industriales"],
+      "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
+      "areaServed": {"@type": "Country", "name": "Panamá"},
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
+      ]    }
   ]
 }
 </script>
