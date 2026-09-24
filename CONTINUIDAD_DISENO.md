@@ -10,7 +10,7 @@ decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen l
 |---|---|
 | Diseño publicado vigente | Inicio breve y seis páginas independientes, incorporados en [PR #13](https://github.com/IsabelLopez/lopsa/pull/13), versión [58d1d34](https://github.com/IsabelLopez/lopsa/commit/58d1d34), 16-sep-2026. Conserva los ajustes visuales de los PR #6–12 indicados abajo. Sitio: [lopsa.com.pa](https://lopsa.com.pa/). |
 | Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [b26454d](https://github.com/IsabelLopez/lopsa/commit/b26454dcc3e7e9a92eb7abf05a0b2a45e9763822), 21-sep-2026, consultada con `git fetch` el 24-sep. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16) y [#17](https://github.com/IsabelLopez/lopsa/pull/17) de SEO/medición y [#18](https://github.com/IsabelLopez/lopsa/pull/18) de instrucciones. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
-| Trabajo de esta revisión | Rama `docs/continuidad-diseno-20260924`: este relevo y la entrada en `CLAUDE.md`. Solo documentación; pendiente de revisión e integración. No propone cambios visuales ni modifica el sitio generado. |
+| Trabajo de esta revisión | [PR #19](https://github.com/IsabelLopez/lopsa/pull/19), rama `docs/continuidad-diseno-20260924`: este relevo y la entrada en `CLAUDE.md`. Solo documentación. Consultar el estado del PR para saber si sigue abierto o está integrado; no propone cambios visuales ni modifica el sitio generado. |
 | Propuestas visuales nuevas | Ninguna aprobada o implementada en esta revisión. Cualquier propuesta futura debe registrar su alcance y referencia aparte del diseño vigente. |
 
 ## Decisiones visuales vigentes
@@ -32,9 +32,9 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
 
 ## Pendientes y siguiente paso
 
-- Revisar e integrar este cambio documental; registrar el enlace de la revisión y el resultado. El estado
-  de una revisión no se transforma en «publicado» hasta verificar su integración y, si cambia el sitio, su
-  despliegue.
+- Consultar [PR #19](https://github.com/IsabelLopez/lopsa/pull/19): si está integrado, continuar con la nueva
+  tarea; si está abierto, completar su revisión e integración. El estado de una revisión no se transforma
+  en «publicado» hasta verificar su integración y, si cambia el sitio, su despliegue.
 - La presencia del código de medición no demuestra recepción de eventos. Queda por comprobar en la
   herramienta correspondiente la recepción de `whatsapp_click` y `generate_lead`, sin confundir un clic
   o una prueba con una consulta real. Este relevo no certifica ese resultado.
@@ -48,13 +48,16 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
 - **Hecho:** referencia pública de las decisiones vigentes y obligación común de retomar/actualizar el
   relevo. Procedimiento Git corregido para identificar el repositorio de producción por su URL.
 - **Archivos / versión:** `CLAUDE.md` y `CONTINUIDAD_DISENO.md`, rama `docs/continuidad-diseno-20260924`,
-  sobre `b26454d`. Sin cambios en datos, plantillas, estilos ni `dist/`.
+  sobre `b26454d`; revisión en [PR #19](https://github.com/IsabelLopez/lopsa/pull/19). Sin cambios en datos,
+  plantillas, estilos ni `dist/`.
 - **Revisión:** `python construir_sitio.py` completado; `python verificar_sitio.py` → **OK, 11 páginas**.
   Veinte enlaces locales comprobados, sin destinos ausentes; `git diff --check` sin errores. La construcción
   solo cambió la fecha de `dist/sitemap.xml`; se restauró ese resultado generado a su versión de base para
   conservar esta revisión exclusivamente documental. `git diff --exit-code -- dist` sin diferencias.
-- **Pendiente:** revisión e integración de esta rama; sin rediseño propuesto.
-- **Siguiente acción:** completar las comprobaciones y enlazar la revisión para continuar desde ella.
+- **Pendiente:** consultar el estado de [PR #19](https://github.com/IsabelLopez/lopsa/pull/19); el enlace
+  conserva el resultado de revisión e integración. Sin rediseño propuesto.
+- **Siguiente acción:** si el PR está integrado, retomar la nueva tarea con este diseño como referencia;
+  si está abierto, completar la revisión e integración según `CLAUDE.md` y el alcance de la sesión.
 
 ### Plantilla para el siguiente avance
 
