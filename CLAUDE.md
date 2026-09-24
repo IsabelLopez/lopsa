@@ -1,8 +1,21 @@
-# Instrucciones para Claude — sitio web de LOPSA (lopsa.com.pa)
+# Instrucciones para cualquier agente — sitio web de LOPSA (lopsa.com.pa)
 
-Este repositorio ES la página web de LOPSA, S.A. Todo lo que llega a la rama `main` se publica solo en
+Este repositorio ES la página web de LOPSA, S.A. Todo lo que llega a la rama `main` del repositorio de
+producción [IsabelLopez/lopsa](https://github.com/IsabelLopez/lopsa) se publica solo en
 https://lopsa.com.pa (Netlify, en 1 a 3 minutos). Quien te escribe es un socio de LOPSA que **no programa**: te dirá
 con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y le confirmas con el enlace.
+
+## Continuidad entre sesiones y modelos
+- Estas son las reglas comunes para Claude, Codex y cualquier otro agente; `AGENTS.md` apunta aquí.
+- Antes de trabajar, lee [CONTINUIDAD_DISENO.md](CONTINUIDAD_DISENO.md) y los cambios posteriores de la rama.
+  Retoma lo aprobado y lo pendiente desde sus archivos y referencias. Cambiar de modelo o aplicación no
+  autoriza a rediseñar ni a sustituir recursos aprobados por preferencias propias.
+- Registra allí cada avance relevante al producirse: decisión o alcance autorizado, archivos y versión,
+  revisión realizada, pendientes y siguiente acción. Antes de un corte o cambio de sesión deja un punto de
+  continuidad, aunque el trabajo siga incompleto. Las propuestas se identifican por separado; una rama o un
+  pull request no prueban que algo esté publicado. Conserva la referencia anterior al actualizar el estado.
+- El relevo contiene solo información pública. No depende de una memoria privada de la aplicación; las
+  reglas se cambian aquí y el estado con sus evidencias se actualiza en el relevo.
 
 ## Cómo hablar con la persona
 - Español sencillo y frases cortas, sin jerga («commit», «PR», «merge») salvo que la persona pregunte.
@@ -31,14 +44,18 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
   `netlify-honeypot`, ni el `name` de sus campos): de eso dependen los avisos de cotización que llegan por correo.
 
 ## Cómo hacer un cambio (siempre en este orden)
-1. Parte de lo último publicado: `git fetch origin` y trabaja en una rama nueva creada desde `origin/main`
-   (si la sesión ya te dio una rama, trae `origin/main` a ella antes de empezar).
+1. Identifica con `git remote -v` el remoto cuya URL corresponde a **`IsabelLopez/lopsa`**, repositorio de
+   producción. No presupongas que se llama `origin`: puede llamarse `isabel`, y `origin` puede ser un espejo.
+   Haz `git fetch <remoto-produccion>` y crea una rama desde `<remoto-produccion>/main` (si ya te dieron una
+   rama, incorpora esa referencia antes de empezar). Si falta ese remoto, añádelo con la URL de producción
+   sin cambiar el destino de otros remotos. Comprueba por separado el despliegue al confirmar lo publicado.
 2. Haz solo el cambio que se pidió.
 3. `pip install -r requirements.txt` (una vez por sesión), luego `python construir_sitio.py` y
    `python verificar_sitio.py`. El verificador tiene que decir **OK**; si no, corrige y repite.
 4. Revisa `git diff --stat`: que solo cambie lo pedido (más `dist/sitemap.xml`, que lleva la fecha del día).
-5. Commit con mensaje en español, sube la rama y abre un pull request contra `main`.
-6. Justo antes de fusionar, vuelve a traer `origin/main`. Si cambió (otro socio publicó algo), mézclalo en tu rama.
+5. Commit con mensaje en español, sube la rama al remoto de producción y abre un pull request contra `main`
+   en **`IsabelLopez/lopsa`**. Con GitHub CLI indica `--repo IsabelLopez/lopsa` para no usar el espejo por error.
+6. Justo antes de fusionar, vuelve a traer `<remoto-produccion>/main`. Si cambió (otro socio publicó algo), mézclalo en tu rama.
    Si hay conflicto dentro de `dist/`, no lo arregles a mano: quédate con cualquiera de las dos versiones, vuelve a
    correr `construir_sitio.py` y `verificar_sitio.py`, y haz commit.
 7. **Fusiona tú el pull request a `main`**: si todo salió bien no hace falta pedir permiso. Si algo falló, NO
