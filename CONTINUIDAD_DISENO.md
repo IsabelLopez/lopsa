@@ -9,8 +9,8 @@ decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen l
 | Estado | Evidencia y alcance |
 |---|---|
 | Diseño publicado vigente | Inicio breve y seis páginas independientes, incorporados en [PR #13](https://github.com/IsabelLopez/lopsa/pull/13), versión [58d1d34](https://github.com/IsabelLopez/lopsa/commit/58d1d34), 16-sep-2026. Conserva los ajustes visuales de los PR #6–12 indicados abajo. Sitio: [lopsa.com.pa](https://lopsa.com.pa/). |
-| Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [71ff5fa](https://github.com/IsabelLopez/lopsa/commit/71ff5fa), integración de [PR #19](https://github.com/IsabelLopez/lopsa/pull/19) (24-sep-2026), consultada con `git fetch` el 06-oct. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16) y [#17](https://github.com/IsabelLopez/lopsa/pull/17) de SEO/medición y [#18](https://github.com/IsabelLopez/lopsa/pull/18)–[#19](https://github.com/IsabelLopez/lopsa/pull/19) de instrucciones. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
-| Trabajo de esta revisión | [PR #20](https://github.com/IsabelLopez/lopsa/pull/20), rama `seo/datos-estructurados-lastmod-20261006`: datos estructurados completos, migas en JSON-LD y `lastmod` real en el sitemap. Sin cambios visuales: fuera del JSON-LD del `<head>`, el HTML generado es idéntico. Consultar el estado del PR para saber si está integrado. |
+| Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [c3fd2f0](https://github.com/IsabelLopez/lopsa/commit/c3fd2f0), integración de [PR #20](https://github.com/IsabelLopez/lopsa/pull/20) (06-oct-2026), consultada con `git fetch` el 06-oct. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16), [#17](https://github.com/IsabelLopez/lopsa/pull/17) y [#20](https://github.com/IsabelLopez/lopsa/pull/20) de SEO/medición y [#18](https://github.com/IsabelLopez/lopsa/pull/18)–[#19](https://github.com/IsabelLopez/lopsa/pull/19) de instrucciones. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
+| Trabajo de esta revisión | [PR #21](https://github.com/IsabelLopez/lopsa/pull/21), rama `web/fotos-sin-caras-ni-emblemas-20261006`: cuatro fotos recortadas sin personas identificables ni emblemas ajenos y versiones anteriores retiradas. Mismas ranuras y proporciones. Consultar el estado del PR para saber si está integrado. |
 | Propuestas visuales nuevas | Ninguna aprobada o implementada en esta revisión. Cualquier propuesta futura debe registrar su alcance y referencia aparte del diseño vigente. |
 
 ## Decisiones visuales vigentes
@@ -32,9 +32,10 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
 
 ## Pendientes y siguiente paso
 
-- Consultar [PR #20](https://github.com/IsabelLopez/lopsa/pull/20): si está integrado, comprobar en producción
-  el JSON-LD de la portada y el sitemap; si está abierto, completar su revisión e integración. El estado de
-  una revisión no se transforma en «publicado» hasta verificar su integración y su despliegue.
+- [PR #20](https://github.com/IsabelLopez/lopsa/pull/20) está integrado y verificado en producción (JSON-LD y
+  sitemap). Consultar [PR #21](https://github.com/IsabelLopez/lopsa/pull/21): si está integrado, comprobar que las
+  fotos nuevas cargan y que las retiradas ya no responden. El estado de una revisión no se transforma en
+  «publicado» hasta verificar su integración y su despliegue.
 - Las páginas por aplicación y los casos de obra son una propuesta en preparación, pendiente de aprobación
   de la dirección de LOPSA. No publicarlas sin esa aprobación; deben reutilizar los componentes y el diseño
   vigentes de esta tabla, sin nuevas afirmaciones técnicas ni datos de clientes.
@@ -45,6 +46,21 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
   aprobado en esta tabla con su referencia, conservando el antecedente en el punto de continuidad.
 
 ## Puntos de continuidad
+
+### 06-oct-2026 — fotos sin personas identificables ni emblemas ajenos
+
+- **Hecho:** Proceso (pasos 2 y 3) y Trabajos («Preparación mecánica del piso» y «Sellado del encuentro losa–muro»)
+  usan recortes de las mismas fotos sin caras reconocibles, emblemas de otras empresas ni marcas: `paso-2-v4`,
+  `paso-3-v4`, `galeria-preparacion-piso-v4` y `galeria-preparacion-juntas-v4`. Se retiraron del sitio publicado
+  `paso-2-v3`, `paso-3-v3`, `galeria-preparacion-piso-v3`, `galeria-preparacion-juntas-v3` y `nosotros-cuadrilla`.
+  Pies de foto sin cambios; texto alternativo ajustado. Regla nueva en `CLAUDE.md`.
+- **Archivos / versión:** `datos/imagenes.json`, `datos/_imagenes_generadas.json`, `datos/proceso.json`,
+  `datos/proyectos.json`, `estaticos/img/` y `dist/`; [PR #21](https://github.com/IsabelLopez/lopsa/pull/21).
+- **Revisión:** verificador **OK, 11 páginas**; diff limitado a las etiquetas `<img>` de Proceso y Trabajos; recortes
+  revisados ampliados; capturas de escritorio con las mismas ranuras. Revisadas también las demás fotos con personas
+  (techos de zinc, equipo y drenaje): sin rostros identificables a su tamaño publicado.
+- **Pendiente:** comprobar en producción que las versiones nuevas cargan y que las retiradas ya no responden.
+- **Siguiente acción:** antes de incorporar una foto con personas, revisar caras, emblemas y marcas a tamaño completo.
 
 ### 06-oct-2026 — SEO técnico sin cambios visuales
 
