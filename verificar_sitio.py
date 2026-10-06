@@ -11,6 +11,7 @@ import re
 import sys
 import json
 from collections import Counter
+from datetime import date
 from html.parser import HTMLParser
 from urllib.parse import unquote, urljoin, urlsplit
 from xml.etree import ElementTree
@@ -50,9 +51,14 @@ class Analizador(HTMLParser):
         self.formularios = []
         self.formulario_actual = None
         self.en_titulo = False
+        self.ld_json = []
+        self.en_ld = False
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == "script" and a.get("type") == "application/ld+json":
+            self.ld_json.append("")
+            self.en_ld = True
         if a.get("id"):
             self.ids[a["id"]] += 1
         self.clases.update(a.get("class", "").split())
@@ -89,10 +95,14 @@ class Analizador(HTMLParser):
             self.en_titulo = False
         if tag == "form":
             self.formulario_actual = None
+        if tag == "script":
+            self.en_ld = False
 
     def handle_data(self, data):
         if self.en_titulo:
             self.titulos[-1] += data
+        if self.en_ld:
+            self.ld_json[-1] += data
 
 
 def ruta_publica(rel):
@@ -150,6 +160,15 @@ def main():
         if re.search(r"\bruc\b", bajo):
             problemas.append(f"{rel}: contiene RUC")
         an = analizadas[p]
+        # Un error de sintaxis en los datos estructurados no se ve en la página: Google lo descarta en silencio.
+        for bloque in an.ld_json:
+            try:
+                datos_ld = json.loads(bloque)
+            except ValueError as e:
+                problemas.append(f"{rel}: JSON-LD inválido ({e})")
+                continue
+            if not isinstance(datos_ld, dict) or datos_ld.get("@context") != "https://schema.org":
+                problemas.append(f"{rel}: JSON-LD sin @context de schema.org")
         if an.h1 != 1:
             problemas.append(f"{rel}: tiene {an.h1} H1 (debe ser 1)")
         for identificador, cantidad in an.ids.items():
@@ -234,6 +253,15 @@ def main():
         rutas = {ruta_publica(destino) for destino in PAGINAS.values() if destino not in ("404.html", "gracias/index.html")}
         if urls != {sitio_url + ruta for ruta in rutas}:
             problemas.append("El sitemap debe incluir todas las páginas públicas y excluir Gracias y 404")
+        # lastmod: una fecha real por URL (construir_sitio.py la conserva mientras la página no cambie).
+        entradas = sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}url")
+        for entrada in entradas:
+            lastmod = entrada.find("{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod")
+            try:
+                if date.fromisoformat(lastmod.text) > date.today():
+                    problemas.append(f"Sitemap: lastmod en el futuro ({lastmod.text})")
+            except (AttributeError, TypeError, ValueError):
+                problemas.append("Sitemap: cada URL debe llevar un lastmod con fecha AAAA-MM-DD")
     except (OSError, ElementTree.ParseError) as e:
         problemas.append(f"No se pudo verificar el sitemap: {e}")
     # imágenes: sin EXIF y peso

@@ -1,6 +1,6 @@
 # Continuidad del diseño de lopsa.com.pa
 
-Actualizado: **24-sep-2026**. Relevo público para continuar el mismo trabajo desde cualquier sesión o modelo.
+Actualizado: **06-oct-2026**. Relevo público para continuar el mismo trabajo desde cualquier sesión o modelo.
 Las reglas y el procedimiento viven únicamente en [CLAUDE.md](CLAUDE.md); este archivo registra estado,
 decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen las decisiones vigentes.
 
@@ -9,8 +9,8 @@ decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen l
 | Estado | Evidencia y alcance |
 |---|---|
 | Diseño publicado vigente | Inicio breve y seis páginas independientes, incorporados en [PR #13](https://github.com/IsabelLopez/lopsa/pull/13), versión [58d1d34](https://github.com/IsabelLopez/lopsa/commit/58d1d34), 16-sep-2026. Conserva los ajustes visuales de los PR #6–12 indicados abajo. Sitio: [lopsa.com.pa](https://lopsa.com.pa/). |
-| Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [b26454d](https://github.com/IsabelLopez/lopsa/commit/b26454dcc3e7e9a92eb7abf05a0b2a45e9763822), 21-sep-2026, consultada con `git fetch` el 24-sep. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16) y [#17](https://github.com/IsabelLopez/lopsa/pull/17) de SEO/medición y [#18](https://github.com/IsabelLopez/lopsa/pull/18) de instrucciones. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
-| Trabajo de esta revisión | [PR #19](https://github.com/IsabelLopez/lopsa/pull/19), rama `docs/continuidad-diseno-20260924`: este relevo y la entrada en `CLAUDE.md`. Solo documentación. Consultar el estado del PR para saber si sigue abierto o está integrado; no propone cambios visuales ni modifica el sitio generado. |
+| Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [71ff5fa](https://github.com/IsabelLopez/lopsa/commit/71ff5fa), integración de [PR #19](https://github.com/IsabelLopez/lopsa/pull/19) (24-sep-2026), consultada con `git fetch` el 06-oct. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16) y [#17](https://github.com/IsabelLopez/lopsa/pull/17) de SEO/medición y [#18](https://github.com/IsabelLopez/lopsa/pull/18)–[#19](https://github.com/IsabelLopez/lopsa/pull/19) de instrucciones. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
+| Trabajo de esta revisión | [PR #20](https://github.com/IsabelLopez/lopsa/pull/20), rama `seo/datos-estructurados-lastmod-20261006`: datos estructurados completos, migas en JSON-LD y `lastmod` real en el sitemap. Sin cambios visuales: fuera del JSON-LD del `<head>`, el HTML generado es idéntico. Consultar el estado del PR para saber si está integrado. |
 | Propuestas visuales nuevas | Ninguna aprobada o implementada en esta revisión. Cualquier propuesta futura debe registrar su alcance y referencia aparte del diseño vigente. |
 
 ## Decisiones visuales vigentes
@@ -32,9 +32,12 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
 
 ## Pendientes y siguiente paso
 
-- Consultar [PR #19](https://github.com/IsabelLopez/lopsa/pull/19): si está integrado, continuar con la nueva
-  tarea; si está abierto, completar su revisión e integración. El estado de una revisión no se transforma
-  en «publicado» hasta verificar su integración y, si cambia el sitio, su despliegue.
+- Consultar [PR #20](https://github.com/IsabelLopez/lopsa/pull/20): si está integrado, comprobar en producción
+  el JSON-LD de la portada y el sitemap; si está abierto, completar su revisión e integración. El estado de
+  una revisión no se transforma en «publicado» hasta verificar su integración y su despliegue.
+- Las páginas por aplicación y los casos de obra son una propuesta en preparación, pendiente de aprobación
+  de la dirección de LOPSA. No publicarlas sin esa aprobación; deben reutilizar los componentes y el diseño
+  vigentes de esta tabla, sin nuevas afirmaciones técnicas ni datos de clientes.
 - La presencia del código de medición no demuestra recepción de eventos. Queda por comprobar en la
   herramienta correspondiente la recepción de `whatsapp_click` y `generate_lead`, sin confundir un clic
   o una prueba con una consulta real. Este relevo no certifica ese resultado.
@@ -42,6 +45,24 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
   aprobado en esta tabla con su referencia, conservando el antecedente en el punto de continuidad.
 
 ## Puntos de continuidad
+
+### 06-oct-2026 — SEO técnico sin cambios visuales
+
+- **Hecho:** datos estructurados de la portada completados (tipo `HomeAndConstructionBusiness`, catálogo con las
+  seis aplicaciones publicadas, punto de contacto, lema y `sameAs` con Instagram, la página pública de Facebook
+  «LOPSA, S.A.» y la ficha de Google); `BreadcrumbList` en las seis páginas con migas visibles; `lastmod` del
+  sitemap con la fecha real de cada página (`datos/_fechas_sitemap.json`); el verificador comprueba JSON-LD y
+  fechas. La FAQ estructurada de Contacto ya existía con las ocho preguntas publicadas: no se duplicó.
+  Estado: integrado mediante PR si su página lo indica; propuesto mientras siga abierto.
+- **Archivos / versión:** `construir_sitio.py`, `verificar_sitio.py`, `plantillas/base.html`, `index.html` y las
+  seis plantillas con migas, `datos/sitio.json` (`facebook`), `datos/_fechas_sitemap.json`, `CLAUDE.md`, `README.md`;
+  rama `seo/datos-estructurados-lastmod-20261006` sobre `71ff5fa`, [PR #20](https://github.com/IsabelLopez/lopsa/pull/20).
+- **Revisión:** construcción estable en dos pasadas; verificador **OK, 11 páginas**; prueba negativa del
+  verificador; diff de `dist/` limitado a JSON-LD y sitemap; validator.schema.org con 0 errores en portada,
+  Contacto y Aplicaciones; capturas de escritorio y móvil idénticas a la versión anterior.
+- **Pendiente:** comprobar producción tras la integración. Diseño, textos visibles, formulario y fotografías sin cambios.
+- **Siguiente acción:** retomar desde este relevo; cualquier página nueva requiere aprobación y debe reutilizar
+  las decisiones visuales vigentes.
 
 ### 24-sep-2026 — documentación de continuidad
 

@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% import '_macros.html' as m with context %}
+{% set miga = "Nuestro proceso" %}
 {% block titulo %}Nuestro proceso de aplicación | LOPSA Panamá{% endblock %}
 {% block descripcion %}Conozca cómo LOPSA prepara, aplica y verifica el sistema de poliurea caliente. Cinco etapas, controles de calidad y documentación técnica.{% endblock %}
 {% block canonical %}/proceso/{% endblock %}
 {% block contenido %}
 <header class="pagina-intro">
   <div class="contenedor">
-    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Nuestro proceso</span></nav>
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">{{ miga }}</span></nav>
     <p class="etiqueta">Nuestro proceso</p>
     <h1>Bien hecho, desde la base.</h1>
     <p>{{ proceso.intro }}</p>

@@ -16,8 +16,8 @@ de gestión de LOPSA: `04_COMERCIAL/Web_LOPSA/`. Este repositorio es **el códig
 | `plantillas/*.html` | Plantillas Jinja2: `base.html` (cabecera, pie, metadatos) y una por página. |
 | `estaticos/` | CSS, JavaScript, logos, favicons y las fotos ya optimizadas (`img/`). |
 | `preparar_imagenes.py` | Toma las fotos originales de `Fotos_LOPSA/` (repositorio de gestión), las recorta, difumina rótulos ajenos y exporta WebP **sin EXIF ni GPS**. |
-| `construir_sitio.py` | Genera `dist/` (datos + plantillas + estáticos + `robots.txt` + `sitemap.xml`). |
-| `verificar_sitio.py` | Revisa `dist/`: palabras prohibidas, un solo H1, imágenes y enlaces, metadatos y peso. Sale con error si algo falla. |
+| `construir_sitio.py` | Genera `dist/` (datos + plantillas + estáticos + `robots.txt` + `sitemap.xml`). El `lastmod` de cada URL es la fecha real de su último cambio, guardada en `datos/_fechas_sitemap.json` con la huella del HTML generado. |
+| `verificar_sitio.py` | Revisa `dist/`: palabras prohibidas, un solo H1, imágenes y enlaces, metadatos, datos estructurados (JSON-LD válido), fechas del sitemap y peso. Sale con error si algo falla. |
 | `dist/` | **Lo que se publica.** Se versiona para que Netlify lo sirva sin construir nada. |
 | `netlify.toml` | Carpeta a publicar, cabeceras de seguridad, caché y redirecciones. |
 | `legacy/coming-soon/` | El «Coming Soon» en Next.js entregado por Isabel López el 02-sep-2026 (etiqueta `coming-soon-isabel`). Solo referencia. |

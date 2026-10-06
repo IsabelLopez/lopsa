@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% import '_macros.html' as m with context %}
+{% set miga = "La tecnología" %}
 {% block titulo %}Qué es la poliurea caliente | LOPSA Panamá{% endblock %}
 {% block descripcion %}Conozca qué es la poliurea caliente, sus aplicaciones, capas, durabilidad y diferencias con otros sistemas de impermeabilización.{% endblock %}
 {% block canonical %}/poliurea/{% endblock %}
 {% block contenido %}
 <header class="pagina-intro">
   <div class="contenedor">
-    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">La tecnología</span></nav>
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">{{ miga }}</span></nav>
     <p class="etiqueta">La tecnología</p>
     <h1>¿Qué es la poliurea caliente?</h1>
     <p>Una protección continua que se adapta a su superficie. Conozca cómo funciona y qué necesita cada proyecto.</p>

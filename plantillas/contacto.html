@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% import '_macros.html' as m with context %}
+{% set miga = "Contacto" %}
 {% block titulo %}Contacto y cotizaciones | LOPSA Panamá{% endblock %}
 {% block descripcion %}Consulte su proyecto de poliurea caliente con LOPSA. WhatsApp +507 6604-4196, ventas@lopsa.com.pa o formulario de cotización.{% endblock %}
 {% block canonical %}/contacto/{% endblock %}
@@ -13,7 +14,7 @@
 {% block contenido %}
 <header class="pagina-intro">
   <div class="contenedor">
-    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Contacto</span></nav>
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">{{ miga }}</span></nav>
     <p class="etiqueta">Contacto</p>
     <h1>Hablemos de su proyecto.</h1>
     <p>Comparta lo que necesita. Le ayudamos a definir el siguiente paso.</p>
