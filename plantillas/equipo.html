@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% import '_macros.html' as m with context %}
+{% set miga = "Nuestro equipo" %}
 {% block titulo %}Nuestro equipo | LOPSA Panamá{% endblock %}
 {% block descripcion %}Conozca al equipo de LOPSA: personal capacitado y certificado, dirección de ingeniería y equipos propios para la aplicación de poliurea caliente.{% endblock %}
 {% block canonical %}/equipo/{% endblock %}
 {% block contenido %}
 <header class="pagina-intro">
   <div class="contenedor">
-    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Nuestro equipo</span></nav>
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">{{ miga }}</span></nav>
     <p class="etiqueta">Nuestro equipo</p>
     <h1>Personas preparadas. Trabajo bien ejecutado.</h1>
     <p>Personal propio, coordinación en obra y supervisión técnica en cada etapa.</p>

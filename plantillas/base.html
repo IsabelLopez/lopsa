@@ -30,6 +30,11 @@
 <link rel="stylesheet" href="/css/estilos.css?v={{ version_css }}">
 {% if sitio.google_verificacion %}<meta name="google-site-verification" content="{{ sitio.google_verificacion }}">
 {% endif %}{% block cabeza %}{% endblock %}
+{% if miga is defined %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ sitio.url }}/"}, {"@type": "ListItem", "position": 2, "name": {{ miga | tojson }}, "item": "{{ sitio.url }}{{ self.canonical() }}"}]}
+</script>
+{% endif %}
 {% if sitio.ga4_id %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ sitio.ga4_id }}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ sitio.ga4_id }}');

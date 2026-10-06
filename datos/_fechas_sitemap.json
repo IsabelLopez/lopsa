@@ -1,0 +1,41 @@
+{
+  "_nota": "Generado por construir_sitio.py: fecha de la última modificación real de cada página (lastmod del sitemap). La fecha cambia solo cuando cambia el HTML generado de esa página. No editar a mano.",
+  "paginas": {
+    "/": {
+      "fecha": "2026-10-06",
+      "sha256": "b8de07bfa5f85b4eb7c64c7c54cd9b6e6e3af4991a79747bd2627d60a945309a"
+    },
+    "/poliurea/": {
+      "fecha": "2026-10-06",
+      "sha256": "811a80c9c90ceac1206e7f57447c4449757396388fe66ee519badda731a455b7"
+    },
+    "/aplicaciones/": {
+      "fecha": "2026-10-06",
+      "sha256": "d3cc835fd4f53f55537d7dcfdcca788a0e04c272d8f4ca5e89d9bcbfe4c9cf8f"
+    },
+    "/proceso/": {
+      "fecha": "2026-10-06",
+      "sha256": "7ae96ce2bd5cfde00644ecb58dd171458deed69a549b7e210e437f0c96e12e19"
+    },
+    "/trabajos/": {
+      "fecha": "2026-10-06",
+      "sha256": "173f275700eb7c23f717ff9a87660a4828f765613c3c907465a65a623b798785"
+    },
+    "/equipo/": {
+      "fecha": "2026-10-06",
+      "sha256": "dcc1465480a802afe767a7c8ee78d5fe803640554cdc836488193ac932b8bb02"
+    },
+    "/contacto/": {
+      "fecha": "2026-10-06",
+      "sha256": "cf4dc5afda4536f2d85156b9ccda9b5745445a23ee7a4a9090efbeba48fae990"
+    },
+    "/privacidad/": {
+      "fecha": "2026-09-18",
+      "sha256": "65a3fc3937045deab17e340c253074e93cd4563bc48af49b849f8dce59a2ce9f"
+    },
+    "/aviso-legal/": {
+      "fecha": "2026-09-18",
+      "sha256": "cb23abbcfbeaad229fd01a28ba69a452050cfbf004bb3fc6ed2ffa7ac2398fe2"
+    }
+  }
+}

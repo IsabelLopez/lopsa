@@ -11,18 +11,27 @@
       "url": "{{ sitio.url }}/", "inLanguage": "es-PA", "publisher": {"@id": "{{ sitio.url }}/#empresa"}
     },
     {
-      "@type": "LocalBusiness", "@id": "{{ sitio.url }}/#empresa",
+      "@type": "HomeAndConstructionBusiness", "@id": "{{ sitio.url }}/#empresa",
       "name": {{ sitio.razon_social | tojson }}, "alternateName": "LOPSA",
       "url": "{{ sitio.url }}/", "logo": "{{ sitio.url }}/icon-512.png", "image": "{{ sitio.url }}/img/og-1200.jpg",
       "telephone": "{{ sitio.telefono_tel }}", "email": "{{ sitio.correo }}",
       "description": {{ sitio.descripcion | tojson }},
+      "slogan": {{ sitio.tagline | tojson }},
       "knowsAbout": ["Poliurea caliente", "Impermeabilización", "Anticorrosión", "Revestimiento de pisos industriales"],
       "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressRegion": "Panamá", "addressCountry": "PA"},
       "areaServed": {"@type": "Country", "name": "Panamá"},
+      "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": "{{ sitio.telefono_tel }}", "email": "{{ sitio.correo }}", "areaServed": "PA", "availableLanguage": "es"},
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog", "name": "Aplicaciones de poliurea caliente",
+        "itemListElement": [
+          {% for a in aplicaciones %}{"@type": "Offer", "itemOffered": {"@type": "Service", "name": {{ a.titulo | tojson }}, "description": {{ a.resumen | tojson }}, "url": "{{ sitio.url }}/aplicaciones/#app-{{ a.id }}", "areaServed": {"@type": "Country", "name": "Panamá"}, "provider": {"@id": "{{ sitio.url }}/#empresa"}}}{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      },
       "openingHoursSpecification": [
         {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
         {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"}
-      ]{% set perfiles = [sitio.instagram, sitio.google_perfil] | select | list %}{% if sitio.google_perfil %},
+      ]{% set perfiles = [sitio.instagram, sitio.facebook, sitio.google_perfil] | select | list %}{% if sitio.google_perfil %},
       "hasMap": {{ sitio.google_perfil | tojson }}{% endif %}{% if perfiles %},
       "sameAs": {{ perfiles | tojson }}{% endif %}
     }

@@ -52,12 +52,14 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
 2. Haz solo el cambio que se pidió.
 3. `pip install -r requirements.txt` (una vez por sesión), luego `python construir_sitio.py` y
    `python verificar_sitio.py`. El verificador tiene que decir **OK**; si no, corrige y repite.
-4. Revisa `git diff --stat`: que solo cambie lo pedido (más `dist/sitemap.xml`, que lleva la fecha del día).
+4. Revisa `git diff --stat`: que solo cambie lo pedido. `dist/sitemap.xml` y `datos/_fechas_sitemap.json` cambian
+   solo cuando cambia el contenido de alguna página: guardan la fecha real de su última modificación (`lastmod`).
+   Ese archivo lo genera `construir_sitio.py`; no se edita a mano.
 5. Commit con mensaje en español, sube la rama al remoto de producción y abre un pull request contra `main`
    en **`IsabelLopez/lopsa`**. Con GitHub CLI indica `--repo IsabelLopez/lopsa` para no usar el espejo por error.
 6. Justo antes de fusionar, vuelve a traer `<remoto-produccion>/main`. Si cambió (otro socio publicó algo), mézclalo en tu rama.
-   Si hay conflicto dentro de `dist/`, no lo arregles a mano: quédate con cualquiera de las dos versiones, vuelve a
-   correr `construir_sitio.py` y `verificar_sitio.py`, y haz commit.
+   Si hay conflicto dentro de `dist/` o en `datos/_fechas_sitemap.json`, no lo arregles a mano: quédate con
+   cualquiera de las dos versiones, vuelve a correr `construir_sitio.py` y `verificar_sitio.py`, y haz commit.
 7. **Fusiona tú el pull request a `main`**: si todo salió bien no hace falta pedir permiso. Si algo falló, NO
    publiques y explica en simple qué pasó.
 8. Espera 2-3 minutos y comprueba en https://lopsa.com.pa (con `curl`, agregando `?v=` y un número para saltar la

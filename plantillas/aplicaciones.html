@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% import '_macros.html' as m with context %}
+{% set miga = "Aplicaciones" %}
 {% block titulo %}Aplicaciones de poliurea caliente | LOPSA Panamá{% endblock %}
 {% block descripcion %}Soluciones de poliurea caliente para cubiertas de zinc, losas, canales, tanques, pisos industriales y estacionamientos en Panamá.{% endblock %}
 {% block canonical %}/aplicaciones/{% endblock %}
 {% block contenido %}
 <header class="pagina-intro">
   <div class="contenedor">
-    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Aplicaciones</span></nav>
+    <nav class="migas" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">{{ miga }}</span></nav>
     <p class="etiqueta">Aplicaciones</p>
     <h1>Una solución para cada superficie.</h1>
     <p>El uso, el soporte y la exposición definen el sistema que necesita su proyecto.</p>
