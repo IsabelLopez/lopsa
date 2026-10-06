@@ -459,19 +459,6 @@
       ]
     },
     {
-      "id": "nosotros-cuadrilla",
-      "origen": "2026027_PH_Plaza_Real/20260700_Cuadrilla_OperarioAzoteaLimpiezaSkyline_01.jpg",
-      "recorte": "4:3",
-      "foco": [
-        0.5,
-        0.5
-      ],
-      "anchos": [
-        480,
-        960
-      ]
-    },
-    {
       "id": "contacto-fondo",
       "origen": "2026003_Lavery/20260613_Equipo_CamionLopsaPlantaNoche_01.jpg",
       "recorte": "16:9",
@@ -598,8 +585,15 @@
       ]
     },
     {
-      "id": "paso-2-v3",
+      "id": "paso-2-v4",
       "origen": "2026003_Lavery/20260500_Preparacion_PulidoPisoPasilloPlanta_01.jpg",
+      "nota": "Recorte sin la cara del operario ni el logo de su camisa (06-oct-2026). No volver al encuadre completo.",
+      "caja": [
+        0.0,
+        0.4,
+        1.0,
+        1.0
+      ],
       "recorte": "3:4",
       "foco": [
         0.5,
@@ -607,24 +601,23 @@
       ],
       "anchos": [
         480,
-        800
-      ],
-      "desenfocar": [
-        [
-          0.56,
-          0.325,
-          0.62,
-          0.345
-        ]
+        650
       ]
     },
     {
-      "id": "paso-3-v3",
+      "id": "paso-3-v4",
       "origen": "2026008_Almacenajes_Del_Este/20260618_Sellado_SelladoGrietaOperario_01.jpg",
+      "nota": "Recorte de la mano y la cinta, sin la cara ni el emblema de la camisa (06-oct-2026). No volver al encuadre completo.",
+      "caja": [
+        0.12,
+        0.49,
+        1.0,
+        0.83
+      ],
       "recorte": "4:3",
       "foco": [
         0.5,
-        0.53
+        0.5
       ],
       "anchos": [
         480,
@@ -751,8 +744,15 @@
       "calidad": 70
     },
     {
-      "id": "galeria-preparacion-piso-v3",
+      "id": "galeria-preparacion-piso-v4",
       "origen": "2026003_Lavery/20260500_Preparacion_PulidoPisoPasilloPlanta_01.jpg",
+      "nota": "Recorte sin la cara del operario ni el logo de su camisa (06-oct-2026). No volver al encuadre completo.",
+      "caja": [
+        0.0,
+        0.4,
+        1.0,
+        1.0
+      ],
       "recorte": "3:4",
       "foco": [
         0.5,
@@ -760,56 +760,27 @@
       ],
       "anchos": [
         480,
-        800,
-        1000
-      ],
-      "desenfocar": [
-        [
-          0.56,
-          0.325,
-          0.62,
-          0.345
-        ]
+        650
       ]
     },
     {
-      "id": "galeria-preparacion-juntas-v3",
+      "id": "galeria-preparacion-juntas-v4",
       "origen": "2026008_Almacenajes_Del_Este/20260619_Sellado_SelladoJuntasLosa_01.jpg",
+      "nota": "Recorte de la junta losa-muro sellada, sin la cara del operario ni los tubos con marca (06-oct-2026). No volver al encuadre anterior.",
+      "caja": [
+        0.0,
+        0.39,
+        0.56,
+        1.0
+      ],
       "recorte": "3:4",
       "foco": [
-        0.42,
+        0.5,
         0.5
       ],
       "anchos": [
         480,
-        800,
-        1000
-      ],
-      "caja": [
-        0,
-        0,
-        1,
-        0.66
-      ],
-      "desenfocar": [
-        [
-          0.585,
-          0.938,
-          0.643,
-          0.971
-        ],
-        [
-          0.64,
-          0.91,
-          0.692,
-          0.95
-        ],
-        [
-          0.684,
-          0.882,
-          0.73,
-          0.928
-        ]
+        800
       ],
       "calidad": 70
     },

@@ -282,15 +282,6 @@
   "formato": "webp",
   "huella": "4f04c12f7b"
  },
- "nosotros-cuadrilla": {
-  "anchos": [
-   480,
-   960
-  ],
-  "prop": 1.3333,
-  "formato": "webp",
-  "huella": "5857a91a9c"
- },
  "contacto-fondo": {
   "anchos": [
    1024,
@@ -363,23 +354,23 @@
   "formato": "webp",
   "huella": "95e48bc352"
  },
- "paso-2-v3": {
+ "paso-2-v4": {
   "anchos": [
    480,
-   800
+   650
   ],
   "prop": 0.75,
   "formato": "webp",
-  "huella": "6f6e46d436"
+  "huella": "493c6dfa4e"
  },
- "paso-3-v3": {
+ "paso-3-v4": {
   "anchos": [
    480,
    800
   ],
   "prop": 1.3333,
   "formato": "webp",
-  "huella": "647c07ad26"
+  "huella": "83cd474fe9"
  },
  "paso-4-v3": {
   "anchos": [
@@ -439,25 +430,23 @@
   "formato": "webp",
   "huella": "a72aa5651f"
  },
- "galeria-preparacion-piso-v3": {
+ "galeria-preparacion-piso-v4": {
   "anchos": [
    480,
-   800,
-   1000
+   650
   ],
   "prop": 0.75,
   "formato": "webp",
-  "huella": "b40801e463"
+  "huella": "e0ae77ffa9"
  },
- "galeria-preparacion-juntas-v3": {
+ "galeria-preparacion-juntas-v4": {
   "anchos": [
    480,
-   800,
-   1000
+   800
   ],
   "prop": 0.75,
   "formato": "webp",
-  "huella": "d7abecb3b4"
+  "huella": "cd7ac61df6"
  },
  "galeria-preparacion-drenaje-v3": {
   "anchos": [

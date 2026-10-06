@@ -81,6 +81,10 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
 - Garantía: **«10 años contra filtraciones en cubiertas»**. Separar de **25 años de vida útil estimada W3 en cubiertas**.
 - **8–14 segundos** es formación de gel, referencia de la ficha técnica española del sistema; no secado completo ni habilitación instantánea. La ficha internacional da otros tiempos: la puesta en servicio depende del producto suministrado, curado, acabado y uso. Promover reducción de paradas y planificación por zonas.
 - Respaldo público documentado: ETE 11/0016, CE, W3, BROOF(t1) sobre concreto, ensayo de migración al agua, raíces, difusión de radón y declaración del fabricante para áreas alimentarias. Mantener el alcance y tipo de documento de cada tarjeta; no extender a certificación de LOPSA, todos los soportes o todos los productos. En celular mostrar dos tarjetas por fila. Acordeón: «Consultar Ficha Técnica».
+- **Fotos sin personas identificables ni emblemas ajenos:** ninguna cara reconocible (no hay autorización de uso de
+  imagen) ni logos de otras empresas en ropa, equipos o letreros. Se recortan o difuminan desde `datos/imagenes.json`
+  con un identificador nuevo. Las versiones retiradas el 06-oct-2026 (`paso-2-v3`, `paso-3-v3`,
+  `galeria-preparacion-piso-v3`, `galeria-preparacion-juntas-v3` y `nosotros-cuadrilla`) no se vuelven a usar.
 - Sin precios, tarifas ni descuentos. Sin marcas de materiales ni de equipos. Sin promesas que LOPSA no haya
   confirmado (plazos, certificaciones, «precio fijo»).
 - LOPSA se presenta como especialista en poliurea caliente; la construcción es secundaria.
