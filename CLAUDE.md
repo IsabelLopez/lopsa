@@ -90,6 +90,9 @@ con palabras qué quiere cambiar. Tú haces el cambio, lo revisas, lo publicas y
 - LOPSA se presenta como especialista en poliurea caliente; la construcción es secundaria.
 - Contacto público: WhatsApp y teléfono **+507 6604-4196**, correo **ventas@lopsa.com.pa**. Ningún otro teléfono
   ni correo personal.
+- **Redes visibles: solo Instagram** (@lopsa_pa): ícono en el pie de todas las páginas y junto al botón de WhatsApp
+  en Contacto, en marino y dorado (07-oct-2026). El enlace sale de `datos/sitio.json` → `instagram`. No enlazar
+  Facebook de forma visible mientras su página no tenga contenido.
 - Español con tildes y ñ, trato de usted.
 
 ## Este repositorio es PÚBLICO
