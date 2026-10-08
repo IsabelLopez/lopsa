@@ -81,6 +81,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <img src="/img/logo-blanco.svg" alt="LOPSA" width="160" height="47">
       <p class="pie__lema">{{ sitio.tagline }}</p>
       <p class="pie__triada">Impermeabilización · Anticorrosión · Revestimiento industrial</p>
+      {% if sitio.instagram %}<a class="pie__instagram" href="{{ sitio.instagram }}" target="_blank" rel="noopener" aria-label="Instagram de LOPSA">{{ m.icono_instagram('ico') }}</a>{% endif %}
     </div>
     <div class="pie__datos">
       <p><strong>{{ sitio.razon_social }}</strong></p>

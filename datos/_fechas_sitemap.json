@@ -2,40 +2,40 @@
   "_nota": "Generado por construir_sitio.py: fecha de la última modificación real de cada página (lastmod del sitemap). La fecha cambia solo cuando cambia el HTML generado de esa página. No editar a mano.",
   "paginas": {
     "/": {
-      "fecha": "2026-10-06",
-      "sha256": "b8de07bfa5f85b4eb7c64c7c54cd9b6e6e3af4991a79747bd2627d60a945309a"
+      "fecha": "2026-10-07",
+      "sha256": "9b81da1fb0c4a88cf12933125f55cb3b5a1eae7b1e174585d620c0e800c834ab"
     },
     "/poliurea/": {
-      "fecha": "2026-10-06",
-      "sha256": "811a80c9c90ceac1206e7f57447c4449757396388fe66ee519badda731a455b7"
+      "fecha": "2026-10-07",
+      "sha256": "b2933436c4c8c5d6671eb486e6aa53e8708f958f87e96b65e3e4f7ca03ac9313"
     },
     "/aplicaciones/": {
-      "fecha": "2026-10-06",
-      "sha256": "d3cc835fd4f53f55537d7dcfdcca788a0e04c272d8f4ca5e89d9bcbfe4c9cf8f"
+      "fecha": "2026-10-07",
+      "sha256": "5fee61e869bddf2c68d722c2e063417d0f4d5d6d1810640b6a4ad471d302004b"
     },
     "/proceso/": {
-      "fecha": "2026-10-06",
-      "sha256": "3595853b965c6792fb227f5b44a5d0794970d455ec388f25264df1e109b0d460"
+      "fecha": "2026-10-07",
+      "sha256": "5f2cbba0031fe21f37ba842146938267fd3cc88450284b693e7e5b09a99ce179"
     },
     "/trabajos/": {
-      "fecha": "2026-10-06",
-      "sha256": "c35362cbf87a1ac43d4abc1610891439ef088db8eaa1b4b6210999f5de413ada"
+      "fecha": "2026-10-07",
+      "sha256": "e90df1e18bad07a515d9418557d3bf0f424b1f841e483c75ecf21c46109c1cd0"
     },
     "/equipo/": {
-      "fecha": "2026-10-06",
-      "sha256": "dcc1465480a802afe767a7c8ee78d5fe803640554cdc836488193ac932b8bb02"
+      "fecha": "2026-10-07",
+      "sha256": "4ec5cffa4bd9c2675a89775a7ed1e2b27117d4991abfca11638924dcb8724a2a"
     },
     "/contacto/": {
-      "fecha": "2026-10-06",
-      "sha256": "cf4dc5afda4536f2d85156b9ccda9b5745445a23ee7a4a9090efbeba48fae990"
+      "fecha": "2026-10-07",
+      "sha256": "96df1289abd4d83236802742faff4a94864ef2c07b085ae663811f3e46e63a9c"
     },
     "/privacidad/": {
-      "fecha": "2026-09-18",
-      "sha256": "65a3fc3937045deab17e340c253074e93cd4563bc48af49b849f8dce59a2ce9f"
+      "fecha": "2026-10-07",
+      "sha256": "2ac054caeda81ec6beb752ba902fa05a8b3342ef5fc7f0191e5e5cf7c2edd4d0"
     },
     "/aviso-legal/": {
-      "fecha": "2026-09-18",
-      "sha256": "cb23abbcfbeaad229fd01a28ba69a452050cfbf004bb3fc6ed2ffa7ac2398fe2"
+      "fecha": "2026-10-07",
+      "sha256": "3b1c17f4fa89b74a58c209fb80805dc037a007cd11f291b9b572dca0468afb6d"
     }
   }
 }

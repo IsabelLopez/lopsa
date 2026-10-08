@@ -128,6 +128,9 @@ button,summary {cursor:pointer;}
 .contacto__datos span {color:var(--gris-2);}
 .contacto__datos a {text-decoration:none;}
 .contacto__datos a:hover {text-decoration:underline;}
+.contacto__acciones {display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+.boton-icono {display:inline-flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;border:1px solid var(--marino);border-radius:3px;color:var(--marino);transition:background-color .2s,color .2s;}
+.boton-icono:hover {background:var(--marino);color:var(--dorado);}
 .consulta-rapida {margin-top:20px;font-size:.8rem;}
 .consulta-rapida>summary {padding-block:10px;}
 .cotizador {display:grid;gap:15px;padding:15px 0;}
@@ -153,6 +156,9 @@ button,summary {cursor:pointer;}
 .pie__marca img {width:130px;height:auto;}
 .pie__lema {margin-top:18px;color:#fff;max-width:27ch;}
 .pie__triada {font-size:.69rem;margin-top:12px;max-width:34ch;}
+.pie__instagram {display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;margin-top:20px;border:1px solid #c9a55480;border-radius:3px;color:var(--dorado);transition:background-color .2s,color .2s,border-color .2s;}
+.pie__instagram:hover {background:var(--dorado);border-color:var(--dorado);color:#142640;}
+.pie__instagram:focus-visible {outline-color:var(--dorado);}
 .pie__datos {display:grid;gap:8px;align-content:start;}
 .pie__datos strong,.pie__datos a {color:#fff;}
 .pie__datos p:last-child {display:none;}

@@ -1,6 +1,6 @@
 # Continuidad del diseño de lopsa.com.pa
 
-Actualizado: **06-oct-2026**. Relevo público para continuar el mismo trabajo desde cualquier sesión o modelo.
+Actualizado: **07-oct-2026**. Relevo público para continuar el mismo trabajo desde cualquier sesión o modelo.
 Las reglas y el procedimiento viven únicamente en [CLAUDE.md](CLAUDE.md); este archivo registra estado,
 decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen las decisiones vigentes.
 
@@ -9,8 +9,8 @@ decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen l
 | Estado | Evidencia y alcance |
 |---|---|
 | Diseño publicado vigente | Inicio breve y seis páginas independientes, incorporados en [PR #13](https://github.com/IsabelLopez/lopsa/pull/13), versión [58d1d34](https://github.com/IsabelLopez/lopsa/commit/58d1d34), 16-sep-2026. Conserva los ajustes visuales de los PR #6–12 indicados abajo. Sitio: [lopsa.com.pa](https://lopsa.com.pa/). |
-| Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [c3fd2f0](https://github.com/IsabelLopez/lopsa/commit/c3fd2f0), integración de [PR #20](https://github.com/IsabelLopez/lopsa/pull/20) (06-oct-2026), consultada con `git fetch` el 06-oct. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16), [#17](https://github.com/IsabelLopez/lopsa/pull/17) y [#20](https://github.com/IsabelLopez/lopsa/pull/20) de SEO/medición y [#18](https://github.com/IsabelLopez/lopsa/pull/18)–[#19](https://github.com/IsabelLopez/lopsa/pull/19) de instrucciones. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
-| Trabajo de esta revisión | [PR #21](https://github.com/IsabelLopez/lopsa/pull/21), rama `web/fotos-sin-caras-ni-emblemas-20261006`: cuatro fotos recortadas sin personas identificables ni emblemas ajenos y versiones anteriores retiradas. Mismas ranuras y proporciones. Consultar el estado del PR para saber si está integrado. |
+| Base actual de producción | `IsabelLopez/lopsa`, rama `main`, [9e3c199](https://github.com/IsabelLopez/lopsa/commit/9e3c199), integración de [PR #21](https://github.com/IsabelLopez/lopsa/pull/21) (06-oct-2026), consultada con `git fetch` el 07-oct. Incluye [PR #14](https://github.com/IsabelLopez/lopsa/pull/14), [#15](https://github.com/IsabelLopez/lopsa/pull/15), [#16](https://github.com/IsabelLopez/lopsa/pull/16), [#17](https://github.com/IsabelLopez/lopsa/pull/17) y [#20](https://github.com/IsabelLopez/lopsa/pull/20) de SEO/medición, [#18](https://github.com/IsabelLopez/lopsa/pull/18)–[#19](https://github.com/IsabelLopez/lopsa/pull/19) de instrucciones y [#21](https://github.com/IsabelLopez/lopsa/pull/21) de fotos. Esta lectura de Git no certifica el identificador del despliegue activo de Netlify. |
+| Trabajo de esta revisión | [PR #22](https://github.com/IsabelLopez/lopsa/pull/22), rama `web/enlace-instagram-20261007`: enlace visible a Instagram (@lopsa_pa) con ícono en el pie y junto al botón de WhatsApp en Contacto. Sin otros cambios visuales. Consultar el estado del PR para saber si está integrado. |
 | Propuestas visuales nuevas | Ninguna aprobada o implementada en esta revisión. Cualquier propuesta futura debe registrar su alcance y referencia aparte del diseño vigente. |
 
 ## Decisiones visuales vigentes
@@ -25,6 +25,7 @@ decisiones y evidencia. Las instrucciones antiguas del historial no sustituyen l
 | **Aplicaciones sin pies superpuestos sobre fotos.** Conservar las imágenes procesadas y sus fuentes; la fotografía externa de estacionamiento no representa una obra de LOPSA. | [PR #7](https://github.com/IsabelLopez/lopsa/pull/7); [plantillas/aplicaciones.html](plantillas/aplicaciones.html), fuente y licencia en [README.md](README.md). |
 | **Poliurea: cifras compactas, capas rotuladas y una tabla.** Nombres y líneas dentro de la ilustración; comparación común para PC y celular, con desplazamiento horizontal y criterio fijo. No reemplazarla por fichas móviles. | [PR #11](https://github.com/IsabelLopez/lopsa/pull/11); [plantillas/poliurea.html](plantillas/poliurea.html), [datos/poliurea.json](datos/poliurea.json), [estaticos/css/estilos.css](estaticos/css/estilos.css). |
 | **Respaldo técnico con alcance preciso.** Ocho tarjetas: dos por fila en celular y cuatro en escritorio; acordeón «Consultar Ficha Técnica». Conservar los alcances técnicos establecidos en `CLAUDE.md`. | [PR #12](https://github.com/IsabelLopez/lopsa/pull/12); [plantillas/proceso.html](plantillas/proceso.html), [datos/proceso.json](datos/proceso.json), [estaticos/css/estilos.css](estaticos/css/estilos.css). |
+| **Instagram visible, sin Facebook.** Ícono de Instagram (@lopsa_pa) bajo el lema del pie, dorado sobre marino, y botón cuadrado marino de 48 px junto a «Escribir por WhatsApp» en Contacto (en 320 px baja a la línea siguiente). SVG en línea con `aria-label="Instagram de LOPSA"`; abre en otra pestaña. Facebook no se enlaza de forma visible. | [PR #22](https://github.com/IsabelLopez/lopsa/pull/22); [plantillas/base.html](plantillas/base.html), [plantillas/contacto.html](plantillas/contacto.html), [plantillas/_macros.html](plantillas/_macros.html) (`icono_instagram`), [estaticos/css/estilos.css](estaticos/css/estilos.css) (`.pie__instagram`, `.boton-icono`), [datos/sitio.json](datos/sitio.json) (`instagram`). |
 
 Las capturas locales no incluidas en Git no son una referencia disponible para otro equipo. Para comparar
 el resultado, usar el sitio, esta versión de los archivos y las referencias anteriores; si se añade una
@@ -32,10 +33,11 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
 
 ## Pendientes y siguiente paso
 
-- [PR #20](https://github.com/IsabelLopez/lopsa/pull/20) está integrado y verificado en producción (JSON-LD y
-  sitemap). Consultar [PR #21](https://github.com/IsabelLopez/lopsa/pull/21): si está integrado, comprobar que las
-  fotos nuevas cargan y que las retiradas ya no responden. El estado de una revisión no se transforma en
-  «publicado» hasta verificar su integración y su despliegue.
+- [PR #20](https://github.com/IsabelLopez/lopsa/pull/20) y [PR #21](https://github.com/IsabelLopez/lopsa/pull/21)
+  están integrados y verificados en producción: JSON-LD y sitemap; fotos `-v4` en 200 y versiones retiradas en 404
+  (comprobado de nuevo el 07-oct). Consultar [PR #22](https://github.com/IsabelLopez/lopsa/pull/22): si está
+  integrado, comprobar que el ícono de Instagram se ve en el pie y en Contacto. El estado de una revisión no se
+  transforma en «publicado» hasta verificar su integración y su despliegue.
 - Las páginas por aplicación y los casos de obra son una propuesta en preparación, pendiente de aprobación
   de la dirección de LOPSA. No publicarlas sin esa aprobación; deben reutilizar los componentes y el diseño
   vigentes de esta tabla, sin nuevas afirmaciones técnicas ni datos de clientes.
@@ -46,6 +48,22 @@ captura al relevo, debe ser pública, estar versionada o tener un enlace accesib
   aprobado en esta tabla con su referencia, conservando el antecedente en el punto de continuidad.
 
 ## Puntos de continuidad
+
+### 07-oct-2026 — enlace visible a Instagram
+
+- **Hecho:** la web solo mencionaba Instagram en los datos estructurados (`sameAs`), sin enlace visible. Ahora hay
+  un ícono de Instagram enlazado a https://www.instagram.com/lopsa_pa/ en el pie de todas las páginas y junto al
+  botón de WhatsApp en Contacto. Solo Instagram: Facebook no se enlaza de forma visible. Regla nueva en
+  `CLAUDE.md`. Estado: integrado mediante PR si su página lo indica; propuesto mientras siga abierto.
+- **Archivos / versión:** `plantillas/_macros.html`, `plantillas/base.html`, `plantillas/contacto.html`,
+  `estaticos/css/estilos.css`, `dist/`, `datos/_fechas_sitemap.json`, `CLAUDE.md`; rama
+  `web/enlace-instagram-20261007` sobre `9e3c199`, [PR #22](https://github.com/IsabelLopez/lopsa/pull/22).
+- **Revisión:** verificador **OK, 11 páginas**; diff de `dist/` limitado al pie, a las acciones de Contacto, a la
+  versión del CSS y al `lastmod`; Chrome sin cabeza en 320, 390, 768, 1024, 1440 y 1920 px sobre 10 páginas, sin
+  desbordes ni errores de JavaScript; enlace visible en todas (42×42 px en el pie, 48×48 px en Contacto); estados
+  al pasar el cursor y foco de teclado comprobados. Datos estructurados sin cambios.
+- **Pendiente:** comprobar en producción, tras la integración, que el HTML servido coincide con `dist/`.
+- **Siguiente acción:** cualquier red social nueva se añade solo con orden de la dirección y con este mismo patrón.
 
 ### 06-oct-2026 — fotos sin personas identificables ni emblemas ajenos
 

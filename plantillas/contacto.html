@@ -24,7 +24,7 @@
   <div class="contenedor contacto__grid">
     <div class="contacto__col">
       <p class="etiqueta">Hablemos de su proyecto</p><h2>La solución empieza<br>por conocer su superficie.</h2><p class="contacto__sub">Comparta unas fotos, el área aproximada y la ubicación. Le ayudamos a definir el siguiente paso.</p>
-      <a class="boton boton--marino" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="contacto">{{ m.icono_whatsapp('ico') }} Escribir por WhatsApp</a>
+      <div class="contacto__acciones"><a class="boton boton--marino" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="contacto">{{ m.icono_whatsapp('ico') }} Escribir por WhatsApp</a>{% if sitio.instagram %}<a class="boton-icono" href="{{ sitio.instagram }}" target="_blank" rel="noopener" aria-label="Instagram de LOPSA">{{ m.icono_instagram('ico') }}</a>{% endif %}</div>
       <details class="consulta-rapida"><summary>Preparar una consulta con área y ubicación</summary>
         <div class="cotizador" id="cotizador"><p>Seleccione la superficie</p><div class="chips" role="group" aria-label="Tipo de superficie">{% for a in aplicaciones %}<button type="button" data-tipo="{{ a.titulo }}" aria-pressed="false">{{ a.titulo }}</button>{% endfor %}</div><div class="cotizador__campos"><label>Área aproximada (m²)<input type="number" inputmode="numeric" min="1" id="cot-area" placeholder="Ej. 250"></label><label>Ubicación<input type="text" id="cot-lugar" placeholder="Barrio o ciudad"></label></div><a class="enlace" id="cot-enviar" href="{{ wa(sitio.whatsapp_texto) }}" target="_blank" rel="noopener" data-wa="cotizador">Enviar consulta por WhatsApp ↗</a></div>
       </details>
